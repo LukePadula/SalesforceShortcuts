@@ -14,6 +14,13 @@ input:focus {
   box-shadow: none;
 }
 
+button {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+}
+
 /* .App {
   text-align: center;
 }

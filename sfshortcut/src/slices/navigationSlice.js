@@ -1,19 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {};
+const initialState = {
+  navigationPage: "HOME",
+};
 
 export const navigationSlice = createSlice({
   name: "navigation",
   initialState,
   reducers: {
-    setNavigation: (state, action) => {
+    setNavigationPage: (state, action) => {
+      console.log(action.payload);
       state.navigationPage = action.payload;
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } =
-  navigationSlice.actions;
-export const selectCount = (state) => state.counter.value;
+export const { setNavigationPage } = navigationSlice.actions;
+export const selectNavigationPage = (state) => state.navigation.navigationPage;
 
 export default navigationSlice.reducer;
