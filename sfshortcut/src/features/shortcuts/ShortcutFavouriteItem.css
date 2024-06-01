@@ -1,0 +1,11 @@
+.favourite-button {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #3e7cf4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

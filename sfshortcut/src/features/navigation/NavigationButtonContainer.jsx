@@ -15,6 +15,10 @@ export default function NavigationButtonContainer() {
         buttonLabel="Settings"
         selected={currentPage === "Settings"}
       />
+      <NavigationButton
+        buttonLabel="Salesforce"
+        selected={currentPage === "Salesforce"}
+      />
     </div>
   );
 }

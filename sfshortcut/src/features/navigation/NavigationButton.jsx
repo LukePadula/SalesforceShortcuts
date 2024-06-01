@@ -4,15 +4,18 @@ import { useDispatch } from "react-redux";
 import { setNavigationPage } from "../../slices/navigationSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faList, faGear } from "@fortawesome/free-solid-svg-icons";
+import { faSalesforce } from "@fortawesome/free-brands-svg-icons";
+
+import { navigateTab } from "../../app/utilities/chromeNavigationUtils";
 
 export default function NavigationButton({ buttonLabel, selected }) {
   const dispatch = useDispatch();
-  console.log(selected);
 
   const iconMap = {
     Home: faHome,
     List: faList,
     Settings: faGear,
+    Salesforce: faSalesforce,
   };
 
   const buttonStyleClass = selected
@@ -25,7 +28,11 @@ export default function NavigationButton({ buttonLabel, selected }) {
         className={buttonStyleClass}
         type="button"
         onClick={() => {
-          dispatch(setNavigationPage(buttonLabel));
+          if (buttonLabel === "Salesforce") {
+            navigateTab("https://login.salesforce.com/?locale=uk");
+          } else {
+            dispatch(setNavigationPage(buttonLabel));
+          }
         }}
       >
         <FontAwesomeIcon className="nav-icon" icon={iconMap[buttonLabel]} />

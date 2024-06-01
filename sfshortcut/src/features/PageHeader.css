@@ -1,0 +1,18 @@
+.page-header {
+  display: flex;
+  align-items: center;
+}
+.page-title {
+  color: #ffffff;
+}
+
+.navigate-back-icon {
+  width: 30px;
+  height: 30px;
+  color: #8d8d8d;
+  cursor: pointer;
+}
+
+.navigate-back-icon:hover {
+  color: #3e7cf4;
+}

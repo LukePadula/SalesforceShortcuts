@@ -9,7 +9,6 @@ export const searchSlice = createSlice({
   initialState,
   reducers: {
     onSearchTermChanged: (state, action) => {
-      console.log(action.payload);
       state.searchTerm = action.payload;
     },
   },

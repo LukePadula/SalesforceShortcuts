@@ -10,8 +10,6 @@ export default function SearchBar() {
   const searchTerm = useSelector(selectSearchTerm);
   const dispatch = useDispatch();
 
-  console.log(searchTerm);
-
   return (
     <>
       <input

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  navigationPage: "HOME",
+  navigationPage: "Home",
 };
 
 export const navigationSlice = createSlice({
@@ -9,7 +9,6 @@ export const navigationSlice = createSlice({
   initialState,
   reducers: {
     setNavigationPage: (state, action) => {
-      console.log(action.payload);
       state.navigationPage = action.payload;
     },
   },
