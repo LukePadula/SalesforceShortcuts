@@ -1,0 +1,16 @@
+.list-button-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 50px;
+  border: 2px solid #3e7cf4;
+  text-align: center;
+}
+
+.star-icon {
+  color: #b3b3b3;
+}
+
+.star-icon-selected {
+  color: #ffc300;
+}

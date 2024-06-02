@@ -7,8 +7,6 @@ import ShortcutFavouriteItem from "../shortcuts/ShortcutFavouriteItem";
 export default function HomePage() {
   const favourites = useSelector(selectFavorites);
 
-  console.log(favourites, "FAVS");
-
   return (
     <div className="home-container">
       <div className="favourite-shortcut-container">
