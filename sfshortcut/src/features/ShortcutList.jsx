@@ -4,13 +4,26 @@ import "./ShortcutList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-export default function ShortcutList({ favourites }) {
+export default function ShortcutList({ shortcuts, favourites }) {
+  console.log(favourites, "FAVS");
+  const updatedShortcuts = { ...shortcuts };
+
+  Object.keys(updatedShortcuts).forEach((key) => {
+    updatedShortcuts[key] = { ...updatedShortcuts[key], favourite: false };
+  });
+
+  favourites.forEach((key) => {
+    if (updatedShortcuts[key]) {
+      updatedShortcuts[key] = { ...updatedShortcuts[key], favourite: true };
+    }
+  });
+
   return (
     <div className="list-container">
-      {Object.keys(favourites).map((key) => (
+      {Object.keys(updatedShortcuts).map((key) => (
         <ShortcutListItem
-          label={key}
-          config={favourites[key]}
+          shortcutKey={key}
+          config={updatedShortcuts[key]}
           starIcon={{ FontAwesomeIcon, iconType: faStar }}
         />
       ))}

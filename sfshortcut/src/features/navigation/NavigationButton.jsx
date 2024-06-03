@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavigationButton.css";
 import { useDispatch } from "react-redux";
-import { setNavigationPage } from "../../slices/navigationSlice";
+import { handleNavigationChange } from "../../slices/navigationSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faList, faGear } from "@fortawesome/free-solid-svg-icons";
 import { faSalesforce } from "@fortawesome/free-brands-svg-icons";
@@ -18,6 +18,9 @@ export default function NavigationButton({ buttonLabel, selected }) {
     Salesforce: faSalesforce,
   };
 
+  const salesforceClass =
+    buttonLabel === "Salesforce" ? "salesforce-icon" : null;
+
   const buttonStyleClass = selected
     ? "nav-button selected-nav-button"
     : "nav-button";
@@ -25,13 +28,13 @@ export default function NavigationButton({ buttonLabel, selected }) {
   return (
     <div className="nav-button-container">
       <button
-        className={buttonStyleClass}
+        className={`${buttonStyleClass} ${salesforceClass}`}
         type="button"
         onClick={() => {
           if (buttonLabel === "Salesforce") {
-            navigateTab("https://login.salesforce.com/?locale=uk");
+            navigateTab("https://login.salesforce.com/?locale=uk", true);
           } else {
-            dispatch(setNavigationPage(buttonLabel));
+            dispatch(handleNavigationChange(buttonLabel));
           }
         }}
       >

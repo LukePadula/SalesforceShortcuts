@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectNavigationPage } from "../slices/navigationSlice";
+import "./ContentContainer.css";
 
 import HomePage from "./pages/HomePage";
 import ListPage from "./pages/ListPage";
@@ -20,7 +21,7 @@ export default function ContentContainer() {
   console.log(page, PageComponent);
   return (
     <div className="content-container">
-      <PageHeader pageTitle={page} />
+      {page !== "Home" ? <PageHeader pageTitle={page} /> : null}
       <PageComponent />
     </div>
   );

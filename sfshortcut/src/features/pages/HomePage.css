@@ -1,5 +1,11 @@
+.home-container {
+  height: 100%;
+}
+
 .favourite-shortcut-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 100%;
 }

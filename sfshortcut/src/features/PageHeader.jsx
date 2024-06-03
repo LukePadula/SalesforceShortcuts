@@ -10,11 +10,9 @@ export default function PageHeader({ pageTitle }) {
 
   return (
     <div className="page-header">
-      {pageTitle != "Home" ? (
-        <button onClick={() => dispatch(setNavigationPage("Home"))}>
-          <FontAwesomeIcon className="navigate-back-icon" icon={faArrowLeft} />
-        </button>
-      ) : null}
+      <button onClick={() => dispatch(setNavigationPage("Home"))}>
+        <FontAwesomeIcon className="navigate-back-icon" icon={faArrowLeft} />
+      </button>
       <h1 className="page-title">{pageTitle}</h1>
     </div>
   );

@@ -1,0 +1,26 @@
+.no-favourites-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffff;
+  height: 100%;
+  padding: 25px;
+}
+
+.no-favourites-navigate-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e7cf4;
+  border-radius: 5px;
+  width: 25%;
+  height: 13%;
+  color: #ffff;
+  margin-top: 10px;
+}
+
+.no-favourites-navigate-button > * {
+  padding: 5px;
+}

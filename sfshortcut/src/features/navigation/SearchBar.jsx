@@ -2,9 +2,10 @@ import React from "react";
 import "./SearchBar.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  selectSearchTerm,
   onSearchTermChanged,
-} from "../../slices/searchSlice";
+  selectSearchTerm,
+} from "../../slices/shortcutSlice";
+import { handleNavigationChange } from "../../slices/navigationSlice";
 
 export default function SearchBar() {
   const searchTerm = useSelector(selectSearchTerm);
@@ -15,6 +16,10 @@ export default function SearchBar() {
       <input
         className="search-bar"
         onChange={(e) => {
+          console.log(searchTerm, "SEARHC");
+          if (!searchTerm) {
+            dispatch(handleNavigationChange("List"));
+          }
           dispatch(onSearchTermChanged(e.target.value));
         }}
       />

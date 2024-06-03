@@ -4,11 +4,12 @@
 }
 .page-title {
   color: #ffffff;
+  font-size: 18px;
 }
 
 .navigate-back-icon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   color: #8d8d8d;
   cursor: pointer;
 }

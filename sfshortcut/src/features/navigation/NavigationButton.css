@@ -6,13 +6,18 @@
   justify-content: center;
   align-items: center;
   color: #8d8d8d;
+  cursor: pointer;
 }
 
 .nav-icon {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 .selected-nav-button {
   color: #3e7cf4;
+}
+
+.salesforce-icon {
+  scale: 1.28;
 }

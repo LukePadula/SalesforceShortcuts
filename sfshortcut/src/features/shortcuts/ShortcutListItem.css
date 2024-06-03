@@ -1,14 +1,44 @@
 .list-button-container {
-  display: flex;
-  justify-content: space-evenly;
   width: 80%;
-  height: 50px;
+  height: 25%;
   border: 2px solid #3e7cf4;
   text-align: center;
+  margin: 3px;
+  border-radius: 5px;
+}
+
+.list-button-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.list-content-cont {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-item-title {
+  color: #ffff;
+  font-weight: bold;
+}
+
+.list-item-type {
+  color: #b3b3b3;
+}
+
+.star-icon-unselected {
+  color: #b3b3b3;
 }
 
 .star-icon {
-  color: #b3b3b3;
+  width: 20px;
+  height: 20px;
 }
 
 .star-icon-selected {

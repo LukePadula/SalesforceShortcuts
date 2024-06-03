@@ -1,21 +1,33 @@
 import React from "react";
 import "./HomePage.css";
 import { useSelector } from "react-redux";
-import { selectFavorites } from "../../slices/shortcutSlice";
+import { selectFavorites, selectShortcuts } from "../../slices/shortcutSlice";
 import ShortcutFavouriteItem from "../shortcuts/ShortcutFavouriteItem";
+import NoFavourites from "../NoFavourites";
 
 export default function HomePage() {
   const favourites = useSelector(selectFavorites);
+  const shortcuts = useSelector(selectShortcuts);
 
-  return (
-    <div className="home-container">
+  let content;
+
+  if (favourites.length > 0) {
+    content = (
       <div className="favourite-shortcut-container">
-        {Object.keys(favourites).map((key) => (
+        {favourites.map((key) => (
           <div key={key} className="shortcut-item">
-            <ShortcutFavouriteItem label={key} config={favourites[key]} />
+            <ShortcutFavouriteItem label={key} config={shortcuts[key]} />
           </div>
         ))}
       </div>
+    );
+  } else {
+    content = <NoFavourites />;
+  }
+
+  return (
+    <div className="home-container">
+      {content}
       <div className="object-shortcut-container"></div>
     </div>
   );
