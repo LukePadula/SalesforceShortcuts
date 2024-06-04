@@ -1,6 +1,6 @@
 import React from "react";
 import "./ShortcutListItem.css";
-import { navigateTab } from "../../app/utilities/chromeNavigationUtils";
+import { navigateShortcut } from "../../app/utilities/chromeNavigationUtils";
 import { useDispatch } from "react-redux";
 import { setShortcutFavourite } from "../../slices/shortcutSlice";
 import { displayAlertModal } from "../../slices/navigationSlice";
@@ -29,7 +29,7 @@ export default function ShortcutListItem({ shortcutKey, config, starIcon }) {
   };
 
   return (
-    <button className="list-button-container" onClick={() => navigateTab()}>
+    <button className="list-button-container">
       <div className="list-button-content">
         <div className="list-content-cont">
           <p className="list-item-title">{config.label}</p>

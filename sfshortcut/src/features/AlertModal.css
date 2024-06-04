@@ -1,5 +1,5 @@
 .alert-modal-container {
-  background-color: #3e7cf4;
+  background-color: var(--primary-colour);
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   width: 100%;
@@ -31,9 +31,6 @@
 
 .icon-favourite-selected {
   color: #ffc300;
-}
-
-.icon-favourite-unselected {
 }
 
 .close-alert-modal-container {

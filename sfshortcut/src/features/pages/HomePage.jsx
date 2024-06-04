@@ -3,7 +3,7 @@ import "./HomePage.css";
 import { useSelector } from "react-redux";
 import { selectFavorites, selectShortcuts } from "../../slices/shortcutSlice";
 import ShortcutFavouriteItem from "../shortcuts/ShortcutFavouriteItem";
-import NoFavourites from "../NoFavourites";
+import ActionBlocked from "../ActionBlocked";
 
 export default function HomePage() {
   const favourites = useSelector(selectFavorites);
@@ -22,7 +22,7 @@ export default function HomePage() {
       </div>
     );
   } else {
-    content = <NoFavourites />;
+    content = <ActionBlocked type={"noFavourites"} />;
   }
 
   return (

@@ -18,7 +18,7 @@ export const shortcutSlice = createSlice({
       let newData = state.shortcuts;
       let favouritesList;
 
-      if (savedFavourites.length > 0) {
+      if (Array.isArray(savedFavourites) && savedFavourites.length > 0) {
         favouritesList = savedFavourites;
         state.shortcutFavourites = savedFavourites;
       } else {

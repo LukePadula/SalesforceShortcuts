@@ -1,25 +1,22 @@
 import { setFavourites } from "../../slices/shortcutSlice";
-import { useDispatch } from "react-redux";
+import { loadSettings } from "../../slices/settingsSlice";
+import { store } from "../store";
 
 const getChromeStorage = (storageType, key) => {
-  if (chrome.storage && chrome.storage[storageType]) {
-    chrome.storage[storageType].get(["storageObject"], (result) => {
-      if (result.storageObject && result.storageObject[key]) {
-        const dispatch = useDispatch();
-        dispatch(setFavourites(result.storageObject[key]));
+  if (chrome.storage) {
+    chrome.storage.sync.get(["shortcuts"], (result) => {
+      if (result.shortcuts) {
+        store.dispatch(setFavourites({ savedFavourites: result.shortcuts }));
       }
     });
+  } else {
+    store.dispatch(setFavourites({ savedFavourites: [] }));
   }
 };
 
-const setChromeStorage = (key, data) => {
-  if (chrome.storage && chrome.storage[storageType]) {
-    chrome.storage[storageType].get(["storageObject"], (result) => {
-      let storageObject = result.storageObject || {};
-
-      storageObject[key] = data;
-      chrome.storage[storageType].set({ storageObject });
-    });
+const setChromeStorage = (shortcuts) => {
+  if (chrome.storage) {
+    chrome.storage.sync.set({ shortcuts });
   }
 };
 

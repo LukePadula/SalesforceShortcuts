@@ -2,16 +2,17 @@ import { setUrl } from "../../slices/navigationSlice";
 import { useDispatch } from "react-redux";
 import { store } from "../store";
 
-const navigateTab = (url, fullLink = false) => {
-  const link = fullLink
-    ? url
-    : "https://creative-hawk-k51mlq-dev-ed.trailblaze.lightning.force.com/lightning/" +
-      url;
-
+const navigateTab = (url, openInNewTab = false) => {
   if (chrome.storage) {
-    chrome.tabs.update({
-      link,
-    });
+    if (openInNewTab) {
+      chrome.tabs.create({
+        url,
+      });
+    } else {
+      chrome.tabs.update({
+        url,
+      });
+    }
     window.close();
   }
 };

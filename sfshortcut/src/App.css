@@ -1,3 +1,14 @@
+:root {
+  --primary-colour: #3e7cf4;
+  --secondary-colour: #b3b3b3;
+  --favourite-icon-selected-colour: #ffc300;
+
+  /* Dark/light mode variables */
+  --dark-mode-text-colour: #ffff;
+  --white-mode-text-colour: #3e7cf4;
+  --dark-mode-background-colour: #3f3d3d;
+}
+
 h1,
 p {
   font-family: "Inter", sans-serif;
@@ -20,6 +31,7 @@ button {
   border: none;
   box-shadow: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -28,7 +40,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8d8d8d;
+  background: var(--secondary-colour);
 }
 
 ::-webkit-scrollbar {

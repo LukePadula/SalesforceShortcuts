@@ -7,33 +7,25 @@ import { setFavourites, selectFavorites } from "../slices/shortcutSlice";
 import { selectAlertModal } from "../slices/navigationSlice";
 import AlertModal from "./AlertModal";
 import { validateUrl } from "../app/utilities/chromeNavigationUtils";
+import { loadSettings } from "../slices/settingsSlice";
+import { getChromeStorage, setChromeStorage } from "../app/utilities/chromeAPI";
 
 export default function ViewContainer() {
   const dispatch = useDispatch();
-  const shortcuts = useSelector(selectFavorites);
+  const shortcutFavourites = useSelector(selectFavorites);
   const alertModalConfig = useSelector(selectAlertModal);
 
   // Get when first renders
   useEffect(() => {
-    validateUrl();
-    if (chrome.storage) {
-      chrome.storage.sync.get(["shortcuts"], (result) => {
-        if (result.shortcuts) {
-          dispatch(setFavourites({ savedFavourites: result.shortcuts }));
-        }
-      });
-    } else {
-      dispatch(setFavourites({ savedFavourites: [] }));
-    }
+    // validateUrl();
+    getChromeStorage();
   }, []);
 
   // Every time shortcut changes
   useEffect(() => {
     console.log("CHANGE");
-    if (chrome.storage) {
-      chrome.storage.sync.set({ shortcuts });
-    }
-  }, [shortcuts]);
+    setChromeStorage(shortcutFavourites);
+  }, [shortcutFavourites]);
 
   return (
     <div className="container">

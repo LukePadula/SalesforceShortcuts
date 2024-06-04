@@ -4,7 +4,12 @@ export default function SettingsContainer() {
   return (
     <div className="settings-container">
       <div className="settings-item">
-        <input type="checkbox" id="darkMode" name="Enable Dark Mode" checked />
+        <input
+          onChange={(e) => {}}
+          type="checkbox"
+          id="darkModeSetting"
+          name="Enable Dark Mode"
+        />
       </div>
       <div className="settings-item">
         <p>Open shortcuts in new tab</p>
