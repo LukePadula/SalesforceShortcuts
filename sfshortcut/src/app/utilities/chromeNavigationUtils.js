@@ -38,16 +38,18 @@ const getCurrentUrl = (callback) => {
 };
 
 const validateCurrentUrl = (url) => {
-  return url.includes("lightning.force.com") || url.includes("salesforce.com");
+  return (
+    url &&
+    (url.includes("lightning.force.com") || url.includes("salesforce.com"))
+  );
 };
 
 const validateUrl = () => {
-  getCurrentUrl((url) => {
-    console.log(url);
-    if (validateCurrentUrl(url)) {
-      store.dispatch(setUrl(url));
-    }
-  });
+  const url = getCurrentUrl();
+  console.log(url);
+  if (!validateCurrentUrl(url)) {
+    store.dispatch(setUrl(url));
+  }
 };
 
 export { navigateTab, navigateShortcut, validateUrl };

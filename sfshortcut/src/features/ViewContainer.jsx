@@ -17,7 +17,7 @@ export default function ViewContainer() {
 
   // Get when first renders
   useEffect(() => {
-    // validateUrl();
+    validateUrl();
     getChromeStorage();
   }, []);
 
