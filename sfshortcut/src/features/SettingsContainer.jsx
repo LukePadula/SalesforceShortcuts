@@ -13,8 +13,6 @@ export default function SettingsContainer() {
     dispatch(setSettings({ setting: e.target.id, value: e.target.checked }));
   };
 
-  console.log(JSON.stringify(userSettings), "USER SETTINGS");
-
   return (
     <div className="settings-container">
       <CustomCheckbox

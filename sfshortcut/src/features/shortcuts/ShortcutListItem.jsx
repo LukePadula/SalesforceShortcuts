@@ -13,7 +13,7 @@ export default function ShortcutListItem({ shortcutKey, config, starIcon }) {
     ? "star-icon-selected"
     : "star-icon-unselected";
 
-  const handleClick = async () => {
+  const handleFavourite = () => {
     dispatch(
       setShortcutFavourite({
         shortcutKey,
@@ -29,9 +29,9 @@ export default function ShortcutListItem({ shortcutKey, config, starIcon }) {
   };
 
   return (
-    <div className="list-button-container">
+    <div className="list-item">
       <button
-        className="list-item-button"
+        className="list-button-container"
         onClick={() => navigateShortcut(config.path)}
       >
         <div className="list-button-content">
@@ -39,12 +39,12 @@ export default function ShortcutListItem({ shortcutKey, config, starIcon }) {
             <p className="list-item-title">{config.label}</p>
           </div>
           <div className="list-content-cont">
-            <p className="list-item-type">Setup</p>
+            <p className="list-item-type">{config.pageGroup}</p>
           </div>
         </div>
       </button>
       <div className="star-container">
-        <button onClick={handleClick}>
+        <button onClick={handleFavourite}>
           <FontAwesomeIcon
             className={`star-icon ${starIconClass}`}
             icon={iconType}

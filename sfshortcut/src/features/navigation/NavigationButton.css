@@ -18,7 +18,7 @@
 }
 
 .selected-nav-button {
-  color: #3e7cf4;
+  color: var(--primary-colour);
 }
 
 .salesforce-icon {

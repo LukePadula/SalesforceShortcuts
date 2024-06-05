@@ -15,6 +15,7 @@ export default function SearchBar() {
     <>
       <input
         className="search-bar"
+        placeholder="Search.."
         onChange={(e) => {
           if (!searchTerm) {
             dispatch(handleNavigationChange("List"));

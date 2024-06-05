@@ -1,4 +1,4 @@
-import { setUrl } from "../../slices/navigationSlice";
+import { setUrl, setNavigationPage } from "../../slices/navigationSlice";
 import { store } from "../store";
 
 const navigateTab = (url, createNewTab) => {
@@ -18,19 +18,19 @@ const navigateTab = (url, createNewTab) => {
 
 const navigateShortcut = (urlPath) => {
   const url = store.getState().navigation.url;
-  console.log(urlPath, "PATH");
+
   if (validateCurrentUrl(url)) {
     let breakIndex = url.indexOf(".com/");
     let locationHost = url.substring(0, breakIndex + 4);
 
     const newURL = `${locationHost}/lightning${urlPath}`;
-    console.log(newURL, "NEW URL");
-    // GET SETTINGS FOR NEW TAB
 
     navigateTab(
       `${locationHost}/lightning${urlPath}`,
       store.getState().settings.settings.openShortcutsInNewTab
     );
+  } else {
+    store.dispatch(setNavigationPage("Home"));
   }
 };
 

@@ -1,6 +1,7 @@
 :root {
   --primary-colour: #3e7cf4;
   --secondary-colour: #b3b3b3;
+  --search-bar-colour: #8d8d8d;
   --favourite-icon-selected-colour: #ffc300;
 
   /* Dark/light mode variables */
@@ -21,6 +22,7 @@ input {
   border: none;
   padding: 10px;
   font-size: 16px;
+  color: var(--dark-mode-text-colour);
 }
 
 input:focus {
