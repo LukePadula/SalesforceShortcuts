@@ -1,1686 +1,1407 @@
-export const defaultFavourites = ["Setup_Home"];
+export const defaultFavourites = ["setup_home"];
 
 export const defaultShortcuts = {
-  Setup_Home: {
+  setup_home: {
     label: "Setup Home",
     path: "/setup/SetupOneHome/home",
   },
-  Service_Setup_Assistant: {
+  service_setup_assistant: {
     label: "Service Setup Assistant",
     path: "/setup/ServiceHome/home",
   },
-  Commerce_Setup_Assistant: {
+  commerce_setup_assistant: {
     label: "Commerce Setup Assistant",
     path: "/setup/CommerceSetupAssistant/home",
   },
-  "Multi-Factor_Authentication_Assistant": {
+  "multi-factor_authentication_assistant": {
     label: "Multi-Factor Authentication Assistant",
     path: "/setup/MfaAssistant/home",
   },
-  Hyperforce_Assistant: {
+  hyperforce_assistant: {
     label: "Hyperforce Assistant",
     path: "/setup/HyperforceAssistant/home",
   },
-  Release_Updates: {
+  release_updates: {
     label: "Release Updates",
     path: "/setup/ReleaseUpdates/home",
   },
-  Lightning_Experience_Transition_Assistant: {
+  lightning_experience_transition_assistant: {
     label: "Lightning Experience Transition Assistant",
     path: "/setup/EnableLightningExperience/home",
   },
-  Salesforce_Mobile_App: {
+  salesforce_mobile_app: {
     label: "Salesforce Mobile App",
     path: "/setup/SalesforceMobileAppQuickStart/home",
   },
-  Lightning_Usage: {
+  lightning_usage: {
     label: "Lightning Usage",
     path: "/setup/LightningUsageSetup/home",
   },
-  Optimizer: {
+  optimizer: {
     label: "Optimizer",
     path: "/setup/SalesforceOptimizer/home",
   },
-  Sales_Cloud_Everywhere: {
+  sales_cloud_everywhere: {
     label: "Sales Cloud Everywhere",
     path: "/setup/SalesCloudEverywhereSettings/home",
   },
-  CollapseUsers: {
-    label: "CollapseUsers",
-  },
-  Permission_Set_Groups: {
+  permission_set_groups: {
     label: "Permission Set Groups",
     path: "/setup/PermSetGroups/home",
   },
-  Permission_Sets: {
+  permission_sets: {
     label: "Permission Sets",
     path: "/setup/PermSets/home",
   },
-  Profiles: {
+  profiles: {
     label: "Profiles",
     path: "/setup/EnhancedProfiles/home",
   },
-  Public_Groups: {
+  public_groups: {
     label: "Public Groups",
     path: "/setup/PublicGroups/home",
   },
-  Queues: {
+  queues: {
     label: "Queues",
     path: "/setup/Queues/home",
   },
-  Roles: {
+  roles: {
     label: "Roles",
     path: "/setup/Roles/home",
   },
-  User_Management_Settings: {
+  user_management_settings: {
     label: "User Management Settings",
     path: "/setup/UserManagementSettings/home",
   },
-  Users: {
+  users: {
     label: "Users",
     path: "/setup/ManageUsers/home",
   },
-  CollapseData: {
-    label: "CollapseData",
-  },
-  Big_Objects: {
+  big_objects: {
     label: "Big Objects",
     path: "/setup/BigObjects/home",
   },
-  Conversation_Transcript_Export: {
+  conversation_transcript_export: {
     label: "Conversation Transcript Export",
     path: "/setup/CssDataExport/home",
   },
-  Data_Export: {
+  data_export: {
     label: "Data Export",
     path: "/setup/DataManagementExport/home",
   },
-  Data_Integration_Metrics: {
+  data_integration_metrics: {
     label: "Data Integration Metrics",
     path: "/setup/XCleanVitalsUi/home",
   },
-  Data_Integration_Rules: {
+  data_integration_rules: {
     label: "Data Integration Rules",
     path: "/setup/CleanRules/home",
   },
-  CollapseDuplicate_Management: {
-    label: "CollapseDuplicate Management",
-  },
-  Duplicate_Error_Logs: {
+  duplicate_error_logs: {
     label: "Duplicate Error Logs",
     path: "/setup/DuplicateErrorLog/home",
   },
-  Duplicate_Rules: {
+  duplicate_rules: {
     label: "Duplicate Rules",
     path: "/setup/DuplicateRules/home",
   },
-  Matching_Rules: {
+  matching_rules: {
     label: "Matching Rules",
     path: "/setup/MatchingRules/home",
   },
-  Mass_Delete_Records: {
+  mass_delete_records: {
     label: "Mass Delete Records",
     path: "/setup/DataManagementDelete/home",
   },
-  Mass_Transfer_Approval_Requests: {
+  mass_transfer_approval_requests: {
     label: "Mass Transfer Approval Requests",
     path: "/setup/DataManagementManageApprovals/home",
   },
-  Mass_Transfer_Records: {
+  mass_transfer_records: {
     label: "Mass Transfer Records",
     path: "/setup/DataManagementTransfer/home",
   },
-  Mass_Update_Addresses: {
+  mass_update_addresses: {
     label: "Mass Update Addresses",
     path: "/setup/DataManagementMassUpdateAddresses/home",
   },
-  Picklist_Settings: {
+  picklist_settings: {
     label: "Picklist Settings",
     path: "/setup/PicklistSettings/home",
   },
-  Schema_Settings: {
+  schema_settings: {
     label: "Schema Settings",
     path: "/setup/SchemaSettings/home",
   },
-  "State_and_Country/Territory_Picklists": {
+  "state_and_country/territory_picklists": {
     label: "State and Country/Territory Picklists",
     path: "/setup/AddressCleanerOverview/home",
   },
-  Storage_Usage: {
+  storage_usage: {
     label: "Storage Usage",
     path: "/setup/CompanyResourceDisk/home",
   },
-  CollapseEmail: {
-    label: "CollapseEmail",
-  },
-  Apex_Exception_Email: {
+  apex_exception_email: {
     label: "Apex Exception Email",
     path: "/setup/ApexExceptionEmail/home",
   },
-  Classic_Email_Templates: {
+  classic_email_templates: {
     label: "Classic Email Templates",
     path: "/setup/CommunicationTemplatesEmail/home",
   },
-  Classic_Letterheads: {
+  classic_letterheads: {
     label: "Classic Letterheads",
     path: "/setup/CommunicationTemplatesLetterheads/home",
   },
-  Compliance_BCC_Email: {
+  compliance_bcc_email: {
     label: "Compliance BCC Email",
     path: "/setup/SecurityComplianceBcc/home",
   },
-  DKIM_Keys: {
+  dkim_keys: {
     label: "DKIM Keys",
     path: "/setup/EmailDKIMList/home",
   },
-  Delete_Attachments_Sent_as_Links: {
+  delete_attachments_sent_as_links: {
     label: "Delete Attachments Sent as Links",
     path: "/setup/EmailAttachmentManagement/home",
   },
-  Deliverability: {
+  deliverability: {
     label: "Deliverability",
     path: "/setup/OrgEmailSettings/home",
   },
-  Email_Address_Internationalization: {
+  email_address_internationalization: {
     label: "Email Address Internationalization",
     path: "/setup/InternationalEmailAddresses/home",
   },
-  Email_Attachments: {
+  email_attachments: {
     label: "Email Attachments",
     path: "/setup/EmailAttachmentSettings/home",
   },
-  CollapseEmail_Delivery_Settings: {
-    label: "CollapseEmail Delivery Settings",
-  },
-  Email_Domain_Filters: {
+  email_domain_filters: {
     label: "Email Domain Filters",
     path: "/setup/EmailDomainFilter/home",
   },
-  Email_Relays: {
+  email_relays: {
     label: "Email Relays",
     path: "/setup/EmailRelay/home",
   },
-  Email_Footers: {
+  email_footers: {
     label: "Email Footers",
     path: "/setup/EmailDisclaimers/home",
   },
-  Email_to_Salesforce: {
+  email_to_salesforce: {
     label: "Email to Salesforce",
     path: "/setup/EmailToSalesforce/home",
   },
-  Enhanced_Email: {
+  enhanced_email: {
     label: "Enhanced Email",
     path: "/setup/EnhancedEmail/home",
   },
-  Filter_Email_Tracking: {
+  filter_email_tracking: {
     label: "Filter Email Tracking",
     path: "/setup/FilterEmailTracking/home",
   },
-  Gmail_Integration_and_Sync: {
+  gmail_integration_and_sync: {
     label: "Gmail Integration and Sync",
     path: "/setup/LightningForGmailAndSyncSettings/home",
   },
-  Lightning_Email_Templates: {
+  lightning_email_templates: {
     label: "Lightning Email Templates",
     path: "/setup/LightningEmailTemplateSetup/home",
   },
-  Mail_Merge_Templates: {
+  mail_merge_templates: {
     label: "Mail Merge Templates",
     path: "/setup/CommunicationTemplatesWord/home",
   },
-  "Organization-Wide_Addresses": {
+  "organization-wide_addresses": {
     label: "Organization-Wide Addresses",
     path: "/setup/OrgWideEmailAddresses/home",
   },
-  Outlook_Integration_and_Sync: {
+  outlook_integration_and_sync: {
     label: "Outlook Integration and Sync",
     path: "/setup/LightningForOutlookAndSyncSettings/home",
   },
-  Send_through_External_Email_Services: {
+  send_through_external_email_services: {
     label: "Send through External Email Services",
     path: "/setup/EmailTransportServiceSetupPage/home",
   },
-  Test_Deliverability: {
+  test_deliverability: {
     label: "Test Deliverability",
     path: "/setup/TestEmailDeliverability/home",
   },
-  CollapseApps: {
-    label: "CollapseApps",
-  },
-  App_Manager: {
+  app_manager: {
     label: "App Manager",
     path: "/setup/NavigationMenus/home",
   },
-  AppExchange_Marketplace: {
+  appexchange_marketplace: {
     label: "AppExchange Marketplace",
     path: "/setup/AppExchangeMarketplace/home",
   },
-  CollapseConnected_Apps: {
-    label: "CollapseConnected Apps",
-  },
-  Connected_Apps_OAuth_Usage: {
+  connected_apps_oauth_usage: {
     label: "Connected Apps OAuth Usage",
     path: "/setup/ConnectedAppsUsage/home",
   },
-  Manage_Connected_Apps: {
+  manage_connected_apps: {
     label: "Manage Connected Apps",
     path: "/setup/ConnectedApplication/home",
   },
-  CollapseExternal_Client_Apps: {
-    label: "CollapseExternal Client Apps",
-  },
-  Settings: {
+  settings: {
     label: "Settings",
     path: "/setup/EinsteinSearchSettings/home",
   },
-  CollapseLightning_Bolt: {
-    label: "CollapseLightning Bolt",
-  },
-  Flow_Category: {
+  flow_category: {
     label: "Flow Category",
     path: "/setup/FlowCategory/home",
   },
-  Lightning_Bolt_Solutions: {
+  lightning_bolt_solutions: {
     label: "Lightning Bolt Solutions",
     path: "/setup/LightningBolt/home",
   },
-  CollapseMobile_Apps: {
-    label: "CollapseMobile Apps",
-  },
-  CollapseSalesforce: {
-    label: "CollapseSalesforce",
-  },
-  Salesforce_Branding: {
+  salesforce_branding: {
     label: "Salesforce Branding",
     path: "/setup/Salesforce1Branding/home",
   },
-  Salesforce_Navigation: {
+  salesforce_navigation: {
     label: "Salesforce Navigation",
     path: "/setup/ProjectOneAppMenu/home",
   },
-  Salesforce_Notifications: {
+  salesforce_notifications: {
     label: "Salesforce Notifications",
     path: "/setup/NotificationsSettings/home",
   },
-  Salesforce_Offline: {
+  salesforce_offline: {
     label: "Salesforce Offline",
     path: "/setup/MobileOfflineStorageAdmin/home",
   },
-  Salesforce_Settings: {
+  salesforce_settings: {
     label: "Salesforce Settings",
     path: "/setup/Salesforce1Settings/home",
   },
-  CollapsePackaging: {
-    label: "CollapsePackaging",
-  },
-  Installed_Packages: {
+  installed_packages: {
     label: "Installed Packages",
     path: "/setup/ImportedPackage/home",
   },
-  Package_Manager: {
+  package_manager: {
     label: "Package Manager",
     path: "/setup/Package/home",
   },
-  Package_Usage: {
+  package_usage: {
     label: "Package Usage",
     path: "/setup/PackageUsageSummary/home",
   },
-  CollapseFeature_Settings: {
-    label: "CollapseFeature Settings",
-  },
-  CollapseAnalytics: {
-    label: "CollapseAnalytics",
-  },
-  App_Install_History: {
+  app_install_history: {
     label: "App Install History",
     path: "/setup/InsightsSetupAppHistoryControlPanel/home",
   },
-  "Auto-Installed_Apps": {
+  "auto-installed_apps": {
     label: "Auto-Installed Apps",
     path: "/setup/InsightsSetupAutoInstalledApps/home",
   },
-  "CollapseReports_&_Dashboards": {
-    label: "CollapseReports & Dashboards",
-  },
-  Access_Policies: {
+  access_policies: {
     label: "Access Policies",
     path: "/setup/SessionLevelPolicyUI/home",
   },
-  Historical_Trending: {
+  historical_trending: {
     label: "Historical Trending",
     path: "/setup/HistoricalTrendingUI/home",
   },
-  Report_Types: {
+  report_types: {
     label: "Report Types",
     path: "/setup/CustomReportTypes/home",
   },
-  Reporting_Snapshots: {
+  reporting_snapshots: {
     label: "Reporting Snapshots",
     path: "/setup/AnalyticSnapshots/home",
   },
-  Reports_and_Dashboards_Settings: {
+  reports_and_dashboards_settings: {
     label: "Reports and Dashboards Settings",
     path: "/setup/ReportUI/home",
   },
-  CollapseTableau: {
-    label: "CollapseTableau",
-  },
-  Tableau_Embedding: {
+  tableau_embedding: {
     label: "Tableau Embedding",
     path: "/setup/TableauEmbeddingSettings/home",
   },
-  CollapseChatter: {
-    label: "CollapseChatter",
-  },
-  Chatter_Settings: {
+  chatter_settings: {
     label: "Chatter Settings",
     path: "/setup/CollaborationSettings/home",
   },
-  Email_Settings: {
+  email_settings: {
     label: "Email Settings",
     path: "/setup/ChatterEmailSettings/home",
   },
-  CollapseFeed_Item: {
-    label: "CollapseFeed Item",
-  },
-  Feed_Item_Actions: {
+  feed_item_actions: {
     label: "Feed Item Actions",
     path: "/setup/FeedItemActions/home",
   },
-  Feed_Item_Layouts: {
+  feed_item_layouts: {
     label: "Feed Item Layouts",
     path: "/setup/FeedItemLayouts/home",
   },
-  Feed_Tracking: {
+  feed_tracking: {
     label: "Feed Tracking",
     path: "/setup/FeedTracking/home",
   },
-  CollapseGroups: {
-    label: "CollapseGroups",
-  },
-  Group_Layouts: {
+  group_layouts: {
     label: "Group Layouts",
     path: "/setup/CollaborationGroupLayouts/home",
   },
-  Group_Member_Triggers: {
+  group_member_triggers: {
     label: "Group Member Triggers",
     path: "/setup/CollaborationGroupMemberTriggers/home",
   },
-  Group_Record_Triggers: {
+  group_record_triggers: {
     label: "Group Record Triggers",
     path: "/setup/CollaborationGroupRecordTriggers/home",
   },
-  Group_Triggers: {
+  group_triggers: {
     label: "Group Triggers",
     path: "/setup/CollaborationGroupTriggers/home",
   },
-  Record_Types: {
+  record_types: {
     label: "Record Types",
     path: "/setup/CollaborationGroupRecordTypes/home",
   },
-  Influence: {
+  influence: {
     label: "Influence",
     path: "/setup/InfluenceSettings/home",
   },
-  CollapseTriggers: {
-    label: "CollapseTriggers",
-  },
-  FeedComment_Triggers: {
+  feedcomment_triggers: {
     label: "FeedComment Triggers",
     path: "/setup/FeedCommentTriggers/home",
   },
-  FeedItem_Triggers: {
+  feeditem_triggers: {
     label: "FeedItem Triggers",
     path: "/setup/FeedItemTriggers/home",
   },
-  "CollapseData.com": {
-    label: "CollapseData.com",
-  },
-  "Licenses_&_Limits": {
+  "licenses_&_limits": {
     label: "Licenses & Limits",
     path: "/setup/ViewLicensesAndLimits/home",
   },
-  Prospector_Preferences: {
+  prospector_preferences: {
     label: "Prospector Preferences",
     path: "/setup/DataDotComPreferences/home",
   },
-  Prospector_Users: {
+  prospector_users: {
     label: "Prospector Users",
     path: "/setup/ProspectingUsers/home",
   },
-  CollapseDigital_Experiences: {
-    label: "CollapseDigital Experiences",
-  },
-  Functions: {
+  functions: {
     label: "Functions",
     path: "/setup/Functions/home",
   },
-  Home: {
+  home: {
     label: "Home",
     path: "/setup/Home/home",
   },
-  CollapseMarketing: {
-    label: "CollapseMarketing",
-  },
-  Accounts_As_Campaign_Members: {
+  accounts_as_campaign_members: {
     label: "Accounts As Campaign Members",
     path: "/setup/AccountAsCM/home",
   },
-  CollapseCampaign_Influence: {
-    label: "CollapseCampaign Influence",
-  },
-  "Auto-Association_Settings": {
+  "auto-association_settings": {
     label: "Auto-Association Settings",
     path: "/setup/AutoAssociationSettings/home",
   },
-  Campaign_Influence_Settings: {
+  campaign_influence_settings: {
     label: "Campaign Influence Settings",
     path: "/setup/CampaignInfluenceSettings/home",
   },
-  Lead_Assignment_Rules: {
+  lead_assignment_rules: {
     label: "Lead Assignment Rules",
     path: "/setup/LeadRules/home",
   },
-  "Lead_Auto-Response_Rules": {
+  "lead_auto-response_rules": {
     label: "Lead Auto-Response Rules",
     path: "/setup/LeadResponses/home",
   },
-  Lead_Processes: {
+  lead_processes: {
     label: "Lead Processes",
     path: "/setup/LeadProcess/home",
   },
-  Lead_Settings: {
+  lead_settings: {
     label: "Lead Settings",
     path: "/setup/LeadSettings/home",
   },
-  CollapseLinkedIn_Lead_Gen: {
-    label: "CollapseLinkedIn Lead Gen",
-  },
-  Lead_Gen_Fields: {
+  lead_gen_fields: {
     label: "Lead Gen Fields",
     path: "/setup/LinkedInLeadGenFields/home",
   },
-  LinkedIn_Accounts: {
+  linkedin_accounts: {
     label: "LinkedIn Accounts",
     path: "/setup/LinkedInLeadGenAccounts/home",
   },
-  "Web-to-Lead": {
+  "web-to-lead": {
     label: "Web-to-Lead",
     path: "/setup/LeadWebtoleads/home",
   },
-  Omnichannel_Inventory: {
+  omnichannel_inventory: {
     label: "Omnichannel Inventory",
     path: "/setup/OmniChannelInventory/home",
   },
-  "Quip_(Salesforce_Anywhere)": {
+  "quip_(salesforce_anywhere)": {
     label: "Quip (Salesforce Anywhere)",
     path: "/setup/SalesforceAnywhereSetupPage/home",
   },
-  CollapseRevenue_Lifecycle_Management: {
-    label: "CollapseRevenue Lifecycle Management",
-  },
-  Revenue_Settings: {
+  revenue_settings: {
     label: "Revenue Settings",
     path: "/setup/RevenueSettings/home",
   },
-  CollapseSales: {
-    label: "CollapseSales",
-  },
-  ExpandAccounts: {
-    label: "ExpandAccounts",
-  },
-  Activity_Settings: {
+  activity_settings: {
     label: "Activity Settings",
     path: "/setup/HomeActivitiesSetupPage/home",
   },
-  Contact_Intelligence_View_Setup: {
+  contact_intelligence_view_setup: {
     label: "Contact Intelligence View Setup",
     path: "/setup/ContactInspectionSettings/home",
   },
-  Contact_Roles_on_Contracts: {
+  contact_roles_on_contracts: {
     label: "Contact Roles on Contracts",
     path: "/setup/ContractContactRoles/home",
   },
-  Contact_Roles_on_Opportunities: {
+  contact_roles_on_opportunities: {
     label: "Contact Roles on Opportunities",
     path: "/setup/OpportunityRoles/home",
   },
-  Contract_Settings: {
+  contract_settings: {
     label: "Contract Settings",
     path: "/setup/ContractSettings/home",
   },
-  CollapseForecasts: {
-    label: "CollapseForecasts",
-  },
-  Forecasts_Hierarchy: {
+  forecasts_hierarchy: {
     label: "Forecasts Hierarchy",
     path: "/setup/Forecasting3Role/home",
   },
-  Forecasts_Settings: {
+  forecasts_settings: {
     label: "Forecasts Settings",
     path: "/setup/Forecasting3Settings/home",
   },
-  Individual_Settings: {
+  individual_settings: {
     label: "Individual Settings",
     path: "/setup/IndividualSettings/home",
   },
-  Lead_Intelligence_View_Setup: {
+  lead_intelligence_view_setup: {
     label: "Lead Intelligence View Setup",
     path: "/setup/LeadInspectionSettings/home",
   },
-  LinkedIn_Sales_Navigator: {
+  linkedin_sales_navigator: {
     label: "LinkedIn Sales Navigator",
     path: "/setup/LinkedInSalesNavigatorPage/home",
   },
-  CollapseMeetings: {
-    label: "CollapseMeetings",
-  },
-  Notes_Settings: {
+  notes_settings: {
     label: "Notes Settings",
     path: "/setup/NotesSetupPage/home",
   },
-  CollapseOpportunities: {
-    label: "CollapseOpportunities",
-  },
-  Big_Deal_Alert: {
+  big_deal_alert: {
     label: "Big Deal Alert",
     path: "/setup/OpportunityAlerts/home",
   },
-  Opportunity_Settings: {
+  opportunity_settings: {
     label: "Opportunity Settings",
     path: "/setup/OpportunitySettings/home",
   },
-  Opportunity_Team_Settings: {
+  opportunity_team_settings: {
     label: "Opportunity Team Settings",
     path: "/setup/OpportunityTeamMemberSettings/home",
   },
-  Order_Settings: {
+  order_settings: {
     label: "Order Settings",
     path: "/setup/OrderSettings/home",
   },
-  CollapseProducts: {
-    label: "CollapseProducts",
-  },
-  Asset_Settings: {
+  asset_settings: {
     label: "Asset Settings",
     path: "/setup/AssetSettings/home",
   },
-  Product_Schedules_Settings: {
+  product_schedules_settings: {
     label: "Product Schedules Settings",
     path: "/setup/Product2ScheduleSetup/home",
   },
-  Product_Settings: {
+  product_settings: {
     label: "Product Settings",
     path: "/setup/Product2Settings/home",
   },
-  CollapseQuotes: {
-    label: "CollapseQuotes",
-  },
-  Quotes_Settings: {
+  quotes_settings: {
     label: "Quotes Settings",
     path: "/setup/QuoteSettings/home",
   },
-  CollapseSales_Engagement: {
-    label: "CollapseSales Engagement",
-  },
-  CollapseInbox: {
-    label: "CollapseInbox",
-  },
-  Setup_Assistant: {
+  setup_assistant: {
     label: "Setup Assistant",
     path: "/setup/EmailIqSetupPage/home",
   },
-  Log_a_Call: {
+  log_a_call: {
     label: "Log a Call",
     path: "/setup/DialerLogACallSetup/home",
   },
-  Sales_Engagement_Settings: {
+  sales_engagement_settings: {
     label: "Sales Engagement Settings",
     path: "/setup/SalesEngagement/home",
   },
-  Sales_Processes: {
+  sales_processes: {
     label: "Sales Processes",
     path: "/setup/OpportunityProcess/home",
   },
-  CollapseTerritories: {
-    label: "CollapseTerritories",
-  },
-  Territory_Settings: {
+  territory_settings: {
     label: "Territory Settings",
     path: "/setup/Territory2Settings/home",
   },
-  Update_Reminders: {
+  update_reminders: {
     label: "Update Reminders",
     path: "/setup/OpportunityUpdateReminders/home",
   },
-  CollapseSalesforce_Files: {
-    label: "CollapseSalesforce Files",
-  },
-  Asset_Files: {
+  asset_files: {
     label: "Asset Files",
     path: "/setup/ContentAssets/home",
   },
-  Content_Deliveries_and_Public_Links: {
+  content_deliveries_and_public_links: {
     label: "Content Deliveries and Public Links",
     path: "/setup/ContentDistribution/home",
   },
-  Files_Connect: {
+  files_connect: {
     label: "Files Connect",
     path: "/setup/ContentHub/home",
   },
-  General_Settings: {
+  general_settings: {
     label: "General Settings",
     path: "/setup/FilesGeneralSettings/home",
   },
-  Regenerate_Previews: {
+  regenerate_previews: {
     label: "Regenerate Previews",
     path: "/setup/RegeneratePreviews/home",
   },
-  Salesforce_CRM_Content: {
+  salesforce_crm_content: {
     label: "Salesforce CRM Content",
     path: "/setup/SalesforceCRMContent/home",
   },
-  CollapseSalesforce_IoT: {
-    label: "CollapseSalesforce IoT",
-  },
-  Get_Started: {
+  get_started: {
     label: "Get Started",
     path: "/setup/IoTGettingStarted/home",
   },
-  CollapseScheduled_Reminders: {
-    label: "CollapseScheduled Reminders",
-  },
-  Scheduled_Reminder_Settings: {
+  scheduled_reminder_settings: {
     label: "Scheduled Reminder Settings",
     path: "/setup/ReminderSettings/home",
   },
-  CollapseService: {
-    label: "CollapseService",
-  },
-  CollapseCall_Center: {
-    label: "CollapseCall Center",
-  },
-  Call_Centers: {
+  call_centers: {
     label: "Call Centers",
     path: "/setup/CallCenters/home",
   },
-  Directory_Numbers: {
+  directory_numbers: {
     label: "Directory Numbers",
     path: "/setup/AdditionalDirectoryNumbers/home",
   },
-  Softphone_Layouts: {
+  softphone_layouts: {
     label: "Softphone Layouts",
     path: "/setup/SoftphoneLayouts/home",
   },
-  Case_Assignment_Rules: {
+  case_assignment_rules: {
     label: "Case Assignment Rules",
     path: "/setup/CaseRules/home",
   },
-  "Case_Auto-Response_Rules": {
+  "case_auto-response_rules": {
     label: "Case Auto-Response Rules",
     path: "/setup/CaseResponses/home",
   },
-  Case_Comment_Triggers: {
+  case_comment_triggers: {
     label: "Case Comment Triggers",
     path: "/setup/CaseCommentTriggers/home",
   },
-  Case_Merge: {
+  case_merge: {
     label: "Case Merge",
     path: "/setup/CaseMerge/home",
   },
-  CollapseCase_Teams: {
-    label: "CollapseCase Teams",
-  },
-  Case_Team_Roles: {
+  case_team_roles: {
     label: "Case Team Roles",
     path: "/setup/CaseTeamRoles/home",
   },
-  Predefined_Case_Teams: {
+  predefined_case_teams: {
     label: "Predefined Case Teams",
     path: "/setup/CaseTeamTemplates/home",
   },
-  CollapseChat: {
-    label: "CollapseChat",
-  },
-  Chat_Settings: {
+  chat_settings: {
     label: "Chat Settings",
     path: "/setup/LiveAgentSettings/home",
   },
-  Contact_Roles_on_Cases: {
+  contact_roles_on_cases: {
     label: "Contact Roles on Cases",
     path: "/setup/CaseContactRoles/home",
   },
-  Conversation_Intelligence_Rules: {
+  conversation_intelligence_rules: {
     label: "Conversation Intelligence Rules",
     path: "/setup/CiSignals/home",
   },
-  Customer_Contact_Requests: {
+  customer_contact_requests: {
     label: "Customer Contact Requests",
     path: "/setup/ContactRequestFlows/home",
   },
-  Customer_Service_Incident_Management: {
+  customer_service_incident_management: {
     label: "Customer Service Incident Management",
     path: "/setup/IncidentManagement/home",
   },
-  "Email-to-Case": {
+  "email-to-case": {
     label: "Email-to-Case",
     path: "/setup/EmailToCase/home",
   },
-  CollapseEmbedded_Service: {
-    label: "CollapseEmbedded Service",
-  },
-  Channel_Menu: {
+  channel_menu: {
     label: "Channel Menu",
     path: "/setup/ChannelMenuDeployments/home",
   },
-  Embedded_Service_Deployments: {
+  embedded_service_deployments: {
     label: "Embedded Service Deployments",
     path: "/setup/EmbeddedServiceDeployments/home",
   },
-  "Messaging_for_In-App_and_Web_User_Verification": {
+  "messaging_for_in-app_and_web_user_verification": {
     label: "Messaging for In-App and Web User Verification",
     path: "/setup/Authorization/home",
   },
-  CollapseEntitlement_Management: {
-    label: "CollapseEntitlement Management",
-  },
-  Entitlement_Processes: {
+  entitlement_processes: {
     label: "Entitlement Processes",
     path: "/setup/DataManagementManageSlaProcess/home",
   },
-  Entitlement_Settings: {
+  entitlement_settings: {
     label: "Entitlement Settings",
     path: "/setup/EntitlementSettings/home",
   },
-  Entitlement_Templates: {
+  entitlement_templates: {
     label: "Entitlement Templates",
     path: "/setup/EntitlementTemplates/home",
   },
-  Milestones: {
+  milestones: {
     label: "Milestones",
     path: "/setup/MilestoneTypes/home",
   },
-  Escalation_Rules: {
+  escalation_rules: {
     label: "Escalation Rules",
     path: "/setup/CaseEscRules/home",
   },
-  Feed_Filters: {
+  feed_filters: {
     label: "Feed Filters",
     path: "/setup/FeedFilterDefinitions/home",
   },
-  CollapseField_Service: {
-    label: "CollapseField Service",
-  },
-  CollapseField_Service_Mobile: {
-    label: "CollapseField Service Mobile",
-  },
-  Field_Service_Mobile_App_Builder: {
+  field_service_mobile_app_builder: {
     label: "Field Service Mobile App Builder",
     path: "/setup/FieldServiceAppBuilder/home",
   },
-  Field_Service_Settings: {
+  field_service_settings: {
     label: "Field Service Settings",
     path: "/setup/FieldServiceSettings/home",
   },
-  Macro_Settings: {
+  macro_settings: {
     label: "Macro Settings",
     path: "/setup/MacroSettings/home",
   },
-  CollapseMessaging: {
-    label: "CollapseMessaging",
-  },
-  Messaging_Components: {
+  messaging_components: {
     label: "Messaging Components",
     path: "/setup/ConversationMessageDefinitions/home",
   },
-  Messaging_Settings: {
+  messaging_settings: {
     label: "Messaging Settings",
     path: "/setup/LiveMessageSetup/home",
   },
-  CollapseSensitive_Data_Rules: {
-    label: "CollapseSensitive Data Rules",
-  },
-  Sensitive_Data_Rules_for_Enhanced_Channels: {
+  sensitive_data_rules_for_enhanced_channels: {
     label: "Sensitive Data Rules for Enhanced Channels",
     path: "/setup/MessagingSensitiveDataRulesEnhanced/home",
   },
-  "CollapseOmni-Channel": {
-    label: "CollapseOmni-Channel",
-  },
-  "Omni-Channel_Settings": {
+  "omni-channel_settings": {
     label: "Omni-Channel Settings",
     path: "/setup/OmniChannelSettings/home",
   },
-  Support_Processes: {
+  support_processes: {
     label: "Support Processes",
     path: "/setup/CaseProcess/home",
   },
-  Support_Settings: {
+  support_settings: {
     label: "Support Settings",
     path: "/setup/CaseSettings/home",
   },
-  Swarming: {
+  swarming: {
     label: "Swarming",
     path: "/setup/CaseSwarming/home",
   },
-  "Web-to-Case": {
+  "web-to-case": {
     label: "Web-to-Case",
     path: "/setup/CaseWebtocase/home",
   },
-  "Web-to-Case_HTML_Generator": {
+  "web-to-case_html_generator": {
     label: "Web-to-Case HTML Generator",
     path: "/setup/CaseWebToCaseHtmlGenerator/home",
   },
-  CollapseSurvey: {
-    label: "CollapseSurvey",
-  },
-  Survey_Settings: {
+  survey_settings: {
     label: "Survey Settings",
     path: "/setup/SurveySettings/home",
   },
-  CollapseTopics: {
-    label: "CollapseTopics",
-  },
-  Topic_Assignment_Triggers: {
+  topic_assignment_triggers: {
     label: "Topic Assignment Triggers",
     path: "/setup/TopicAssigmentTriggers/home",
   },
-  Topic_Triggers: {
+  topic_triggers: {
     label: "Topic Triggers",
     path: "/setup/TopicTriggers/home",
   },
-  Topics_for_Objects: {
+  topics_for_objects: {
     label: "Topics for Objects",
     path: "/setup/TopicRecords/home",
   },
-  CollapseSlack: {
-    label: "CollapseSlack",
-  },
-  Slack_Apps_Setup: {
+  slack_apps_setup: {
     label: "Slack Apps Setup",
     path: "/setup/SlackSetupAssistant/home",
   },
-  CollapseWorkflow_Services: {
-    label: "CollapseWorkflow Services",
-  },
-  Batch_Management: {
+  batch_management: {
     label: "Batch Management",
     path: "/setup/BatchProcessJobDefinition/home",
   },
-  Monitor_Workflow_Services: {
+  monitor_workflow_services: {
     label: "Monitor Workflow Services",
     path: "/setup/MonitorWorkflowServices/home",
   },
-  CollapseMuleSoft: {
-    label: "CollapseMuleSoft",
-  },
-  Services: {
+  services: {
     label: "Services",
     path: "/setup/MulesoftServices/home",
   },
-  CollapseEinstein: {
-    label: "CollapseEinstein",
-  },
-  CollapseEinstein_Assessors: {
-    label: "CollapseEinstein Assessors",
-  },
-  Einstein_Bots_Assessor: {
+  einstein_bots_assessor: {
     label: "Einstein Bots Assessor",
     path: "/setup/EinsteinBotsReadinessCheck/home",
   },
-  Einstein_Conversation_Insights_Assessor: {
+  einstein_conversation_insights_assessor: {
     label: "Einstein Conversation Insights Assessor",
     path: "/setup/EinsteinCIReadinessCheck/home",
   },
-  Sales_Cloud_Einstein_Assessor: {
+  sales_cloud_einstein_assessor: {
     label: "Sales Cloud Einstein Assessor",
     path: "/setup/SalesCloudEinsteinReadinessCheck/home",
   },
-  Service_Cloud_Einstein_Assessor: {
+  service_cloud_einstein_assessor: {
     label: "Service Cloud Einstein Assessor",
     path: "/setup/ServiceCloudEinsteinReadinessCheck/home",
   },
-  CollapseEinstein_Platform: {
-    label: "CollapseEinstein Platform",
-  },
-  Einstein_Bots: {
+  einstein_bots: {
     label: "Einstein Bots",
     path: "/setup/EinsteinBots/home",
   },
-  "Einstein.ai": {
+  "einstein.ai": {
     label: "Einstein.ai",
     path: "/setup/EinsteinKeyManagement/home",
   },
-  CollapseEinstein_Sales: {
-    label: "CollapseEinstein Sales",
-  },
-  ExpandEinstein_Activity_Capture: {
-    label: "ExpandEinstein Activity Capture",
-  },
-  CollapseEinstein_Search: {
-    label: "CollapseEinstein Search",
-  },
-  "Objects_to_Always_Search_(Beta)": {
+  "objects_to_always_search_(beta)": {
     label: "Objects to Always Search (Beta)",
     path: "/setup/SearchScope/home",
   },
-  Promoted_Search_Terms: {
+  promoted_search_terms: {
     label: "Promoted Search Terms",
     path: "/setup/SearchPromotionRulesManagementPage/home",
   },
-  Search_Layouts: {
+  search_layouts: {
     label: "Search Layouts",
     path: "/setup/EinsteinSearchLayouts/home",
   },
-  Search_Manager: {
+  search_manager: {
     label: "Search Manager",
     path: "/setup/SearchConfiguration/home",
   },
-  Synonyms: {
+  synonyms: {
     label: "Synonyms",
     path: "/setup/ManageSynonyms/home",
   },
-  CollapseUnified_Messaging: {
-    label: "CollapseUnified Messaging",
-  },
-  CollapseBranded_Domain: {
-    label: "CollapseBranded Domain",
-  },
-  URL_Shortening_Domain: {
+  url_shortening_domain: {
     label: "URL Shortening Domain",
     path: "/setup/E360URLShorteningDomain/home",
   },
-  CollapseObjects_and_Fields: {
-    label: "CollapseObjects and Fields",
-  },
-  Object_Manager: {
+  object_manager: {
     label: "Object Manager",
     path: "/setup/ObjectManager/home",
   },
-  Picklist_Value_Sets: {
+  picklist_value_sets: {
     label: "Picklist Value Sets",
     path: "/setup/Picklists/home",
   },
-  Schema_Builder: {
+  schema_builder: {
     label: "Schema Builder",
     path: "/setup/SchemaBuilder/home",
   },
-  CollapseEvents: {
-    label: "CollapseEvents",
-  },
-  Event_Manager: {
+  event_manager: {
     label: "Event Manager",
     path: "/setup/EventManager/home",
   },
-  Event_Relays: {
+  event_relays: {
     label: "Event Relays",
     path: "/setup/EventRelay/home",
   },
-  CollapseProcess_Automation: {
-    label: "CollapseProcess Automation",
-  },
-  Approval_Processes: {
+  approval_processes: {
     label: "Approval Processes",
     path: "/setup/ApprovalProcesses/home",
   },
-  "Automation_Home_(Beta)": {
+  "automation_home_(beta)": {
     label: "Automation Home (Beta)",
     path: "/setup/ProcessHome/home",
   },
-  Flows: {
+  flows: {
     label: "Flows",
     path: "/setup/Flows/home",
   },
-  Migrate_to_Flow: {
+  migrate_to_flow: {
     label: "Migrate to Flow",
     path: "/setup/MigrateToFlowTool/home",
   },
-  Next_Best_Action: {
+  next_best_action: {
     label: "Next Best Action",
     path: "/setup/NextBestAction/home",
   },
-  Paused_And_Failed_Flow_Interviews: {
+  paused_and_failed_flow_interviews: {
     label: "Paused And Failed Flow Interviews",
     path: "/setup/Pausedflows/home",
   },
-  Post_Templates: {
+  post_templates: {
     label: "Post Templates",
     path: "/setup/FeedTemplates/home",
   },
-  Process_Automation_Settings: {
+  process_automation_settings: {
     label: "Process Automation Settings",
     path: "/setup/WorkflowSettings/home",
   },
-  Process_Builder: {
+  process_builder: {
     label: "Process Builder",
     path: "/setup/ProcessAutomation/home",
   },
-  CollapseWorkflow_Actions: {
-    label: "CollapseWorkflow Actions",
-  },
-  Email_Alerts: {
+  email_alerts: {
     label: "Email Alerts",
     path: "/setup/WorkflowEmails/home",
   },
-  Field_Updates: {
+  field_updates: {
     label: "Field Updates",
     path: "/setup/WorkflowFieldUpdates/home",
   },
-  Outbound_Messages: {
+  outbound_messages: {
     label: "Outbound Messages",
     path: "/setup/WorkflowOmStatus/home",
   },
-  Send_Actions: {
+  send_actions: {
     label: "Send Actions",
     path: "/setup/SendAction/home",
   },
-  Tasks: {
+  tasks: {
     label: "Tasks",
     path: "/setup/WorkflowTasks/home",
   },
-  Workflow_Rules: {
+  workflow_rules: {
     label: "Workflow Rules",
     path: "/setup/WorkflowRules/home",
   },
-  CollapseUser_Interface: {
-    label: "CollapseUser Interface",
-  },
-  Action_Link_Templates: {
+  action_link_templates: {
     label: "Action Link Templates",
     path: "/setup/ActionLinkGroupTemplates/home",
   },
-  "Actions_&_Recommendations": {
+  "actions_&_recommendations": {
     label: "Actions & Recommendations",
     path: "/setup/GuidedActions/home",
   },
-  App_Menu: {
+  app_menu: {
     label: "App Menu",
     path: "/setup/AppMenu/home",
   },
-  Custom_Labels: {
+  custom_labels: {
     label: "Custom Labels",
     path: "/setup/ExternalStrings/home",
   },
-  Density_Settings: {
+  density_settings: {
     label: "Density Settings",
     path: "/setup/DensitySetup/home",
   },
-  CollapseGlobal_Actions: {
-    label: "CollapseGlobal Actions",
-  },
-  Global_Actions: {
+  global_actions: {
     label: "Global Actions",
     path: "/setup/GlobalActions/home",
   },
-  Publisher_Layouts: {
+  publisher_layouts: {
     label: "Publisher Layouts",
     path: "/setup/GlobalPublisherLayouts/home",
   },
-  Lightning_App_Builder: {
+  lightning_app_builder: {
     label: "Lightning App Builder",
     path: "/setup/FlexiPageList/home",
   },
-  Lightning_Extension: {
+  lightning_extension: {
     label: "Lightning Extension",
     path: "/setup/LightningExtension/home",
   },
-  Loaded_Console_Tab_Limit: {
+  loaded_console_tab_limit: {
     label: "Loaded Console Tab Limit",
     path: "/setup/ConsoleMaxTabCacheSetup/home",
   },
-  Path_Settings: {
+  path_settings: {
     label: "Path Settings",
     path: "/setup/PathAssistantSetupHome/home",
   },
-  Quick_Text_Settings: {
+  quick_text_settings: {
     label: "Quick Text Settings",
     path: "/setup/LightningQuickTextSettings/home",
   },
-  Record_Page_Settings: {
+  record_page_settings: {
     label: "Record Page Settings",
     path: "/setup/SimpleRecordHome/home",
   },
-  Rename_Tabs_and_Labels: {
+  rename_tabs_and_labels: {
     label: "Rename Tabs and Labels",
     path: "/setup/RenameTab/home",
   },
-  CollapseSites_and_Domains: {
-    label: "CollapseSites and Domains",
-  },
-  Custom_URLs: {
+  custom_urls: {
     label: "Custom URLs",
     path: "/setup/DomainSites/home",
   },
-  Domains: {
+  domains: {
     label: "Domains",
     path: "/setup/DomainNames/home",
   },
-  Sites: {
+  sites: {
     label: "Sites",
     path: "/setup/CustomDomain/home",
   },
-  Tabs: {
+  tabs: {
     label: "Tabs",
     path: "/setup/CustomTabs/home",
   },
-  Themes_and_Branding: {
+  themes_and_branding: {
     label: "Themes and Branding",
     path: "/setup/ThemingAndBranding/home",
   },
-  CollapseTranslation_Workbench: {
-    label: "CollapseTranslation Workbench",
-  },
-  Export: {
+  export: {
     label: "Export",
     path: "/setup/LabelWorkbenchExport/home",
   },
-  Import: {
+  import: {
     label: "Import",
     path: "/setup/LabelWorkbenchImport/home",
   },
-  Override: {
+  override: {
     label: "Override",
     path: "/setup/LabelWorkbenchOverride/home",
   },
-  Translate: {
+  translate: {
     label: "Translate",
     path: "/setup/LabelWorkbenchTranslate/home",
   },
-  Translation_Language_Settings: {
+  translation_language_settings: {
     label: "Translation Language Settings",
     path: "/setup/LabelWorkbenchSetup/home",
   },
-  User_Interface: {
+  user_interface: {
     label: "User Interface",
     path: "/setup/UserInterfaceUI/home",
   },
-  CollapseCustom_Code: {
-    label: "CollapseCustom Code",
-  },
-  Apex_Classes: {
+  apex_classes: {
     label: "Apex Classes",
     path: "/setup/ApexClasses/home",
   },
-  Apex_Settings: {
+  apex_settings: {
     label: "Apex Settings",
     path: "/setup/ApexSettings/home",
   },
-  Apex_Test_Execution: {
+  apex_test_execution: {
     label: "Apex Test Execution",
     path: "/setup/ApexTestQueue/home",
   },
-  Apex_Test_History: {
+  apex_test_history: {
     label: "Apex Test History",
     path: "/setup/ApexTestHistory/home",
   },
-  Apex_Triggers: {
+  apex_triggers: {
     label: "Apex Triggers",
     path: "/setup/ApexTriggers/home",
   },
-  Canvas_App_Previewer: {
+  canvas_app_previewer: {
     label: "Canvas App Previewer",
     path: "/setup/CanvasPreviewerUi/home",
   },
-  Custom_Metadata_Types: {
+  custom_metadata_types: {
     label: "Custom Metadata Types",
     path: "/setup/CustomMetadata/home",
   },
-  Custom_Permissions: {
+  custom_permissions: {
     label: "Custom Permissions",
     path: "/setup/CustomPermissions/home",
   },
-  Custom_Settings: {
+  custom_settings: {
     label: "Custom Settings",
     path: "/setup/CustomSettings/home",
   },
-  DataWeave_Resources: {
+  dataweave_resources: {
     label: "DataWeave Resources",
     path: "/setup/DataWeaveResources/home",
   },
-  Email_Services: {
+  email_services: {
     label: "Email Services",
     path: "/setup/EmailToApexFunction/home",
   },
-  CollapseLightning_Components: {
-    label: "CollapseLightning Components",
-  },
-  Debug_Mode: {
+  debug_mode: {
     label: "Debug Mode",
     path: "/setup/UserDebugModeSetup/home",
   },
-  Lightning_Components: {
+  lightning_components: {
     label: "Lightning Components",
     path: "/setup/LightningComponentBundles/home",
   },
-  Platform_Cache: {
+  platform_cache: {
     label: "Platform Cache",
     path: "/setup/PlatformCache/home",
   },
-  Remote_Access: {
+  remote_access: {
     label: "Remote Access",
     path: "/setup/RemoteAccess/home",
   },
-  Static_Resources: {
+  static_resources: {
     label: "Static Resources",
     path: "/setup/StaticResources/home",
   },
-  Tools: {
+  tools: {
     label: "Tools",
     path: "/setup/ClientDevTools/home",
   },
-  Visualforce_Components: {
+  visualforce_components: {
     label: "Visualforce Components",
     path: "/setup/ApexComponents/home",
   },
-  Visualforce_Pages: {
+  visualforce_pages: {
     label: "Visualforce Pages",
     path: "/setup/ApexPages/home",
   },
-  CollapseDevelopment: {
-    label: "CollapseDevelopment",
-  },
-  Dev_Hub: {
+  dev_hub: {
     label: "Dev Hub",
     path: "/setup/DevHub/home",
   },
-  DevOps_Center: {
+  devops_center: {
     label: "DevOps Center",
     path: "/setup/DevOpsCenterSetup/home",
   },
-  Einstein_for_Developers: {
+  einstein_for_developers: {
     label: "Einstein for Developers",
     path: "/setup/EinsteinForDevelopers/home",
   },
-  Scratch_Orgs: {
+  scratch_orgs: {
     label: "Scratch Orgs",
     path: "/setup/ShapeGrantAccess/home",
   },
-  CollapseScale: {
-    label: "CollapseScale",
-  },
-  CollapseScale_Test: {
-    label: "CollapseScale Test",
-  },
-  Performance_Assistant: {
+  performance_assistant: {
     label: "Performance Assistant",
     path: "/setup/PerformanceAssistant/home",
   },
-  CollapseEnvironments: {
-    label: "CollapseEnvironments",
-  },
-  CollapseDeploy: {
-    label: "CollapseDeploy",
-  },
-  Deployment_Settings: {
+  deployment_settings: {
     label: "Deployment Settings",
     path: "/setup/DeploymentSettings/home",
   },
-  Deployment_Status: {
+  deployment_status: {
     label: "Deployment Status",
     path: "/setup/DeployStatus/home",
   },
-  CollapseJobs: {
-    label: "CollapseJobs",
-  },
-  Apex_Flex_Queue: {
+  apex_flex_queue: {
     label: "Apex Flex Queue",
     path: "/setup/ApexFlexQueue/home",
   },
-  Apex_Jobs: {
+  apex_jobs: {
     label: "Apex Jobs",
     path: "/setup/AsyncApexJobs/home",
   },
-  Background_Jobs: {
+  background_jobs: {
     label: "Background Jobs",
     path: "/setup/ParallelJobsStatus/home",
   },
-  Bulk_Data_Load_Jobs: {
+  bulk_data_load_jobs: {
     label: "Bulk Data Load Jobs",
     path: "/setup/AsyncApiJobStatus/home",
   },
-  Scheduled_Jobs: {
+  scheduled_jobs: {
     label: "Scheduled Jobs",
     path: "/setup/ScheduledJobs/home",
   },
-  CollapseLogs: {
-    label: "CollapseLogs",
-  },
-  Debug_Logs: {
+  debug_logs: {
     label: "Debug Logs",
     path: "/setup/ApexDebugLogs/home",
   },
-  Email_Log_Files: {
+  email_log_files: {
     label: "Email Log Files",
     path: "/setup/EmailLogFiles/home",
   },
-  CollapseMonitoring: {
-    label: "CollapseMonitoring",
-  },
-  API_Usage_Notifications: {
+  api_usage_notifications: {
     label: "API Usage Notifications",
     path: "/setup/MonitoringRateLimitingNotification/home",
   },
-  Case_Escalations: {
+  case_escalations: {
     label: "Case Escalations",
     path: "/setup/DataManagementManageCaseEscalation/home",
   },
-  Email_Snapshots: {
+  email_snapshots: {
     label: "Email Snapshots",
     path: "/setup/EmailCapture/home",
   },
-  "Time-Based_Workflow": {
+  "time-based_workflow": {
     label: "Time-Based Workflow",
     path: "/setup/DataManagementManageWorkflowQueue/home",
   },
-  System_Overview: {
+  system_overview: {
     label: "System Overview",
     path: "/setup/SystemOverview/home",
   },
-  CollapseUser_Engagement: {
-    label: "CollapseUser Engagement",
-  },
-  Adoption_Assistance: {
+  adoption_assistance: {
     label: "Adoption Assistance",
     path: "/setup/AdoptionAssistance/home",
   },
-  Guidance_Center: {
+  guidance_center: {
     label: "Guidance Center",
     path: "/setup/LearningSetup/home",
   },
-  Help_Menu: {
+  help_menu: {
     label: "Help Menu",
     path: "/setup/HelpMenu/home",
   },
-  "In-App_Guidance": {
+  "in-app_guidance": {
     label: "In-App Guidance",
     path: "/setup/Prompts/home",
   },
-  CollapseIntegrations: {
-    label: "CollapseIntegrations",
-  },
-  API: {
+  api: {
     label: "API",
     path: "/setup/WebServices/home",
   },
-  Change_Data_Capture: {
+  change_data_capture: {
     label: "Change Data Capture",
     path: "/setup/CdcObjectEnablement/home",
   },
-  Data_Import_Wizard: {
+  data_import_wizard: {
     label: "Data Import Wizard",
     path: "/setup/DataManagementDataImporter/home",
   },
-  Data_Loader: {
+  data_loader: {
     label: "Data Loader",
     path: "/setup/DataLoader/home",
   },
-  "Dataloader.io": {
+  "dataloader.io": {
     label: "Dataloader.io",
     path: "/setup/DataLoaderIo/home",
   },
-  External_Data_Sources: {
+  external_data_sources: {
     label: "External Data Sources",
     path: "/setup/ExternalDataSource/home",
   },
-  External_Objects: {
+  external_objects: {
     label: "External Objects",
     path: "/setup/ExternalObjects/home",
   },
-  External_Services: {
+  external_services: {
     label: "External Services",
     path: "/setup/ExternalServices/home",
   },
-  Platform_Events: {
+  platform_events: {
     label: "Platform Events",
     path: "/setup/EventObjects/home",
   },
-  Teams_Integration: {
+  teams_integration: {
     label: "Teams Integration",
     path: "/setup/MicrosoftTeamsIntegration/home",
   },
-  CollapseNotification_Builder: {
-    label: "CollapseNotification Builder",
-  },
-  Custom_Notifications: {
+  custom_notifications: {
     label: "Custom Notifications",
     path: "/setup/CustomNotifications/home",
   },
-  Notification_Delivery_Settings: {
+  notification_delivery_settings: {
     label: "Notification Delivery Settings",
     path: "/setup/NotificationTypesManager/home",
   },
-  CollapseOffline: {
-    label: "CollapseOffline",
-  },
-  Briefcase_Builder: {
+  briefcase_builder: {
     label: "Briefcase Builder",
     path: "/setup/Briefcase/home",
   },
-  CollapseCompany_Settings: {
-    label: "CollapseCompany Settings",
-  },
-  Business_Hours: {
+  business_hours: {
     label: "Business Hours",
     path: "/setup/BusinessHours/home",
   },
-  CollapseCalendar_Settings: {
-    label: "CollapseCalendar Settings",
-  },
-  Public_Calendars_and_Resources: {
+  public_calendars_and_resources: {
     label: "Public Calendars and Resources",
     path: "/setup/Calendars/home",
   },
-  Company_Information: {
+  company_information: {
     label: "Company Information",
     path: "/setup/CompanyProfileInfo/home",
   },
-  Data_Protection_and_Privacy: {
+  data_protection_and_privacy: {
     label: "Data Protection and Privacy",
     path: "/setup/ConsentManagement/home",
   },
-  Fiscal_Year: {
+  fiscal_year: {
     label: "Fiscal Year",
     path: "/setup/ForecastFiscalYear/home",
   },
-  Holidays: {
+  holidays: {
     label: "Holidays",
     path: "/setup/Holiday/home",
   },
-  Language_Settings: {
+  language_settings: {
     label: "Language Settings",
     path: "/setup/LanguageSettings/home",
   },
-  My_Domain: {
+  my_domain: {
     label: "My Domain",
     path: "/setup/OrgDomain/home",
   },
-  CollapseData_Classification: {
-    label: "CollapseData Classification",
-  },
-  Data_Classification_Download: {
+  data_classification_download: {
     label: "Data Classification Download",
     path: "/setup/DataClassificationDownload/home",
   },
-  Data_Classification_Settings: {
+  data_classification_settings: {
     label: "Data Classification Settings",
     path: "/setup/DataClassificationSettings/home",
   },
-  Data_Classification_Upload: {
+  data_classification_upload: {
     label: "Data Classification Upload",
     path: "/setup/DataClassificationUpload/home",
   },
-  CollapsePrivacy_Center: {
-    label: "CollapsePrivacy Center",
-  },
-  Consent_Event_Stream: {
+  consent_event_stream: {
     label: "Consent Event Stream",
     path: "/setup/ConsentEventStream/home",
   },
-  CollapseIdentity: {
-    label: "CollapseIdentity",
-  },
-  "Auth._Providers": {
+  "auth._providers": {
     label: "Auth. Providers",
     path: "/setup/AuthProviders/home",
   },
-  Identity_Connect: {
+  identity_connect: {
     label: "Identity Connect",
     path: "/setup/IdentityConnect/home",
   },
-  Identity_Provider: {
+  identity_provider: {
     label: "Identity Provider",
     path: "/setup/IdpPage/home",
   },
-  Identity_Provider_Event_Log: {
+  identity_provider_event_log: {
     label: "Identity Provider Event Log",
     path: "/setup/IdpErrorLog/home",
   },
-  Identity_Verification: {
+  identity_verification: {
     label: "Identity Verification",
     path: "/setup/IdentityVerification/home",
   },
-  Identity_Verification_History: {
+  identity_verification_history: {
     label: "Identity Verification History",
     path: "/setup/VerificationHistory/home",
   },
-  Login_Flows: {
+  login_flows: {
     label: "Login Flows",
     path: "/setup/LoginFlow/home",
   },
-  Login_History: {
+  login_history: {
     label: "Login History",
     path: "/setup/OrgLoginHistory/home",
   },
-  OAuth_Custom_Scopes: {
+  oauth_custom_scopes: {
     label: "OAuth Custom Scopes",
     path: "/setup/OauthCustomScope/home",
   },
-  OAuth_and_OpenID_Connect_Settings: {
+  oauth_and_openid_connect_settings: {
     label: "OAuth and OpenID Connect Settings",
     path: "/setup/OauthOidcSettings/home",
   },
-  "Single_Sign-On_Settings": {
+  "single_sign-on_settings": {
     label: "Single Sign-On Settings",
     path: "/setup/SingleSignOn/home",
   },
-  Token_Exchange_Handlers: {
+  token_exchange_handlers: {
     label: "Token Exchange Handlers",
     path: "/setup/OauthTokenExchangeHandlers/home",
   },
-  CollapseSecurity: {
-    label: "CollapseSecurity",
-  },
-  Activations: {
+  activations: {
     label: "Activations",
     path: "/setup/ActivatedIpAddressAndClientBrowsersPage/home",
   },
-  CORS: {
+  cors: {
     label: "CORS",
     path: "/setup/CorsWhitelistEntries/home",
   },
-  CSP_Violations: {
+  csp_violations: {
     label: "CSP Violations",
     path: "/setup/ContentSecurityPolicyViolations/home",
   },
-  Certificate_and_Key_Management: {
+  certificate_and_key_management: {
     label: "Certificate and Key Management",
     path: "/setup/CertificatesAndKeysManagement/home",
   },
-  Delegated_Administration: {
+  delegated_administration: {
     label: "Delegated Administration",
     path: "/setup/DelegateGroups/home",
   },
-  CollapseEvent_Monitoring: {
-    label: "CollapseEvent Monitoring",
-  },
-  "Event_Log_File_Browser_(Beta)": {
+  "event_log_file_browser_(beta)": {
     label: "Event Log File Browser (Beta)",
     path: "/setup/ElfBrowser/home",
   },
-  Event_Monitoring_Settings: {
+  event_monitoring_settings: {
     label: "Event Monitoring Settings",
     path: "/setup/EventMonitoringSetup/home",
   },
-  Transaction_Security_Policies: {
+  transaction_security_policies: {
     label: "Transaction Security Policies",
     path: "/setup/TransactionSecurityNew/home",
   },
-  Expire_All_Passwords: {
+  expire_all_passwords: {
     label: "Expire All Passwords",
     path: "/setup/SecurityExpirePasswords/home",
   },
-  Field_Accessibility: {
+  field_accessibility: {
     label: "Field Accessibility",
     path: "/setup/FieldAccessibility/home",
   },
-  File_Upload_and_Download_Security: {
+  file_upload_and_download_security: {
     label: "File Upload and Download Security",
     path: "/setup/FileTypeSetting/home",
   },
-  Guest_User_Sharing_Rule_Access_Report: {
+  guest_user_sharing_rule_access_report: {
     label: "Guest User Sharing Rule Access Report",
     path: "/setup/GuestUserAccessVerification/home",
   },
-  Health_Check: {
+  health_check: {
     label: "Health Check",
     path: "/setup/HealthCheck/home",
   },
-  Login_Access_Policies: {
+  login_access_policies: {
     label: "Login Access Policies",
     path: "/setup/LoginAccessPolicies/home",
   },
-  Named_Credentials: {
+  named_credentials: {
     label: "Named Credentials",
     path: "/setup/NamedCredential/home",
   },
-  Network_Access: {
+  network_access: {
     label: "Network Access",
     path: "/setup/NetworkAccess/home",
   },
-  Password_Policies: {
+  password_policies: {
     label: "Password Policies",
     path: "/setup/SecurityPolicies/home",
   },
-  CollapsePlatform_Encryption: {
-    label: "CollapsePlatform Encryption",
-  },
-  Encryption_Settings: {
+  encryption_settings: {
     label: "Encryption Settings",
     path: "/setup/EncryptionAdvancedSettings/home",
   },
-  Key_Management: {
+  key_management: {
     label: "Key Management",
     path: "/setup/PlatformEncryptionKeyManagement/home",
   },
-  Private_Connect: {
+  private_connect: {
     label: "Private Connect",
     path: "/setup/PrivateConnect/home",
   },
-  Remote_Site_Settings: {
+  remote_site_settings: {
     label: "Remote Site Settings",
     path: "/setup/SecurityRemoteProxy/home",
   },
-  Session_Management: {
+  session_management: {
     label: "Session Management",
     path: "/setup/SessionManagementPage/home",
   },
-  Session_Settings: {
+  session_settings: {
     label: "Session Settings",
     path: "/setup/SecuritySession/home",
   },
-  Sharing_Settings: {
+  sharing_settings: {
     label: "Sharing Settings",
     path: "/setup/SecuritySharing/home",
   },
-  Trusted_URLs: {
+  trusted_urls: {
     label: "Trusted URLs",
     path: "/setup/SecurityCspTrustedSite/home",
   },
-  Trusted_URLs_for_Redirects: {
+  trusted_urls_for_redirects: {
     label: "Trusted URLs for Redirects",
     path: "/setup/SecurityRedirectWhitelistUrl/home",
   },
-  View_Setup_Audit_Trail: {
+  view_setup_audit_trail: {
     label: "View Setup Audit Trail",
     path: "/setup/SecurityEvents/home",
   },

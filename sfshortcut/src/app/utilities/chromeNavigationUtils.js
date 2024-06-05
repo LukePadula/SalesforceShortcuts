@@ -1,10 +1,9 @@
 import { setUrl } from "../../slices/navigationSlice";
-import { useDispatch } from "react-redux";
 import { store } from "../store";
 
-const navigateTab = (url, openInNewTab = false) => {
+const navigateTab = (url, createNewTab) => {
   if (chrome.storage) {
-    if (openInNewTab) {
+    if (createNewTab) {
       chrome.tabs.create({
         url,
       });
@@ -18,25 +17,33 @@ const navigateTab = (url, openInNewTab = false) => {
 };
 
 const navigateShortcut = (urlPath) => {
-  const currentUrl = getCurrentUrl();
+  const url = store.getState().navigation.url;
+  console.log(urlPath, "PATH");
+  if (validateCurrentUrl(url)) {
+    let breakIndex = url.indexOf(".com/");
+    let locationHost = url.substring(0, breakIndex + 4);
 
-  if (validateCurrentUrl(currentUrl)) {
-    let breakIndex = currentUrl.indexOf(".com/");
-    let locationHost = currentUrl.substring(0, breakIndex + 4);
+    const newURL = `${locationHost}/lightning${urlPath}`;
+    console.log(newURL, "NEW URL");
+    // GET SETTINGS FOR NEW TAB
 
-    navigateTab(`${locationHost}${urlPath}`);
+    navigateTab(
+      `${locationHost}/lightning${urlPath}`,
+      store.getState().settings.settings.openShortcutsInNewTab
+    );
   }
 };
 
-const getCurrentUrl = (callback) => {
-  if (chrome.tabs) {
-    chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-      const currentUrl = tabs[0].url;
-      callback(currentUrl); // Pass the URL to the callback function
-    });
-  }
-};
+async function getCurrentTab() {
+  let tabs = await chrome.tabs.query({ active: true });
 
+  if (tabs.length > 0) {
+    return tabs[0].url;
+  } else {
+    console.log("No active tab found.");
+    return null;
+  }
+}
 const validateCurrentUrl = (url) => {
   return (
     url &&
@@ -44,11 +51,11 @@ const validateCurrentUrl = (url) => {
   );
 };
 
-const validateUrl = () => {
-  const url = getCurrentUrl();
-  console.log(url);
-  if (!validateCurrentUrl(url)) {
+const validateUrl = async () => {
+  const url = await getCurrentTab();
+  if (validateCurrentUrl(url)) {
     store.dispatch(setUrl(url));
+    return true;
   }
 };
 

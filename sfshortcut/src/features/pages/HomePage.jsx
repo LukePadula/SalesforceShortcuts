@@ -4,14 +4,20 @@ import { useSelector } from "react-redux";
 import { selectFavorites, selectShortcuts } from "../../slices/shortcutSlice";
 import ShortcutFavouriteItem from "../shortcuts/ShortcutFavouriteItem";
 import ActionBlocked from "../ActionBlocked";
+import { selectCurrentUrl } from "../../slices/navigationSlice";
 
 export default function HomePage() {
   const favourites = useSelector(selectFavorites);
   const shortcuts = useSelector(selectShortcuts);
+  const url = useSelector(selectCurrentUrl);
 
   let content;
 
-  if (favourites.length > 0) {
+  if (!url) {
+    content = <ActionBlocked type={"invalidUrl"} />;
+  } else if (!favourites.length > 0) {
+    content = <ActionBlocked type={"noFavourites"} />;
+  } else {
     content = (
       <div className="favourite-shortcut-container">
         {favourites.map((key) => (
@@ -21,8 +27,6 @@ export default function HomePage() {
         ))}
       </div>
     );
-  } else {
-    content = <ActionBlocked type={"noFavourites"} />;
   }
 
   return (

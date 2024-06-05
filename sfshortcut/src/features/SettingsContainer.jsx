@@ -1,29 +1,38 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setSettings, selectSettings } from "../slices/settingsSlice";
+import "./SettingsContainer.css";
+import CustomCheckbox from "./CustomCheckbox";
+import { resetFavourites } from "../app/utilities/chromeAPI";
 
 export default function SettingsContainer() {
+  const dispatch = useDispatch();
+  const userSettings = useSelector(selectSettings);
+
+  const updateSetting = (e) => {
+    dispatch(setSettings({ setting: e.target.id, value: e.target.checked }));
+  };
+
+  console.log(JSON.stringify(userSettings), "USER SETTINGS");
+
   return (
     <div className="settings-container">
-      <div className="settings-item">
-        <input
-          onChange={(e) => {}}
-          type="checkbox"
-          id="darkModeSetting"
-          name="Enable Dark Mode"
-        />
-      </div>
-      <div className="settings-item">
-        <p>Open shortcuts in new tab</p>
-      </div>
-      <div className="settings-item">
-        <input type="checkbox" id="darkMode" name="Enable Dark Mode" />
-        <p>Reset Favourites</p>
-      </div>
-      <div className="settings-item">
-        <p>How to Guide</p>
-      </div>
-      <div className="settings-item">
-        <p>Salesforce Shortcut URL</p>
-      </div>
+      <CustomCheckbox
+        label="Dark mode"
+        id="darkMode"
+        onChangeFunction={updateSetting}
+        value={userSettings.darkMode}
+      />
+      <CustomCheckbox
+        label="Open shortcuts in new tab"
+        id="openShortcutsInNewTab"
+        onChangeFunction={updateSetting}
+        value={userSettings.openShortcutsInNewTab}
+      />
+      <CustomCheckbox
+        label="Reset favourites"
+        onChangeFunction={resetFavourites}
+      />
     </div>
   );
 }

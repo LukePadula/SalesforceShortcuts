@@ -44,9 +44,7 @@ export const navigationSlice = createSlice({
   initialState,
   reducers: {
     setNavigationPage: (state, action) => {
-      console.log(action.payload);
       if (action.payload != "List" && state.timeoutId) {
-        console.log("CLEAR");
         clearTimeout(state.timeoutId);
         state.alertModal = null;
       }
@@ -78,5 +76,6 @@ export const {
 } = navigationSlice.actions;
 export const selectNavigationPage = (state) => state.navigation.navigationPage;
 export const selectAlertModal = (state) => state.navigation.alertModal;
+export const selectCurrentUrl = (state) => state.navigation.url;
 
 export default navigationSlice.reducer;

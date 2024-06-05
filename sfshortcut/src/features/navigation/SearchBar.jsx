@@ -16,7 +16,6 @@ export default function SearchBar() {
       <input
         className="search-bar"
         onChange={(e) => {
-          console.log(searchTerm, "SEARHC");
           if (!searchTerm) {
             dispatch(handleNavigationChange("List"));
           }

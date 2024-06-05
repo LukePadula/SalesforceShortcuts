@@ -51,16 +51,21 @@ export const shortcutSlice = createSlice({
     },
     onSearchTermChanged: (state, action) => {
       const oldSearchTerm = state.searchTerm;
-      state.searchTerm = action.payload;
+      const newSearchTerm = action.payload.toLowerCase().replace(/\s+/g, "_");
+
+      console.log(newSearchTerm, "SEARCH");
+
+      //WHAT IS THIS FOR?
+      state.searchTerm = newSearchTerm;
       let searchResults = {};
 
       // Restore full search results.
-      if (oldSearchTerm && !action.payload) {
+      if (oldSearchTerm && !newSearchTerm) {
         searchResults = defaultShortcuts;
       } else {
-        for (const key in state.shortcuts) {
-          if (key.includes(action.payload)) {
-            searchResults[key] = state.shortcuts[key];
+        for (const key in defaultShortcuts) {
+          if (key.includes(newSearchTerm)) {
+            searchResults[key] = defaultShortcuts[key];
           }
         }
       }

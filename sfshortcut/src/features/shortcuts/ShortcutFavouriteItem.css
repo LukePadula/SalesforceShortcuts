@@ -1,11 +1,14 @@
 .favourite-button {
-  width: 70px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
   margin: 10px;
   border-radius: 5px;
+  font-size: 12px;
   background-color: var(--primary-colour);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--dark-mode-text-colour);
+  box-shadow: 0 4px 6px var(--dark-mode-box-shadow);
+  transition: background-color 0.3s, box-shadow 0.3s;
 }

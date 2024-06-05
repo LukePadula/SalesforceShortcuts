@@ -1,6 +1,7 @@
 .page-header {
   display: flex;
   align-items: center;
+  height: 10%;
 }
 .page-title {
   color: #ffffff;

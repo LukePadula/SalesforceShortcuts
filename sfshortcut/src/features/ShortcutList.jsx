@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default function ShortcutList({ shortcuts, favourites }) {
-  console.log(favourites, "FAVS");
   const updatedShortcuts = { ...shortcuts };
 
   Object.keys(updatedShortcuts).forEach((key) => {

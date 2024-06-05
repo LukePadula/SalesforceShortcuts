@@ -6,7 +6,16 @@
   text-align: center;
   color: #ffff;
   height: 100%;
-  padding: 25px;
+  padding: 30px;
+}
+
+.no-favourites-title {
+  margin: 5px;
+  font-size: 24px;
+}
+
+.no-favourites-subtitle {
+  font-size: 13px;
 }
 
 .no-favourites-navigate-button {
@@ -16,9 +25,10 @@
   background-color: var(--primary-colour);
   border-radius: 5px;
   width: 25%;
-  height: 13%;
+  height: 15%;
+  padding: 3px;
   color: #ffff;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .no-favourites-navigate-button > * {

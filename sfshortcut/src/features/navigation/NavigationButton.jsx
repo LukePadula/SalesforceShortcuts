@@ -20,10 +20,15 @@ export default function NavigationButton({ buttonLabel, selected }) {
 
   const salesforceClass =
     buttonLabel === "Salesforce" ? "salesforce-icon" : null;
+  let buttonStyleClass;
+  let iconStyleClass = "nav-icon";
 
-  const buttonStyleClass = selected
-    ? "nav-button selected-nav-button"
-    : "nav-button";
+  if (selected) {
+    buttonStyleClass = "nav-button selected-nav-button";
+  } else {
+    iconStyleClass += " nav-icon-unselected";
+    buttonStyleClass = "nav-button";
+  }
 
   return (
     <div className="nav-button-container">
@@ -38,7 +43,10 @@ export default function NavigationButton({ buttonLabel, selected }) {
           }
         }}
       >
-        <FontAwesomeIcon className="nav-icon" icon={iconMap[buttonLabel]} />
+        <FontAwesomeIcon
+          className={iconStyleClass}
+          icon={iconMap[buttonLabel]}
+        />
       </button>
     </div>
   );

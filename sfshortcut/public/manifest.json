@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "My Chrome Extension",
+  "name": "Salesforce Shortcuts",
   "version": "1.0",
-  "description": "A React-based Chrome extension",
+  "description": "A Salesforce shortcut extension for admins",
   "action": {
     "default_popup": "index.html"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["tabs", "storage", "activeTab", "scripting"],
   "host_permissions": ["<all_urls>"]
 }

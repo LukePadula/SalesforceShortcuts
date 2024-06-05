@@ -7,6 +7,7 @@
   --dark-mode-text-colour: #ffff;
   --white-mode-text-colour: #3e7cf4;
   --dark-mode-background-colour: #3f3d3d;
+  --dark-mode-box-shadow: #0003;
 }
 
 h1,
@@ -25,6 +26,11 @@ input {
 input:focus {
   border: none;
   box-shadow: none;
+}
+
+input:focus-visible {
+  outline: none;
+  border: none;
 }
 
 button {

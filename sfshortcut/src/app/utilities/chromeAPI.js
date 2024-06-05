@@ -1,12 +1,18 @@
 import { setFavourites } from "../../slices/shortcutSlice";
 import { loadSettings } from "../../slices/settingsSlice";
 import { store } from "../store";
+import { defaultFavourites } from "./defaultShortcutData";
 
 const getChromeStorage = (storageType, key) => {
   if (chrome.storage) {
-    chrome.storage.sync.get(["shortcuts", "settings"], (result) => {
+    chrome.storage.local.get(["shortcuts", "settings"], (result) => {
+      console.log(JSON.stringify(result));
       if (result.shortcuts) {
         store.dispatch(setFavourites({ savedFavourites: result.shortcuts }));
+      }
+
+      if (result.settings) {
+        store.dispatch(loadSettings({ savedSettings: result.settings }));
       }
     });
   } else {
@@ -16,17 +22,23 @@ const getChromeStorage = (storageType, key) => {
 
 const setChromeStorage = (shortcuts, settings) => {
   if (chrome.storage) {
-    chrome.storage.sync.get(["shortcuts", "settings"], (result) => {
+    chrome.storage.local.get(["shortcuts", "settings"], (result) => {
+      console.log(JSON.stringify(result), "SET");
+
       const updatedData = {};
       if (shortcuts !== undefined) {
-        updatedData.shortcuts = shortcuts;
+        result.shortcuts = shortcuts;
       }
       if (settings !== undefined) {
-        updatedData.settings = settings;
+        result.settings = settings;
       }
-      chrome.storage.sync.set(updatedData);
+      chrome.storage.local.set(result);
     });
   }
 };
 
-export { getChromeStorage, setChromeStorage };
+const resetFavourites = () => {
+  setChromeStorage([]);
+  store.dispatch(setFavourites({ savedFavourites: defaultFavourites }));
+};
+export { getChromeStorage, setChromeStorage, resetFavourites };

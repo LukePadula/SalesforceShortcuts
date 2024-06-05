@@ -13,8 +13,8 @@
   height: 20px;
 }
 
-.nav-icon:hover {
-  color: #779ae1;
+.nav-icon-unselected:hover {
+  color: #cecece;
 }
 
 .selected-nav-button {

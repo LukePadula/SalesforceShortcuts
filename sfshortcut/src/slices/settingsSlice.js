@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  settings: {},
+  settings: { darkMode: true, openShortcutsInNewTab: true },
 };
 
 export const settingsSlice = createSlice({
@@ -9,17 +9,18 @@ export const settingsSlice = createSlice({
   initialState,
   reducers: {
     loadSettings: (state, action) => {
-      state.settings = action.payload;
+      state.settings = action.payload.savedSettings;
     },
     setSettings: (state, action) => {
-      const { key, value } = action.payload;
+      const { setting, value } = action.payload;
+      console.log(setting, value);
 
-      state.settings[key] = value;
+      state.settings[setting] = value;
     },
   },
 });
 
-export const { loadSettings } = settingsSlice.actions;
-// export const selectNavigationPage = (state) => state.navigation.navigationPage;
+export const { loadSettings, setSettings } = settingsSlice.actions;
+export const selectSettings = (state) => state.settings.settings;
 
 export default settingsSlice.reducer;

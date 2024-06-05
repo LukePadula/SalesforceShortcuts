@@ -2,8 +2,10 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList } from "@fortawesome/free-solid-svg-icons";
+import { faSalesforce } from "@fortawesome/free-brands-svg-icons";
 import { handleNavigationChange } from "../slices/navigationSlice";
 import "./ActionBlocked.css";
+import { navigateTab } from "../app/utilities/chromeNavigationUtils";
 
 export default function ActionBlocked({ type }) {
   const dispatch = useDispatch();
@@ -11,12 +13,17 @@ export default function ActionBlocked({ type }) {
     noFavourites: {
       title: "No Favourites..",
       subtitle: "Go to the shortcut list page to pin some shortcuts",
-      iconType: "faList",
+      iconType: faList,
+      iconLabel: "Shortcuts",
+      iconPressFunction: () => dispatch(handleNavigationChange("List")),
     },
     invalidUrl: {
       title: "Salesforce.com not found",
       subtitle: "Please login into Salesforce before using shortcuts. ",
-      iconType: "faList",
+      iconType: faSalesforce,
+      iconLabel: "Salesforce",
+      iconPressFunction: () =>
+        navigateTab("https://login.salesforce.com/?locale=uk", true),
     },
   };
 
@@ -26,10 +33,10 @@ export default function ActionBlocked({ type }) {
       <p className="no-favourites-subtitle">{contentMap[type].subtitle}</p>
       <button
         className="no-favourites-navigate-button"
-        onClick={() => dispatch(handleNavigationChange("List"))}
+        onClick={() => dispatch(contentMap[type].iconPressFunction)}
       >
-        <FontAwesomeIcon icon={faList} />
-        <p>Shortcuts</p>
+        <FontAwesomeIcon icon={contentMap[type].iconType} />
+        <p>{contentMap[type].iconLabel}</p>
       </button>
     </div>
   );

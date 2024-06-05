@@ -1,19 +1,26 @@
 .list-button-container {
+  position: relative;
   width: 80%;
-  height: 17%;
-  border: 2px solid #3e7cf4;
+  height: 20%;
+  border: 2px solid var(--primary-colour);
   text-align: center;
   margin: 3px;
   border-radius: 5px;
 }
 
+.list-item-button {
+  height: 60px;
+  width: 100%;
+}
+
 .list-button-content {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
+  box-shadow: 0 4px 6px var(--dark-mode-box-shadow);
 }
 
 .list-content-cont {
@@ -24,16 +31,25 @@
 }
 
 .list-item-title {
-  color: #ffff;
+  color: var(-dark-mode-text-colour);
+  font-size: 12px;
   font-weight: bold;
 }
 
 .list-item-type {
-  color: #b3b3b3;
+  color: var(--secondary-colour);
+  font-size: 12px;
+}
+
+.star-container {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .star-icon-unselected {
-  color: #b3b3b3;
+  color: var(--secondary-colour);
 }
 
 .star-icon {
@@ -42,5 +58,5 @@
 }
 
 .star-icon-selected {
-  color: #ffc300;
+  color: var(--favourite-icon-selected-colour);
 }

@@ -1,8 +1,9 @@
 .navigation-container {
   display: flex;
-  justify-content: space-between;
-  margin-left: 6%;
-  margin-right: 6%;
-  padding: 2%;
-  height: 7%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding: 1%;
+  height: 50px;
 }

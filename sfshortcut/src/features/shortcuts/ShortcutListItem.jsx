@@ -29,23 +29,28 @@ export default function ShortcutListItem({ shortcutKey, config, starIcon }) {
   };
 
   return (
-    <button className="list-button-container">
-      <div className="list-button-content">
-        <div className="list-content-cont">
-          <p className="list-item-title">{config.label}</p>
+    <div className="list-button-container">
+      <button
+        className="list-item-button"
+        onClick={() => navigateShortcut(config.path)}
+      >
+        <div className="list-button-content">
+          <div className="list-content-cont">
+            <p className="list-item-title">{config.label}</p>
+          </div>
+          <div className="list-content-cont">
+            <p className="list-item-type">Setup</p>
+          </div>
         </div>
-        <div className="list-content-cont">
-          <p className="list-item-type">Setup</p>
-        </div>
-        <div className="list-content-cont">
-          <button onClick={handleClick}>
-            <FontAwesomeIcon
-              className={`star-icon ${starIconClass}`}
-              icon={iconType}
-            />
-          </button>
-        </div>
+      </button>
+      <div className="star-container">
+        <button onClick={handleClick}>
+          <FontAwesomeIcon
+            className={`star-icon ${starIconClass}`}
+            icon={iconType}
+          />
+        </button>
       </div>
-    </button>
+    </div>
   );
 }

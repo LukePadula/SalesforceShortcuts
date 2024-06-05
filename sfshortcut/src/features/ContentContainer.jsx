@@ -19,10 +19,20 @@ export default function ContentContainer() {
   const PageComponent = contentPageMap[page] || HomePage;
 
   console.log(page, PageComponent);
-  return (
-    <div className="content-container">
-      {page !== "Home" ? <PageHeader pageTitle={page} /> : null}
-      <PageComponent />
-    </div>
-  );
+
+  if (page != "Home") {
+    return (
+      <div className="content-container">
+        <PageHeader pageTitle={page} />
+        <PageComponent />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        {page !== "Home" ? <PageHeader pageTitle={page} /> : null}
+        <PageComponent />
+      </div>
+    );
+  }
 }

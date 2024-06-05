@@ -1,5 +1,6 @@
 .search-bar {
   background-color: var(--secondary-colour);
+  height: 20%;
   border-radius: 5px;
   border: none;
 }
