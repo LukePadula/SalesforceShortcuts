@@ -15,12 +15,12 @@ export default function SettingsContainer() {
 
   return (
     <div className="settings-container">
-      <CustomCheckbox
+      {/* <CustomCheckbox
         label="Dark mode"
         id="darkMode"
         onChangeFunction={updateSetting}
         value={userSettings.darkMode}
-      />
+      /> */}
       <CustomCheckbox
         label="Open shortcuts in new tab"
         id="openShortcutsInNewTab"

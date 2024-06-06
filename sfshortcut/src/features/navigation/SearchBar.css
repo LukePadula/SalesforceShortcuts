@@ -3,8 +3,11 @@
   height: 20%;
   border-radius: 5px;
   border: none;
+  color: #3f3d3d;
+  font-weight: bold;
 }
 
 input::placeholder {
-  color: var(--dark-mode-text-colour);
+  color: #3f3d3d;
+  font-weight: bold;
 }

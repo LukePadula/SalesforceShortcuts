@@ -23,10 +23,10 @@ const navigateShortcut = (urlPath) => {
     let breakIndex = url.indexOf(".com/");
     let locationHost = url.substring(0, breakIndex + 4);
 
-    const newURL = `${locationHost}/lightning${urlPath}`;
+    const newURL = `${locationHost}${urlPath}`;
 
     navigateTab(
-      `${locationHost}/lightning${urlPath}`,
+      `${locationHost}${urlPath}`,
       store.getState().settings.settings.openShortcutsInNewTab
     );
   } else {
