@@ -1,7 +1,6 @@
 .container {
   width: 500px;
-  max-height: 350px;
-  overflow-y: scroll;
+
   background-color: var(--dark-mode-background-colour);
   position: relative;
 }
