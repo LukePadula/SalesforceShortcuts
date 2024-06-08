@@ -71,11 +71,19 @@ export const shortcutSlice = createSlice({
       }
       state.shortcuts = searchResults;
     },
+    onRestoreFullSearchResults: (state, action) => {
+      state.shortcuts = defaultShortcuts;
+      state.searchTerm = "";
+    },
   },
 });
 
-export const { setFavourites, setShortcutFavourite, onSearchTermChanged } =
-  shortcutSlice.actions;
+export const {
+  setFavourites,
+  setShortcutFavourite,
+  onSearchTermChanged,
+  onRestoreFullSearchResults,
+} = shortcutSlice.actions;
 export const selectFavorites = (state) => state.shortcut.shortcutFavourites;
 export const selectShortcuts = (state) => state.shortcut.shortcuts;
 export const selectSearchTerm = (state) => state.shortcut.searchTerm;

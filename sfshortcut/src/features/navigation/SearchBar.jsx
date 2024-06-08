@@ -15,6 +15,7 @@ export default function SearchBar() {
     <>
       <input
         className="search-bar"
+        value={searchTerm}
         placeholder="Search.."
         onChange={(e) => {
           if (!searchTerm) {
