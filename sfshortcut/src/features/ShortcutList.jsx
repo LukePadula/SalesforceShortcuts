@@ -7,10 +7,6 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 export default function ShortcutList({ shortcuts, favourites }) {
   const updatedShortcuts = { ...shortcuts };
 
-  Object.keys(updatedShortcuts).forEach((key) => {
-    updatedShortcuts[key] = { ...updatedShortcuts[key], favourite: false };
-  });
-
   favourites.forEach((key) => {
     if (updatedShortcuts[key]) {
       updatedShortcuts[key] = { ...updatedShortcuts[key], favourite: true };

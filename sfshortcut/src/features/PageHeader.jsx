@@ -3,14 +3,14 @@ import { useDispatch } from "react-redux";
 import "./PageHeader.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { setNavigationPage } from "../slices/navigationSlice";
+import { handleNavigationChange } from "../slices/navigationSlice";
 
 export default function PageHeader({ pageTitle }) {
   const dispatch = useDispatch();
 
   return (
     <div className="page-header">
-      <button onClick={() => dispatch(setNavigationPage("Home"))}>
+      <button onClick={() => dispatch(handleNavigationChange("Home"))}>
         <FontAwesomeIcon className="navigate-back-icon" icon={faArrowLeft} />
       </button>
       <h1 className="page-title">{pageTitle}</h1>

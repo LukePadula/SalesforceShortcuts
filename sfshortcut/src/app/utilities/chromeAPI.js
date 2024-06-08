@@ -40,5 +40,6 @@ const setChromeStorage = (shortcuts, settings) => {
 const resetFavourites = () => {
   setChromeStorage([]);
   store.dispatch(setFavourites({ savedFavourites: defaultFavourites }));
+  window.close();
 };
 export { getChromeStorage, setChromeStorage, resetFavourites };
