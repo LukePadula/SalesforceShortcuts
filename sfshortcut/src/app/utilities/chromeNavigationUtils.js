@@ -23,8 +23,6 @@ const navigateShortcut = (urlPath) => {
     let breakIndex = url.indexOf(".com/");
     let locationHost = url.substring(0, breakIndex + 4);
 
-    const newURL = `${locationHost}${urlPath}`;
-
     navigateTab(
       `${locationHost}${urlPath}`,
       store.getState().settings.settings.openShortcutsInNewTab
@@ -40,7 +38,6 @@ async function getCurrentTab() {
   if (tabs.length > 0) {
     return tabs[0].url;
   } else {
-    console.log("No active tab found.");
     return null;
   }
 }

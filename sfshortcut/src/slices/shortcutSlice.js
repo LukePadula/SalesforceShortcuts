@@ -37,25 +37,17 @@ export const shortcutSlice = createSlice({
       let newShortCutFavourites = state.shortcutFavourites;
 
       if (newShortCutFavourites.includes(shortcutKey)) {
-        console.log("REMOVE");
         newShortCutFavourites = state.shortcutFavourites.filter(
           (item) => item !== shortcutKey
         );
       } else {
-        console.log("ADD");
         newShortCutFavourites.push(shortcutKey);
       }
-
-      console.log(newShortCutFavourites);
       state.shortcutFavourites = newShortCutFavourites;
     },
     onSearchTermChanged: (state, action) => {
       const oldSearchTerm = state.searchTerm;
       const newSearchTerm = action.payload.toLowerCase().replace(/\s+/g, "_");
-
-      console.log(newSearchTerm, "SEARCH");
-
-      //WHAT IS THIS FOR?
       state.searchTerm = newSearchTerm;
       let searchResults = {};
 

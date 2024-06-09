@@ -29,13 +29,11 @@ export default function ViewContainer() {
 
   // Every time shortcut changes
   useEffect(() => {
-    console.log("CHANGE");
     setChromeStorage(shortcutFavourites, undefined);
   }, [shortcutFavourites]);
 
   // Every time settings change
   useEffect(() => {
-    console.log("SETTING CHANGE");
     setChromeStorage(undefined, userSettings);
   }, [userSettings]);
 

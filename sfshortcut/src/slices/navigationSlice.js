@@ -25,7 +25,6 @@ export const displayAlertModal = createAsyncThunk(
   "navigation/displayAlertModal",
   async (payload, { dispatch, getState }) => {
     const { timeoutId } = getState().navigation;
-    console.log(payload, "PAYLOAD");
     // Clear the previous timeout if it exists
     if (timeoutId) {
       clearTimeout(timeoutId);

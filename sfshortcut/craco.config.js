@@ -4,8 +4,6 @@ module.exports = {
     configure: (webpackConfig) => {
       webpackConfig.entry = {
         main: "./src/index.js",
-        background: "./src/background.js",
-        content: "./src/content.js",
       };
       webpackConfig.output = {
         ...webpackConfig.output,

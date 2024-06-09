@@ -18,8 +18,6 @@ export default function ContentContainer() {
   const page = useSelector(selectNavigationPage);
   const PageComponent = contentPageMap[page] || HomePage;
 
-  console.log(page, PageComponent);
-
   if (page != "Home") {
     return (
       <div className="content-container">

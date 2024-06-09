@@ -13,8 +13,6 @@ export const settingsSlice = createSlice({
     },
     setSettings: (state, action) => {
       const { setting, value } = action.payload;
-      console.log(setting, value);
-
       state.settings[setting] = value;
     },
   },

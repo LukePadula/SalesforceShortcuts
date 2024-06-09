@@ -6,7 +6,6 @@ import { defaultFavourites } from "./defaultShortcutData";
 const getChromeStorage = (storageType, key) => {
   if (chrome.storage) {
     chrome.storage.local.get(["shortcuts", "settings"], (result) => {
-      console.log(JSON.stringify(result));
       if (result.shortcuts) {
         store.dispatch(setFavourites({ savedFavourites: result.shortcuts }));
       }
@@ -23,9 +22,6 @@ const getChromeStorage = (storageType, key) => {
 const setChromeStorage = (shortcuts, settings) => {
   if (chrome.storage) {
     chrome.storage.local.get(["shortcuts", "settings"], (result) => {
-      console.log(JSON.stringify(result), "SET");
-
-      const updatedData = {};
       if (shortcuts !== undefined) {
         result.shortcuts = shortcuts;
       }
