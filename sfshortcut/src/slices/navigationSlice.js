@@ -1,10 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 // import { createAsyncThunk } from "@reduxjs/toolkit";
 import { onRestoreFullSearchResults } from "./shortcutSlice";
+import {
+  homeViewLabel,
+  shortcutListViewLabel,
+} from "../app/utilities/predefinedVariables";
 
-import { shortcutListViewLabel } from "../app/utilities/predefinedVariables";
 const initialState = {
-  navigationPage: "Home",
+  navigationPage: homeViewLabel,
   alertModal: null,
   timeoutId: null,
   url: null,
@@ -13,7 +16,7 @@ const initialState = {
 export const handleNavigationChange = createAsyncThunk(
   "navigation/changeNavigationPage",
   async (newPage, { dispatch }) => {
-    if (newPage !== "List") {
+    if (newPage !== shortcutListViewLabel) {
       dispatch(clearAlertModal());
       dispatch(onRestoreFullSearchResults());
     }
@@ -68,6 +71,7 @@ export const navigationSlice = createSlice({
       state.timeoutId = action.payload;
     },
     setUrl: (state, action) => {
+      console.log(action.payload);
       state.url = action.payload;
     },
   },

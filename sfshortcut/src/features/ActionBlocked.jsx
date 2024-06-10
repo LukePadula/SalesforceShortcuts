@@ -6,6 +6,10 @@ import { faSalesforce } from "@fortawesome/free-brands-svg-icons";
 import { handleNavigationChange } from "../slices/navigationSlice";
 import "./ActionBlocked.css";
 import { navigateTab } from "../app/utilities/chromeNavigationUtils";
+import {
+  shortcutListViewLabel,
+  salesforceRedirectLabel,
+} from "../app/utilities/predefinedVariables";
 
 export default function ActionBlocked({ type }) {
   const dispatch = useDispatch();
@@ -14,14 +18,15 @@ export default function ActionBlocked({ type }) {
       title: "No Favourites..",
       subtitle: "Go to the shortcut list page to pin some shortcuts",
       iconType: faList,
-      iconLabel: "Shortcuts",
-      iconPressFunction: () => dispatch(handleNavigationChange("List")),
+      iconLabel: shortcutListViewLabel,
+      iconPressFunction: () =>
+        dispatch(handleNavigationChange(shortcutListViewLabel)),
     },
     invalidUrl: {
       title: "Salesforce.com not found",
       subtitle: "Please login into Salesforce before using shortcuts. ",
       iconType: faSalesforce,
-      iconLabel: "Salesforce",
+      iconLabel: salesforceRedirectLabel,
       iconPressFunction: () =>
         navigateTab("https://login.salesforce.com/?locale=uk", true),
     },

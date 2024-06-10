@@ -3,7 +3,7 @@ import { loadSettings } from "../../slices/settingsSlice";
 import { store } from "../store";
 import { defaultFavourites } from "./defaultShortcutData";
 
-const getChromeStorage = (storageType, key) => {
+const getChromeStorage = () => {
   if (chrome.storage) {
     chrome.storage.local.get(["shortcuts", "settings"], (result) => {
       if (result.shortcuts) {

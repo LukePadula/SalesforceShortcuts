@@ -3,21 +3,33 @@ import "./NavigationButtonContainer.css";
 import { useSelector } from "react-redux";
 import { selectNavigationPage } from "../../slices/navigationSlice";
 import NavigationButton from "./NavigationButton";
+import {
+  homeViewLabel,
+  shortcutListViewLabel,
+  settingsViewLabel,
+  salesforceRedirectLabel,
+} from "../../app/utilities/predefinedVariables";
 
 export default function NavigationButtonContainer() {
   const currentPage = useSelector(selectNavigationPage);
 
   return (
     <div className="button-container">
-      <NavigationButton buttonLabel="Home" selected={currentPage === "Home"} />
-      <NavigationButton buttonLabel="List" selected={currentPage === "List"} />
       <NavigationButton
-        buttonLabel="Settings"
-        selected={currentPage === "Settings"}
+        buttonLabel={homeViewLabel}
+        selected={currentPage === homeViewLabel}
       />
       <NavigationButton
-        buttonLabel="Salesforce"
-        selected={currentPage === "Salesforce"}
+        buttonLabel={shortcutListViewLabel}
+        selected={currentPage === shortcutListViewLabel}
+      />
+      <NavigationButton
+        buttonLabel={settingsViewLabel}
+        selected={currentPage === settingsViewLabel}
+      />
+      <NavigationButton
+        buttonLabel={salesforceRedirectLabel}
+        selected={currentPage === salesforceRedirectLabel}
       />
     </div>
   );

@@ -18,6 +18,7 @@ export default function ViewContainer() {
   // Get when first renders
   useEffect(() => {
     const initialize = async () => {
+      console.log("STARTED");
       // Validate URL
       await validateUrl();
       // Get Chrome Storage

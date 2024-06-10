@@ -5,21 +5,26 @@ import { handleNavigationChange } from "../../slices/navigationSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faList, faGear } from "@fortawesome/free-solid-svg-icons";
 import { faSalesforce } from "@fortawesome/free-brands-svg-icons";
-
+import {
+  homeViewLabel,
+  shortcutListViewLabel,
+  settingsViewLabel,
+  salesforceRedirectLabel,
+} from "../../app/utilities/predefinedVariables";
 import { navigateTab } from "../../app/utilities/chromeNavigationUtils";
 
 export default function NavigationButton({ buttonLabel, selected }) {
   const dispatch = useDispatch();
 
   const iconMap = {
-    Home: faHome,
-    List: faList,
-    Settings: faGear,
-    Salesforce: faSalesforce,
+    [homeViewLabel]: faHome,
+    [shortcutListViewLabel]: faList,
+    [settingsViewLabel]: faGear,
+    [salesforceRedirectLabel]: faSalesforce,
   };
 
   const salesforceClass =
-    buttonLabel === "Salesforce" ? "salesforce-icon" : null;
+    buttonLabel === salesforceRedirectLabel ? "salesforce-icon" : null;
   let buttonStyleClass;
   let iconStyleClass = "nav-icon";
 
@@ -36,7 +41,7 @@ export default function NavigationButton({ buttonLabel, selected }) {
         className={`${buttonStyleClass} ${salesforceClass}`}
         type="button"
         onClick={() => {
-          if (buttonLabel === "Salesforce") {
+          if (buttonLabel === salesforceRedirectLabel) {
             navigateTab("https://login.salesforce.com/?locale=uk", true);
           } else {
             dispatch(handleNavigationChange(buttonLabel));

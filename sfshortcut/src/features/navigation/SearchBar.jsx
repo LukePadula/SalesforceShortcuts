@@ -6,6 +6,7 @@ import {
   selectSearchTerm,
 } from "../../slices/shortcutSlice";
 import { handleNavigationChange } from "../../slices/navigationSlice";
+import { shortcutListViewLabel } from "../../app/utilities/predefinedVariables";
 
 export default function SearchBar() {
   const searchTerm = useSelector(selectSearchTerm);
@@ -19,7 +20,7 @@ export default function SearchBar() {
         placeholder="Search.."
         onChange={(e) => {
           if (!searchTerm) {
-            dispatch(handleNavigationChange("List"));
+            dispatch(handleNavigationChange(shortcutListViewLabel));
           }
           dispatch(onSearchTermChanged(e.target.value));
         }}
