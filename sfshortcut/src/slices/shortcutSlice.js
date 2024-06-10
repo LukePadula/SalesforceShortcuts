@@ -48,7 +48,7 @@ export const shortcutSlice = createSlice({
     onSearchTermChanged: (state, action) => {
       const oldSearchTerm = state.searchTerm;
       const newSearchTerm = action.payload.toLowerCase().replace(/\s+/g, "_");
-      state.searchTerm = newSearchTerm;
+      state.searchTerm = action.payload;
       let searchResults = {};
 
       // Restore full search results.

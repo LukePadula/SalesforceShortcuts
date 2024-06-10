@@ -53,15 +53,9 @@ export const navigationSlice = createSlice({
         clearTimeout(state.timeoutId);
         state.alertModal = null;
       }
-
-      if (action.payload != shortcutListViewLabel) {
-        // Clear search.
-      }
       state.navigationPage = action.payload;
     },
     setAlertModal: (state, action) => {
-      const { alertName, newValue } = action.payload;
-
       state.alertModal = action.payload;
     },
     clearAlertModal: (state, action) => {
