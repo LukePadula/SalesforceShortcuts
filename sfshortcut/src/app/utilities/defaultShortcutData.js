@@ -10,8 +10,8 @@ export const defaultFavourites = [
 export const defaultShortcuts = {
   home: {
     label: "Home",
-    path: "/lightning/page/home",
-    pageGroup: "Salesforce",
+    path: "/lightning/setup/Home/home",
+    pageGroup: "Digital Experiences",
   },
   object_manager: {
     label: "Object Manager",
@@ -22,6 +22,7 @@ export const defaultShortcuts = {
     label: "Developer Console",
     path: "/_ui/common/apex/debug/ApexCSIPage",
     pageGroup: "Developer Tools",
+    favourite: false,
   },
   setup_home: {
     label: "Setup Home",
@@ -53,19 +54,9 @@ export const defaultShortcuts = {
     path: "/lightning/setup/ReleaseUpdates/home",
     pageGroup: "Setup",
   },
-  lightning_experience_transition_assistant: {
-    label: "Lightning Experience Transition Assistant",
-    path: "/lightning/setup/EnableLightningExperience/home",
-    pageGroup: "Setup",
-  },
   salesforce_mobile_app: {
     label: "Salesforce Mobile App",
     path: "/lightning/setup/SalesforceMobileAppQuickStart/home",
-    pageGroup: "Setup",
-  },
-  lightning_usage: {
-    label: "Lightning Usage",
-    path: "/lightning/setup/LightningUsageSetup/home",
     pageGroup: "Setup",
   },
   optimizer: {
@@ -90,7 +81,7 @@ export const defaultShortcuts = {
   },
   profiles: {
     label: "Profiles",
-    path: "/lightning/setup/EnhancedProfiles/home",
+    path: "/lightning/setup/Profiles/home",
     pageGroup: "Users",
   },
   public_groups: {
@@ -121,11 +112,6 @@ export const defaultShortcuts = {
   big_objects: {
     label: "Big Objects",
     path: "/lightning/setup/BigObjects/home",
-    pageGroup: "Data",
-  },
-  conversation_transcript_export: {
-    label: "Conversation Transcript Export",
-    path: "/lightning/setup/CssDataExport/home",
     pageGroup: "Data",
   },
   data_export: {
@@ -343,6 +329,11 @@ export const defaultShortcuts = {
     path: "/lightning/setup/LightningBolt/home",
     pageGroup: "Lightning Bolt",
   },
+  mobile_security: {
+    label: "Mobile Security",
+    path: "/lightning/setup/MobileSecurity/home",
+    pageGroup: "Mobile Apps",
+  },
   salesforce_branding: {
     label: "Salesforce Branding",
     path: "/lightning/setup/Salesforce1Branding/home",
@@ -488,20 +479,35 @@ export const defaultShortcuts = {
     path: "/lightning/setup/FeedItemTriggers/home",
     pageGroup: "Triggers",
   },
-  "licenses_&_limits": {
-    label: "Licenses & Limits",
-    path: "/lightning/setup/ViewLicensesAndLimits/home",
-    pageGroup: "Data.com",
+  b2c_commerce_connections: {
+    label: "B2C Commerce Connections",
+    path: "/lightning/setup/ManageC2CSelfProvisioningConnections/home",
+    pageGroup: "Connect to B2C Commerce",
   },
-  prospector_preferences: {
-    label: "Prospector Preferences",
-    path: "/lightning/setup/DataDotComPreferences/home",
-    pageGroup: "Data.com",
+  all_sites: {
+    label: "All Sites",
+    path: "/lightning/setup/SetupNetworks/home",
+    pageGroup: "Digital Experiences",
   },
-  prospector_users: {
-    label: "Prospector Users",
-    path: "/lightning/setup/ProspectingUsers/home",
-    pageGroup: "Data.com",
+  pages: {
+    label: "Pages",
+    path: "/lightning/setup/CommunityFlexiPageList/home",
+    pageGroup: "Digital Experiences",
+  },
+  templates: {
+    label: "Templates",
+    path: "/lightning/setup/CommunityTemplateDefinitionList/home",
+    pageGroup: "Digital Experiences",
+  },
+  themes: {
+    label: "Themes",
+    path: "/lightning/setup/CommunityThemeDefinitionList/home",
+    pageGroup: "Digital Experiences",
+  },
+  field_history_tracking: {
+    label: "Field History Tracking",
+    path: "/lightning/setup/FieldHistoryTracking/home",
+    pageGroup: "Digital Experiences",
   },
   functions: {
     label: "Functions",
@@ -521,6 +527,11 @@ export const defaultShortcuts = {
   campaign_influence_settings: {
     label: "Campaign Influence Settings",
     path: "/lightning/setup/CampaignInfluenceSettings/home",
+    pageGroup: "Campaign Influence",
+  },
+  model_settings: {
+    label: "Model Settings",
+    path: "/lightning/setup/CampaignInfluenceModel/home",
     pageGroup: "Campaign Influence",
   },
   lead_assignment_rules: {
@@ -563,44 +574,79 @@ export const defaultShortcuts = {
     path: "/lightning/setup/OmniChannelInventory/home",
     pageGroup: "LinkedIn Lead Gen",
   },
+  setup: {
+    label: "Setup",
+    path: "/lightning/setup/OrderManagementSetup/home",
+    pageGroup: "Order Management",
+  },
   "quip_(salesforce_anywhere)": {
     label: "Quip (Salesforce Anywhere)",
     path: "/lightning/setup/SalesforceAnywhereSetupPage/home",
-    pageGroup: "LinkedIn Lead Gen",
+    pageGroup: "Order Management",
   },
-  revenue_settings: {
-    label: "Revenue Settings",
-    path: "/lightning/setup/RevenueSettings/home",
-    pageGroup: "Revenue Lifecycle Management",
+  account_intelligence_view_setup: {
+    label: "Account Intelligence View Setup",
+    path: "/lightning/setup/AccountInspectionSettings/home",
+    pageGroup: "Accounts",
+  },
+  account_owner_report: {
+    label: "Account Owner Report",
+    path: "/lightning/setup/SecurityAccountOwner/home",
+    pageGroup: "Security",
+  },
+  account_settings: {
+    label: "Account Settings",
+    path: "/lightning/setup/AccountSettings/home",
+    pageGroup: "Accounts",
+  },
+  account_teams: {
+    label: "Account Teams",
+    path: "/lightning/setup/AccountTeamSelling/home",
+    pageGroup: "Accounts",
+  },
+  person_accounts: {
+    label: "Person Accounts",
+    path: "/lightning/setup/PersonAccountSettings/home",
+    pageGroup: "Accounts",
   },
   activity_settings: {
     label: "Activity Settings",
     path: "/lightning/setup/HomeActivitiesSetupPage/home",
-    pageGroup: "ExpandAccounts",
+    pageGroup: "Accounts",
   },
   contact_intelligence_view_setup: {
     label: "Contact Intelligence View Setup",
     path: "/lightning/setup/ContactInspectionSettings/home",
-    pageGroup: "ExpandAccounts",
+    pageGroup: "Accounts",
   },
   contact_roles_on_contracts: {
     label: "Contact Roles on Contracts",
     path: "/lightning/setup/ContractContactRoles/home",
-    pageGroup: "ExpandAccounts",
+    pageGroup: "Accounts",
   },
   contact_roles_on_opportunities: {
     label: "Contact Roles on Opportunities",
     path: "/lightning/setup/OpportunityRoles/home",
-    pageGroup: "ExpandAccounts",
+    pageGroup: "Accounts",
+  },
+  buyer_relationship_map: {
+    label: "Buyer Relationship Map",
+    path: "/lightning/setup/BuyerRelationshipMap/home",
+    pageGroup: "Contacts",
   },
   contract_settings: {
     label: "Contract Settings",
     path: "/lightning/setup/ContractSettings/home",
-    pageGroup: "ExpandAccounts",
+    pageGroup: "Contacts",
   },
   forecasts_hierarchy: {
     label: "Forecasts Hierarchy",
     path: "/lightning/setup/Forecasting3Role/home",
+    pageGroup: "Forecasts",
+  },
+  forecasts_quotas: {
+    label: "Forecasts Quotas",
+    path: "/lightning/setup/Forecasting3Quota/home",
     pageGroup: "Forecasts",
   },
   forecasts_settings: {
@@ -643,10 +689,35 @@ export const defaultShortcuts = {
     path: "/lightning/setup/OpportunityTeamMemberSettings/home",
     pageGroup: "Opportunities",
   },
+  pipeline_inspection_setup: {
+    label: "Pipeline Inspection Setup",
+    path: "/lightning/setup/PipelineInspectionSettings/home",
+    pageGroup: "Opportunities",
+  },
   order_settings: {
     label: "Order Settings",
     path: "/lightning/setup/OrderSettings/home",
     pageGroup: "Opportunities",
+  },
+  an_overview_of_prm: {
+    label: "An Overview of PRM",
+    path: "/lightning/setup/PrmUnifiedSetupSettings/home",
+    pageGroup: "PRM",
+  },
+  channel_management: {
+    label: "Channel Management",
+    path: "/lightning/setup/ChannelManagement/home",
+    pageGroup: "PRM",
+  },
+  partner_experience: {
+    label: "Partner Experience",
+    path: "/lightning/setup/PartnerExperience/home",
+    pageGroup: "PRM",
+  },
+  partner_productivity: {
+    label: "Partner Productivity",
+    path: "/lightning/setup/ChannelProductivity/home",
+    pageGroup: "PRM",
   },
   asset_settings: {
     label: "Asset Settings",
@@ -663,6 +734,11 @@ export const defaultShortcuts = {
     path: "/lightning/setup/Product2Settings/home",
     pageGroup: "Products",
   },
+  quote_templates: {
+    label: "Quote Templates",
+    path: "/lightning/setup/QuoteTemplateEditor/home",
+    pageGroup: "Quotes",
+  },
   quotes_settings: {
     label: "Quotes Settings",
     path: "/lightning/setup/QuoteSettings/home",
@@ -670,8 +746,8 @@ export const defaultShortcuts = {
   },
   setup_assistant: {
     label: "Setup Assistant",
-    path: "/lightning/setup/EmailIqSetupPage/home",
-    pageGroup: "Inbox",
+    path: "/lightning/setup/GettingStartedEmbedded/home",
+    pageGroup: "Event Monitoring",
   },
   log_a_call: {
     label: "Log a Call",
@@ -688,9 +764,19 @@ export const defaultShortcuts = {
     path: "/lightning/setup/OpportunityProcess/home",
     pageGroup: "Inbox",
   },
+  territory_models: {
+    label: "Territory Models",
+    path: "/lightning/setup/Territory2Models/home",
+    pageGroup: "Territories",
+  },
   territory_settings: {
     label: "Territory Settings",
     path: "/lightning/setup/Territory2Settings/home",
+    pageGroup: "Territories",
+  },
+  territory_types: {
+    label: "Territory Types",
+    path: "/lightning/setup/Territory2Types/home",
     pageGroup: "Territories",
   },
   update_reminders: {
@@ -727,16 +813,6 @@ export const defaultShortcuts = {
     label: "Salesforce CRM Content",
     path: "/lightning/setup/SalesforceCRMContent/home",
     pageGroup: "Salesforce Files",
-  },
-  get_started: {
-    label: "Get Started",
-    path: "/lightning/setup/IoTGettingStarted/home",
-    pageGroup: "Salesforce IoT",
-  },
-  scheduled_reminder_settings: {
-    label: "Scheduled Reminder Settings",
-    path: "/lightning/setup/ReminderSettings/home",
-    pageGroup: "Scheduled Reminders",
   },
   call_centers: {
     label: "Call Centers",
@@ -783,6 +859,11 @@ export const defaultShortcuts = {
     path: "/lightning/setup/CaseTeamTemplates/home",
     pageGroup: "Case Teams",
   },
+  "channel-object_linking_(beta)": {
+    label: "Channel-Object Linking (Beta)",
+    path: "/lightning/setup/ChannelObjectLinkingSetup/home",
+    pageGroup: "Case Teams",
+  },
   chat_settings: {
     label: "Chat Settings",
     path: "/lightning/setup/LiveAgentSettings/home",
@@ -808,10 +889,20 @@ export const defaultShortcuts = {
     path: "/lightning/setup/IncidentManagement/home",
     pageGroup: "Chat",
   },
+  data_category_setup: {
+    label: "Data Category Setup",
+    path: "/lightning/setup/DataCategorySetup/home",
+    pageGroup: "Data Categories",
+  },
+  default_data_category_visibility: {
+    label: "Default Data Category Visibility",
+    path: "/lightning/setup/DataCategoryDefaultVisibilitySettings/home",
+    pageGroup: "Data Categories",
+  },
   "email-to-case": {
     label: "Email-to-Case",
     path: "/lightning/setup/EmailToCase/home",
-    pageGroup: "Chat",
+    pageGroup: "Data Categories",
   },
   channel_menu: {
     label: "Channel Menu",
@@ -868,6 +959,11 @@ export const defaultShortcuts = {
     path: "/lightning/setup/FieldServiceSettings/home",
     pageGroup: "Field Service Mobile",
   },
+  inbound_social_post_errors: {
+    label: "Inbound Social Post Errors",
+    path: "/lightning/setup/InboundSocialPostErrors/home",
+    pageGroup: "Field Service Mobile",
+  },
   macro_settings: {
     label: "Macro Settings",
     path: "/lightning/setup/MacroSettings/home",
@@ -883,40 +979,115 @@ export const defaultShortcuts = {
     path: "/lightning/setup/LiveMessageSetup/home",
     pageGroup: "Messaging",
   },
-  sensitive_data_rules_for_enhanced_channels: {
-    label: "Sensitive Data Rules for Enhanced Channels",
-    path: "/lightning/setup/MessagingSensitiveDataRulesEnhanced/home",
-    pageGroup: "Sensitive Data Rules",
+  limits: {
+    label: "Limits",
+    path: "/lightning/setup/OmniChannelLimits/home",
+    pageGroup: "Omni-Channel",
+  },
+  "omni-channel_home": {
+    label: "Omni-Channel Home",
+    path: "/lightning/setup/OmniChannelHome/home",
+    pageGroup: "Omni-Channel",
   },
   "omni-channel_settings": {
     label: "Omni-Channel Settings",
     path: "/lightning/setup/OmniChannelSettings/home",
     pageGroup: "Omni-Channel",
   },
+  presence_configurations: {
+    label: "Presence Configurations",
+    path: "/lightning/setup/ServicePresenceUserConfigSettings/home",
+    pageGroup: "Omni-Channel",
+  },
+  presence_decline_reasons: {
+    label: "Presence Decline Reasons",
+    path: "/lightning/setup/ServicePresenceDeclineReasonSettings/home",
+    pageGroup: "Omni-Channel",
+  },
+  presence_statuses: {
+    label: "Presence Statuses",
+    path: "/lightning/setup/ServicePresenceStatusSettings/home",
+    pageGroup: "Omni-Channel",
+  },
+  routing_configurations: {
+    label: "Routing Configurations",
+    path: "/lightning/setup/QueueRoutingConfigSettings/home",
+    pageGroup: "Omni-Channel",
+  },
+  service_channels: {
+    label: "Service Channels",
+    path: "/lightning/setup/ServiceChannelSettings/home",
+    pageGroup: "Omni-Channel",
+  },
+  skills: {
+    label: "Skills",
+    path: "/lightning/setup/SkillPage/home",
+    pageGroup: "Skill Settings",
+  },
+  "skills-based_routing_rules": {
+    label: "Skills-Based Routing Rules",
+    path: "/lightning/setup/OmniChannelAttributeBasedRouting/home",
+    pageGroup: "Omni-Channel",
+  },
+  supervisor_configurations: {
+    label: "Supervisor Configurations",
+    path: "/lightning/setup/OmniSupervisorConfigSettings/home",
+    pageGroup: "Supervisor",
+  },
+  supervisor_settings: {
+    label: "Supervisor Settings",
+    path: "/lightning/setup/OmniSupervisorSettings/home",
+    pageGroup: "Supervisor",
+  },
+  sensitive_data_rules_for_enhanced_channels: {
+    label: "Sensitive Data Rules for Enhanced Channels",
+    path: "/lightning/setup/MessagingSensitiveDataRulesEnhanced/home",
+    pageGroup: "Supervisor",
+  },
+  einstein_classification: {
+    label: "Einstein Classification",
+    path: "/lightning/setup/EinsteinCaseClassification/home",
+    pageGroup: "Service Cloud Einstein",
+  },
+  social_business_rules: {
+    label: "Social Business Rules",
+    path: "/lightning/setup/SocialCustomerServiceBusinessRules/home",
+    pageGroup: "Service Cloud Einstein",
+  },
+  social_customer_service: {
+    label: "Social Customer Service",
+    path: "/lightning/setup/SocialCustomerManagementAccountSettings/home",
+    pageGroup: "Service Cloud Einstein",
+  },
   support_processes: {
     label: "Support Processes",
     path: "/lightning/setup/CaseProcess/home",
-    pageGroup: "Omni-Channel",
+    pageGroup: "Service Cloud Einstein",
   },
   support_settings: {
     label: "Support Settings",
     path: "/lightning/setup/CaseSettings/home",
-    pageGroup: "Omni-Channel",
+    pageGroup: "Service Cloud Einstein",
   },
   swarming: {
     label: "Swarming",
     path: "/lightning/setup/CaseSwarming/home",
-    pageGroup: "Omni-Channel",
+    pageGroup: "Service Cloud Einstein",
   },
   "web-to-case": {
     label: "Web-to-Case",
     path: "/lightning/setup/CaseWebtocase/home",
-    pageGroup: "Omni-Channel",
+    pageGroup: "Service Cloud Einstein",
   },
   "web-to-case_html_generator": {
     label: "Web-to-Case HTML Generator",
     path: "/lightning/setup/CaseWebToCaseHtmlGenerator/home",
-    pageGroup: "Omni-Channel",
+    pageGroup: "Service Cloud Einstein",
+  },
+  skill_types: {
+    label: "Skill Types",
+    path: "/lightning/setup/SkillType/home",
+    pageGroup: "Skill Settings",
   },
   survey_settings: {
     label: "Survey Settings",
@@ -943,20 +1114,10 @@ export const defaultShortcuts = {
     path: "/lightning/setup/SlackSetupAssistant/home",
     pageGroup: "Slack",
   },
-  batch_management: {
-    label: "Batch Management",
-    path: "/lightning/setup/BatchProcessJobDefinition/home",
-    pageGroup: "Workflow Services",
-  },
-  monitor_workflow_services: {
-    label: "Monitor Workflow Services",
-    path: "/lightning/setup/MonitorWorkflowServices/home",
-    pageGroup: "Workflow Services",
-  },
-  services: {
-    label: "Services",
-    path: "/lightning/setup/MulesoftServices/home",
-    pageGroup: "MuleSoft",
+  about_heroku: {
+    label: "About Heroku",
+    path: "/lightning/setup/AboutHeroku/home",
+    pageGroup: "Heroku",
   },
   einstein_bots_assessor: {
     label: "Einstein Bots Assessor",
@@ -983,13 +1144,23 @@ export const defaultShortcuts = {
     path: "/lightning/setup/EinsteinBots/home",
     pageGroup: "Einstein Platform",
   },
+  einstein_prediction_builder: {
+    label: "Einstein Prediction Builder",
+    path: "/lightning/setup/EinsteinBuilder/home",
+    pageGroup: "Einstein Platform",
+  },
+  einstein_recommendation_builder: {
+    label: "Einstein Recommendation Builder",
+    path: "/lightning/setup/EinsteinRecommendation/home",
+    pageGroup: "Einstein Platform",
+  },
   "einstein.ai": {
     label: "Einstein.ai",
     path: "/lightning/setup/EinsteinKeyManagement/home",
     pageGroup: "Einstein Platform",
   },
-  "objects_to_always_search_(beta)": {
-    label: "Objects to Always Search (Beta)",
+  "objects_to_always_search_(moved)": {
+    label: "Objects to Always Search (Moved)",
     path: "/lightning/setup/SearchScope/home",
     pageGroup: "Einstein Search",
   },
@@ -1013,10 +1184,15 @@ export const defaultShortcuts = {
     path: "/lightning/setup/ManageSynonyms/home",
     pageGroup: "Einstein Search",
   },
-  url_shortening_domain: {
-    label: "URL Shortening Domain",
-    path: "/lightning/setup/E360URLShorteningDomain/home",
-    pageGroup: "Branded Domain",
+  regulatory_compliance: {
+    label: "Regulatory Compliance",
+    path: "/lightning/setup/SmsCompliance/home",
+    pageGroup: "SMS",
+  },
+  sms_codes: {
+    label: "SMS Codes",
+    path: "/lightning/setup/SmsCodes/home",
+    pageGroup: "SMS",
   },
   picklist_value_sets: {
     label: "Picklist Value Sets",
@@ -1091,6 +1267,11 @@ export const defaultShortcuts = {
   field_updates: {
     label: "Field Updates",
     path: "/lightning/setup/WorkflowFieldUpdates/home",
+    pageGroup: "Workflow Actions",
+  },
+  knowledge_action: {
+    label: "Knowledge Action",
+    path: "/lightning/setup/WorkflowKnowledgeSubmit/home",
     pageGroup: "Workflow Actions",
   },
   outbound_messages: {
@@ -1333,30 +1514,25 @@ export const defaultShortcuts = {
     path: "/lightning/setup/ApexPages/home",
     pageGroup: "Lightning Components",
   },
-  dev_hub: {
-    label: "Dev Hub",
-    path: "/lightning/setup/DevHub/home",
-    pageGroup: "Development",
-  },
-  devops_center: {
-    label: "DevOps Center",
-    path: "/lightning/setup/DevOpsCenterSetup/home",
-    pageGroup: "Development",
-  },
   einstein_for_developers: {
     label: "Einstein for Developers",
     path: "/lightning/setup/EinsteinForDevelopers/home",
-    pageGroup: "Development",
-  },
-  scratch_orgs: {
-    label: "Scratch Orgs",
-    path: "/lightning/setup/ShapeGrantAccess/home",
     pageGroup: "Development",
   },
   performance_assistant: {
     label: "Performance Assistant",
     path: "/lightning/setup/PerformanceAssistant/home",
     pageGroup: "Scale Test",
+  },
+  inbound_change_sets: {
+    label: "Inbound Change Sets",
+    path: "/lightning/setup/InboundChangeSet/home",
+    pageGroup: "Change Sets",
+  },
+  outbound_change_sets: {
+    label: "Outbound Change Sets",
+    path: "/lightning/setup/OutboundChangeSet/home",
+    pageGroup: "Change Sets",
   },
   deployment_settings: {
     label: "Deployment Settings",
@@ -1448,9 +1624,19 @@ export const defaultShortcuts = {
     path: "/lightning/setup/Prompts/home",
     pageGroup: "User Engagement",
   },
+  enablement_settings: {
+    label: "Enablement Settings",
+    path: "/lightning/setup/EnablementLitePrograms/home",
+    pageGroup: "Enablement",
+  },
   api: {
     label: "API",
     path: "/lightning/setup/WebServices/home",
+    pageGroup: "Integrations",
+  },
+  basic_data_import: {
+    label: "Basic Data Import",
+    path: "/lightning/setup/BasicDataImport/home",
     pageGroup: "Integrations",
   },
   change_data_capture: {
@@ -1548,6 +1734,16 @@ export const defaultShortcuts = {
     path: "/lightning/setup/LanguageSettings/home",
     pageGroup: "Calendar Settings",
   },
+  manage_currencies: {
+    label: "Manage Currencies",
+    path: "/lightning/setup/CompanyCurrency/home",
+    pageGroup: "Calendar Settings",
+  },
+  maps_and_location_settings: {
+    label: "Maps and Location Settings",
+    path: "/lightning/setup/MapsAndLocationServicesSettings/home",
+    pageGroup: "Calendar Settings",
+  },
   my_domain: {
     label: "My Domain",
     path: "/lightning/setup/OrgDomain/home",
@@ -1576,11 +1772,6 @@ export const defaultShortcuts = {
   "auth._providers": {
     label: "Auth. Providers",
     path: "/lightning/setup/AuthProviders/home",
-    pageGroup: "Identity",
-  },
-  identity_connect: {
-    label: "Identity Connect",
-    path: "/lightning/setup/IdentityConnect/home",
     pageGroup: "Identity",
   },
   identity_provider: {
@@ -1643,11 +1834,6 @@ export const defaultShortcuts = {
     path: "/lightning/setup/CorsWhitelistEntries/home",
     pageGroup: "Security",
   },
-  csp_violations: {
-    label: "CSP Violations",
-    path: "/lightning/setup/ContentSecurityPolicyViolations/home",
-    pageGroup: "Security",
-  },
   certificate_and_key_management: {
     label: "Certificate and Key Management",
     path: "/lightning/setup/CertificatesAndKeysManagement/home",
@@ -1658,8 +1844,8 @@ export const defaultShortcuts = {
     path: "/lightning/setup/DelegateGroups/home",
     pageGroup: "Security",
   },
-  "event_log_file_browser_(beta)": {
-    label: "Event Log File Browser (Beta)",
+  event_log_file_browser: {
+    label: "Event Log File Browser",
     path: "/lightning/setup/ElfBrowser/home",
     pageGroup: "Event Monitoring",
   },
@@ -1718,54 +1904,54 @@ export const defaultShortcuts = {
     path: "/lightning/setup/SecurityPolicies/home",
     pageGroup: "Event Monitoring",
   },
-  encryption_settings: {
-    label: "Encryption Settings",
-    path: "/lightning/setup/EncryptionAdvancedSettings/home",
-    pageGroup: "Platform Encryption",
-  },
-  key_management: {
-    label: "Key Management",
-    path: "/lightning/setup/PlatformEncryptionKeyManagement/home",
-    pageGroup: "Platform Encryption",
+  portal_health_check: {
+    label: "Portal Health Check",
+    path: "/lightning/setup/PortalSecurityReport/home",
+    pageGroup: "Event Monitoring",
   },
   private_connect: {
     label: "Private Connect",
     path: "/lightning/setup/PrivateConnect/home",
-    pageGroup: "Platform Encryption",
+    pageGroup: "Event Monitoring",
   },
   remote_site_settings: {
     label: "Remote Site Settings",
     path: "/lightning/setup/SecurityRemoteProxy/home",
-    pageGroup: "Platform Encryption",
+    pageGroup: "Event Monitoring",
   },
   session_management: {
     label: "Session Management",
     path: "/lightning/setup/SessionManagementPage/home",
-    pageGroup: "Platform Encryption",
+    pageGroup: "Event Monitoring",
   },
   session_settings: {
     label: "Session Settings",
     path: "/lightning/setup/SecuritySession/home",
-    pageGroup: "Platform Encryption",
+    pageGroup: "Event Monitoring",
   },
   sharing_settings: {
     label: "Sharing Settings",
     path: "/lightning/setup/SecuritySharing/home",
-    pageGroup: "Platform Encryption",
+    pageGroup: "Event Monitoring",
+  },
+  trusted_url_and_browser_policy_violations: {
+    label: "Trusted URL and Browser Policy Violations",
+    path: "/lightning/setup/BrowserPolicyViolations/home",
+    pageGroup: "Event Monitoring",
   },
   trusted_urls: {
     label: "Trusted URLs",
     path: "/lightning/setup/SecurityCspTrustedSite/home",
-    pageGroup: "Platform Encryption",
+    pageGroup: "Event Monitoring",
   },
   trusted_urls_for_redirects: {
     label: "Trusted URLs for Redirects",
     path: "/lightning/setup/SecurityRedirectWhitelistUrl/home",
-    pageGroup: "Platform Encryption",
+    pageGroup: "Event Monitoring",
   },
   view_setup_audit_trail: {
     label: "View Setup Audit Trail",
     path: "/lightning/setup/SecurityEvents/home",
-    pageGroup: "Platform Encryption",
+    pageGroup: "Setup",
   },
 };
