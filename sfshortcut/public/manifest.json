@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Salesforce Shortcuts",
-  "version": "1.0",
+  "version": "1.1",
   "description": "A Salesforce shortcut extension for admins",
   "action": {
     "default_popup": "index.html"
