@@ -2,10 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 import {
   defaultShortcuts,
   defaultFavourites,
+  defaultObjectFavourites,
 } from "../app/utilities/defaultShortcutData";
 
 const initialState = {
   shortcutFavourites: defaultFavourites,
+  objectFavourites: defaultObjectFavourites,
   shortcuts: defaultShortcuts,
 };
 
@@ -77,6 +79,9 @@ export const {
   onRestoreFullSearchResults,
 } = shortcutSlice.actions;
 export const selectFavorites = (state) => state.shortcut.shortcutFavourites;
+export const selectObjectFavourites = (state) =>
+  state.shortcut.objectFavourites;
+
 export const selectShortcuts = (state) => state.shortcut.shortcuts;
 export const selectSearchTerm = (state) => state.shortcut.searchTerm;
 

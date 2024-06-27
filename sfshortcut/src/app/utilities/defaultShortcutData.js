@@ -7,7 +7,14 @@ export const defaultFavourites = [
   "developer_console",
 ];
 
+export const defaultObjectFavourites = ["opportunity"];
+
 export const defaultShortcuts = {
+  opportunity: {
+    label: "Opportunity",
+    path: "/lightning/setup/ObjectManager/Opportunity/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
   home: {
     label: "Home",
     path: "/lightning/setup/Home/home",
@@ -22,6 +29,12 @@ export const defaultShortcuts = {
     label: "Developer Console",
     path: "/_ui/common/apex/debug/ApexCSIPage",
     pageGroup: "Developer Tools",
+    favourite: false,
+  },
+  flow_trigger_explorer: {
+    label: "Flow Trigger Explorer",
+    path: "/interaction_explorer/flowExplorer.app",
+    pageGroup: "Process Automation",
     favourite: false,
   },
   setup_home: {
@@ -1952,6 +1965,6 @@ export const defaultShortcuts = {
   view_setup_audit_trail: {
     label: "View Setup Audit Trail",
     path: "/lightning/setup/SecurityEvents/home",
-    pageGroup: "Setup",
+    pageGroup: "Event Monitoring",
   },
 };

@@ -9,13 +9,21 @@ import AlertModal from "./AlertModal";
 import { validateUrl } from "../app/utilities/chromeNavigationUtils";
 import { getChromeStorage, setChromeStorage } from "../app/utilities/chromeAPI";
 import { selectSettings } from "../slices/settingsSlice";
+import {
+  selectNavigateToRecordVisable,
+  setNavigateToRecordVisable,
+} from "../slices/navigationSlice";
+import NavigateToRecordModal from "../app/modalTools/navigateToRecordModal";
 
 export default function ViewContainer() {
   const dispatch = useDispatch();
   const shortcutFavourites = useSelector(selectFavorites);
   const userSettings = useSelector(selectSettings);
   const alertModalConfig = useSelector(selectAlertModal);
-  // Get when first renders
+  const navigateToRecordModalVisable = useSelector(
+    selectNavigateToRecordVisable
+  );
+
   useEffect(() => {
     const initialize = async () => {
       console.log("STARTED");
@@ -37,6 +45,22 @@ export default function ViewContainer() {
   useEffect(() => {
     setChromeStorage(undefined, userSettings);
   }, [userSettings]);
+
+  if (navigateToRecordModalVisable) {
+    return (
+      <div className="container">
+        <NavigateToRecordModal />
+        <div
+          className="modal-overlay"
+          onClick={(e) => dispatch(setNavigateToRecordVisable())}
+        >
+          <NavigationBar />
+          <ContentContainer />
+          {alertModalConfig && <AlertModal config={alertModalConfig} />}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container">

@@ -13,18 +13,16 @@ export default function SearchBar() {
   const dispatch = useDispatch();
 
   return (
-    <>
-      <input
-        className="search-bar"
-        value={searchTerm}
-        placeholder="Search.."
-        onChange={(e) => {
-          if (!searchTerm) {
-            dispatch(handleNavigationChange(shortcutListViewLabel));
-          }
-          dispatch(onSearchTermChanged(e.target.value));
-        }}
-      />
-    </>
+    <input
+      className="search-bar"
+      value={searchTerm}
+      placeholder="Search.."
+      onChange={(e) => {
+        if (!searchTerm) {
+          dispatch(handleNavigationChange(shortcutListViewLabel));
+        }
+        dispatch(onSearchTermChanged(e.target.value));
+      }}
+    />
   );
 }

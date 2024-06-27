@@ -5,12 +5,18 @@ import {
   homeViewLabel,
   shortcutListViewLabel,
 } from "../app/utilities/predefinedVariables";
+import {
+  setupFilter,
+  objectsFilter,
+} from "../app/utilities/predefinedVariables";
 
 const initialState = {
   navigationPage: homeViewLabel,
   alertModal: null,
   timeoutId: null,
   url: null,
+  navigateToRecordVisable: false,
+  homePageFilter: setupFilter,
 };
 
 export const handleNavigationChange = createAsyncThunk(
@@ -68,6 +74,12 @@ export const navigationSlice = createSlice({
       console.log(action.payload);
       state.url = action.payload;
     },
+    setNavigateToRecordVisable: (state, action) => {
+      state.navigateToRecordVisable = !state.navigateToRecordVisable;
+    },
+    setHomepageFilter: (state, action) => {
+      state.homePageFilter = action.payload;
+    },
   },
 });
 
@@ -77,9 +89,14 @@ export const {
   clearAlertModal,
   setTimeoutId,
   setUrl,
+  setNavigateToRecordVisable,
+  setHomepageFilter,
 } = navigationSlice.actions;
 export const selectNavigationPage = (state) => state.navigation.navigationPage;
 export const selectAlertModal = (state) => state.navigation.alertModal;
 export const selectCurrentUrl = (state) => state.navigation.url;
+export const selectNavigateToRecordVisable = (state) =>
+  state.navigation.navigateToRecordVisable;
+export const selectHomePageFilter = (state) => state.navigation.homePageFilter;
 
 export default navigationSlice.reducer;

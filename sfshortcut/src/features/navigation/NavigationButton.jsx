@@ -11,7 +11,7 @@ import {
   settingsViewLabel,
   salesforceRedirectLabel,
 } from "../../app/utilities/predefinedVariables";
-import { navigateTab } from "../../app/utilities/chromeNavigationUtils";
+import { setNavigateToRecordVisable } from "../../slices/navigationSlice";
 
 export default function NavigationButton({ buttonLabel, selected }) {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ export default function NavigationButton({ buttonLabel, selected }) {
         type="button"
         onClick={() => {
           if (buttonLabel === salesforceRedirectLabel) {
-            navigateTab("https://login.salesforce.com/?locale=uk", true);
+            dispatch(setNavigateToRecordVisable());
           } else {
             dispatch(handleNavigationChange(buttonLabel));
           }
