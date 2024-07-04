@@ -1,7 +1,11 @@
+.search-container {
+  display: flex;
+}
+
 .search-bar {
   background-color: var(--search-bar-colour);
-  height: 20%;
-  border-radius: 5px;
+  height: 15px;
+  border-radius: 5px 0 0 5px;
   border: none;
   color: #3f3d3d;
   font-weight: bold;
@@ -10,4 +14,23 @@
 input::placeholder {
   color: #3f3d3d;
   font-weight: bold;
+}
+
+.search-clear-container {
+  background-color: var(--search-bar-colour);
+  border-radius: 0 5px 5px 0;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search-clear-icon {
+  color: var(--dark-mode-background-colour);
+  width: 18px;
+  height: 18px;
+}
+
+.search-clear-icon:hover {
+  opacity: 65%;
 }

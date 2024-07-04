@@ -4,7 +4,11 @@ import "./ShortcutList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-export default function ShortcutList({ shortcuts, favourites }) {
+export default function ShortcutList({
+  shortcuts,
+  favourites,
+  objectFavourites,
+}) {
   const updatedShortcuts = { ...shortcuts };
 
   Object.keys(updatedShortcuts).forEach((key) => {
@@ -12,6 +16,12 @@ export default function ShortcutList({ shortcuts, favourites }) {
   });
 
   favourites.forEach((key) => {
+    if (updatedShortcuts[key]) {
+      updatedShortcuts[key] = { ...updatedShortcuts[key], favourite: true };
+    }
+  });
+
+  objectFavourites.forEach((key) => {
     if (updatedShortcuts[key]) {
       updatedShortcuts[key] = { ...updatedShortcuts[key], favourite: true };
     }

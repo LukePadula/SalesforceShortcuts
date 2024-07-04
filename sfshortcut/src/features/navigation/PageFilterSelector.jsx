@@ -2,7 +2,6 @@ import React from "react";
 import "./PageFilterSelector.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  selectNavigationPage,
   selectHomePageFilter,
   setHomepageFilter,
 } from "../../slices/navigationSlice";
@@ -11,13 +10,15 @@ import {
   objectsFilter,
 } from "../../app/utilities/predefinedVariables";
 
-export default function PageFilterSelector() {
-  const currentPage = useSelector(selectNavigationPage);
-  const homePageFilter = useSelector(selectHomePageFilter);
+export default function PageFilterSelector({ goToSlide }) {
   const dispatch = useDispatch();
+  const homePageFilterIndex = useSelector(selectHomePageFilter);
 
-  const handleFilterClick = (e) => {
-    dispatch(setHomepageFilter(e.target.id));
+  const handleFilterClick = (index) => {
+    if (homePageFilterIndex != index) {
+      goToSlide(index);
+      dispatch(setHomepageFilter(index));
+    }
   };
 
   return (
@@ -25,22 +26,22 @@ export default function PageFilterSelector() {
       <button
         id={setupFilter}
         className={
-          homePageFilter === setupFilter
+          homePageFilterIndex === 0
             ? "filter-container selected"
             : "filter-container"
         }
-        onClick={(e) => handleFilterClick(e)}
+        onClick={(e) => handleFilterClick(0)}
       >
         Setup
       </button>
       <button
         id={objectsFilter}
         className={
-          homePageFilter === objectsFilter
+          homePageFilterIndex === 1
             ? "filter-container selected"
             : "filter-container"
         }
-        onClick={(e) => handleFilterClick(e)}
+        onClick={(e) => handleFilterClick(1)}
       >
         Objects
       </button>

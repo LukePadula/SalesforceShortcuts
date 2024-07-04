@@ -6,7 +6,6 @@
   text-align: center;
   color: #ffff;
   height: 100%;
-  padding: 30px;
 }
 
 .no-favourites-title {
@@ -26,7 +25,7 @@
   border-radius: 5px;
   width: 25%;
   height: 15%;
-  padding: 3px;
+  padding: 15px;
   color: #ffff;
   margin-top: 15px;
 }

@@ -7,7 +7,7 @@ import {
   homeViewLabel,
   shortcutListViewLabel,
   settingsViewLabel,
-  salesforceRedirectLabel,
+  navigateToRecordLabel,
 } from "../../app/utilities/predefinedVariables";
 
 export default function NavigationButtonContainer() {
@@ -24,12 +24,12 @@ export default function NavigationButtonContainer() {
         selected={currentPage === shortcutListViewLabel}
       />
       <NavigationButton
-        buttonLabel={settingsViewLabel}
-        selected={currentPage === settingsViewLabel}
+        buttonLabel={navigateToRecordLabel}
+        selected={currentPage === navigateToRecordLabel}
       />
       <NavigationButton
-        buttonLabel={salesforceRedirectLabel}
-        selected={currentPage === salesforceRedirectLabel}
+        buttonLabel={settingsViewLabel}
+        selected={currentPage === settingsViewLabel}
       />
     </div>
   );

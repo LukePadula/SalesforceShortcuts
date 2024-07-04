@@ -17,6 +17,7 @@ export default function ShortcutListItem({ shortcutKey, config, starIcon }) {
     dispatch(
       setShortcutFavourite({
         shortcutKey,
+        shortcutType: config.pageGroup,
       })
     );
     dispatch(

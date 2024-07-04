@@ -16,14 +16,16 @@ export const shortcutSlice = createSlice({
   initialState,
   reducers: {
     setFavourites: (state, action) => {
-      const { savedFavourites } = action.payload;
+      const { savedFavourites, favouriteType } = action.payload;
       let newData = state.shortcuts;
       let favouritesList;
 
       if (Array.isArray(savedFavourites) && savedFavourites.length > 0) {
         favouritesList = savedFavourites;
-        state.shortcutFavourites = savedFavourites;
+        state[favouriteType] = savedFavourites;
+        console.log("NON EMPTY FAVS");
       } else {
+        console.log("EMPTY LIST?");
         favouritesList = defaultFavourites;
       }
 
@@ -34,18 +36,26 @@ export const shortcutSlice = createSlice({
       state.shortcuts = newData;
     },
     setShortcutFavourite: (state, action) => {
-      const { shortcutKey } = action.payload;
+      const { shortcutKey, shortcutType } = action.payload;
 
-      let newShortCutFavourites = state.shortcutFavourites;
+      let favouritesLabel =
+        shortcutType === "Standard Object"
+          ? "objectFavourites"
+          : "shortcutFavourites";
+
+      console.log(JSON.stringify(state["objectFavourites"]), "OBJECT ");
+      console.log(JSON.stringify(state["shortcutFavourites"]), "SHORTCUTS ");
+
+      let newShortCutFavourites = state[favouritesLabel];
 
       if (newShortCutFavourites.includes(shortcutKey)) {
-        newShortCutFavourites = state.shortcutFavourites.filter(
+        newShortCutFavourites = state[favouritesLabel].filter(
           (item) => item !== shortcutKey
         );
       } else {
         newShortCutFavourites.push(shortcutKey);
       }
-      state.shortcutFavourites = newShortCutFavourites;
+      state[favouritesLabel] = newShortCutFavourites;
     },
     onSearchTermChanged: (state, action) => {
       const oldSearchTerm = state.searchTerm;
@@ -66,8 +76,10 @@ export const shortcutSlice = createSlice({
       state.shortcuts = searchResults;
     },
     onRestoreFullSearchResults: (state, action) => {
-      state.shortcuts = defaultShortcuts;
-      state.searchTerm = "";
+      if (state.searchTerm) {
+        state.shortcuts = defaultShortcuts;
+        state.searchTerm = "";
+      }
     },
   },
 });
@@ -81,7 +93,6 @@ export const {
 export const selectFavorites = (state) => state.shortcut.shortcutFavourites;
 export const selectObjectFavourites = (state) =>
   state.shortcut.objectFavourites;
-
 export const selectShortcuts = (state) => state.shortcut.shortcuts;
 export const selectSearchTerm = (state) => state.shortcut.searchTerm;
 

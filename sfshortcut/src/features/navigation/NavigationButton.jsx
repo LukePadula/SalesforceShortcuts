@@ -3,28 +3,27 @@ import "./NavigationButton.css";
 import { useDispatch } from "react-redux";
 import { handleNavigationChange } from "../../slices/navigationSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faList, faGear } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faList, faGear } from "@fortawesome/free-solid-svg-icons";
 import { faSalesforce } from "@fortawesome/free-brands-svg-icons";
 import {
   homeViewLabel,
   shortcutListViewLabel,
   settingsViewLabel,
-  salesforceRedirectLabel,
+  navigateToRecordLabel,
 } from "../../app/utilities/predefinedVariables";
-import { setNavigateToRecordVisable } from "../../slices/navigationSlice";
 
 export default function NavigationButton({ buttonLabel, selected }) {
   const dispatch = useDispatch();
 
   const iconMap = {
-    [homeViewLabel]: faHome,
+    [homeViewLabel]: faStar,
     [shortcutListViewLabel]: faList,
     [settingsViewLabel]: faGear,
-    [salesforceRedirectLabel]: faSalesforce,
+    [navigateToRecordLabel]: faSalesforce,
   };
 
   const salesforceClass =
-    buttonLabel === salesforceRedirectLabel ? "salesforce-icon" : null;
+    buttonLabel === navigateToRecordLabel ? "salesforce-icon" : null;
   let buttonStyleClass;
   let iconStyleClass = "nav-icon";
 
@@ -41,11 +40,7 @@ export default function NavigationButton({ buttonLabel, selected }) {
         className={`${buttonStyleClass} ${salesforceClass}`}
         type="button"
         onClick={() => {
-          if (buttonLabel === salesforceRedirectLabel) {
-            dispatch(setNavigateToRecordVisable());
-          } else {
-            dispatch(handleNavigationChange(buttonLabel));
-          }
+          dispatch(handleNavigationChange(buttonLabel));
         }}
       >
         <FontAwesomeIcon

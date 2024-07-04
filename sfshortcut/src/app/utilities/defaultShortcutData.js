@@ -7,14 +7,16 @@ export const defaultFavourites = [
   "developer_console",
 ];
 
-export const defaultObjectFavourites = ["opportunity"];
+export const defaultObjectFavourites = [
+  "account",
+  "case",
+  "contact",
+  "lead",
+  "opportunity",
+  "order",
+];
 
 export const defaultShortcuts = {
-  opportunity: {
-    label: "Opportunity",
-    path: "/lightning/setup/ObjectManager/Opportunity/FieldsAndRelationships/view",
-    pageGroup: "Standard Object",
-  },
   home: {
     label: "Home",
     path: "/lightning/setup/Home/home",
@@ -1966,5 +1968,621 @@ export const defaultShortcuts = {
     label: "View Setup Audit Trail",
     path: "/lightning/setup/SecurityEvents/home",
     pageGroup: "Event Monitoring",
+  },
+
+  account: {
+    label: "Account",
+    path: "/lightning/setup/ObjectManager/Account/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  activity: {
+    label: "Activity",
+    path: "/lightning/setup/ObjectManager/Activity/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  alternative_payment_method: {
+    label: "Alternative Payment Method",
+    path: "/lightning/setup/ObjectManager/AlternativePaymentMethod/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  api_anomaly_event_store: {
+    label: "API Anomaly Event Store",
+    path: "/lightning/setup/ObjectManager/ApiAnomalyEventStore/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  asset: {
+    label: "Asset",
+    path: "/lightning/setup/ObjectManager/Asset/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  asset_action: {
+    label: "Asset Action",
+    path: "/lightning/setup/ObjectManager/AssetAction/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  asset_action_source: {
+    label: "Asset Action Source",
+    path: "/lightning/setup/ObjectManager/AssetActionSource/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  asset_relationship: {
+    label: "Asset Relationship",
+    path: "/lightning/setup/ObjectManager/AssetRelationship/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  asset_state_period: {
+    label: "Asset State Period",
+    path: "/lightning/setup/ObjectManager/AssetStatePeriod/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  associated_location: {
+    label: "Associated Location",
+    path: "/lightning/setup/ObjectManager/AssociatedLocation/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  authorization_form: {
+    label: "Authorization Form",
+    path: "/lightning/setup/ObjectManager/AuthorizationForm/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  authorization_form_consent: {
+    label: "Authorization Form Consent",
+    path: "/lightning/setup/ObjectManager/AuthorizationFormConsent/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  authorization_form_data_use: {
+    label: "Authorization Form Data Use",
+    path: "/lightning/setup/ObjectManager/AuthorizationFormDataUse/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  authorization_form_text: {
+    label: "Authorization Form Text",
+    path: "/lightning/setup/ObjectManager/AuthorizationFormText/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  business_brand: {
+    label: "Business Brand",
+    path: "/lightning/setup/ObjectManager/BusinessBrand/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  campaign: {
+    label: "Campaign",
+    path: "/lightning/setup/ObjectManager/Campaign/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  campaign_member: {
+    label: "Campaign Member",
+    path: "/lightning/setup/ObjectManager/CampaignMember/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  card_payment_method: {
+    label: "Card Payment Method",
+    path: "/lightning/setup/ObjectManager/CardPaymentMethod/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  case: {
+    label: "Case",
+    path: "/lightning/setup/ObjectManager/Case/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  case_related_issue: {
+    label: "Case Related Issue",
+    path: "/lightning/setup/ObjectManager/CaseRelatedIssue/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  change_request: {
+    label: "Change Request",
+    path: "/lightning/setup/ObjectManager/ChangeRequest/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  change_request_related_issue: {
+    label: "Change Request Related Issue",
+    path: "/lightning/setup/ObjectManager/ChangeRequestRelatedIssue/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  change_request_related_item: {
+    label: "Change Request Related Item",
+    path: "/lightning/setup/ObjectManager/ChangeRequestRelatedItem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  communication_subscription: {
+    label: "Communication Subscription",
+    path: "/lightning/setup/ObjectManager/CommSubscription/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  communication_subscription_channel_type: {
+    label: "Communication Subscription Channel Type",
+    path: "/lightning/setup/ObjectManager/CommSubscriptionChannelType/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  communication_subscription_consent: {
+    label: "Communication Subscription Consent",
+    path: "/lightning/setup/ObjectManager/CommSubscriptionConsent/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  communication_subscription_timing: {
+    label: "Communication Subscription Timing",
+    path: "/lightning/setup/ObjectManager/CommSubscriptionTiming/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  consumption_rate: {
+    label: "Consumption Rate",
+    path: "/lightning/setup/ObjectManager/ConsumptionRate/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  consumption_schedule: {
+    label: "Consumption Schedule",
+    path: "/lightning/setup/ObjectManager/ConsumptionSchedule/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  contact: {
+    label: "Contact",
+    path: "/lightning/setup/ObjectManager/Contact/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  contact_point_address: {
+    label: "Contact Point Address",
+    path: "/lightning/setup/ObjectManager/ContactPointAddress/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  contact_point_consent: {
+    label: "Contact Point Consent",
+    path: "/lightning/setup/ObjectManager/ContactPointConsent/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  contact_point_email: {
+    label: "Contact Point Email",
+    path: "/lightning/setup/ObjectManager/ContactPointEmail/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  contact_point_phone: {
+    label: "Contact Point Phone",
+    path: "/lightning/setup/ObjectManager/ContactPointPhone/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  contact_point_type_consent: {
+    label: "Contact Point Type Consent",
+    path: "/lightning/setup/ObjectManager/ContactPointTypeConsent/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  contact_request: {
+    label: "Contact Request",
+    path: "/lightning/setup/ObjectManager/ContactRequest/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  content_version: {
+    label: "Content Version",
+    path: "/lightning/setup/ObjectManager/ContentVersion/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  contract: {
+    label: "Contract",
+    path: "/lightning/setup/ObjectManager/Contract/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  contract_line_item: {
+    label: "Contract Line Item",
+    path: "/lightning/setup/ObjectManager/ContractLineItem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  credential_stuffing_event_store: {
+    label: "Credential Stuffing Event Store",
+    path: "/lightning/setup/ObjectManager/CredentialStuffingEventStore/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  credit_memo: {
+    label: "Credit Memo",
+    path: "/lightning/setup/ObjectManager/CreditMemo/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  credit_memo_invoice_application: {
+    label: "Credit Memo Invoice Application",
+    path: "/lightning/setup/ObjectManager/CreditMemoInvApplication/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  credit_memo_line: {
+    label: "Credit Memo Line",
+    path: "/lightning/setup/ObjectManager/CreditMemoLine/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  customer: {
+    label: "Customer",
+    path: "/lightning/setup/ObjectManager/Customer/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  "d&b_company": {
+    label: "D&B Company",
+    path: "/lightning/setup/ObjectManager/DandBCompany/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  data_use_legal_basis: {
+    label: "Data Use Legal Basis",
+    path: "/lightning/setup/ObjectManager/DataUseLegalBasis/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  data_use_purpose: {
+    label: "Data Use Purpose",
+    path: "/lightning/setup/ObjectManager/DataUsePurpose/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  digital_wallet: {
+    label: "Digital Wallet",
+    path: "/lightning/setup/ObjectManager/DigitalWallet/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  duplicate_record_item: {
+    label: "Duplicate Record Item",
+    path: "/lightning/setup/ObjectManager/DuplicateRecordItem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  duplicate_record_set: {
+    label: "Duplicate Record Set",
+    path: "/lightning/setup/ObjectManager/DuplicateRecordSet/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  email_message: {
+    label: "Email Message",
+    path: "/lightning/setup/ObjectManager/EmailMessage/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  engagement_channel_type: {
+    label: "Engagement Channel Type",
+    path: "/lightning/setup/ObjectManager/EngagementChannelType/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  entitlement: {
+    label: "Entitlement",
+    path: "/lightning/setup/ObjectManager/Entitlement/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  entitlement_contact: {
+    label: "Entitlement Contact",
+    path: "/lightning/setup/ObjectManager/EntitlementContact/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  event: {
+    label: "Event",
+    path: "/lightning/setup/ObjectManager/Event/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  finance_balance_snapshot: {
+    label: "Finance Balance Snapshot",
+    path: "/lightning/setup/ObjectManager/FinanceBalanceSnapshot/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  finance_transaction: {
+    label: "Finance Transaction",
+    path: "/lightning/setup/ObjectManager/FinanceTransaction/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  guest_user_anomaly_event_store: {
+    label: "Guest User Anomaly Event Store",
+    path: "/lightning/setup/ObjectManager/GuestUserAnomalyEventStore/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  image: {
+    label: "Image",
+    path: "/lightning/setup/ObjectManager/Image/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  incident: {
+    label: "Incident",
+    path: "/lightning/setup/ObjectManager/Incident/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  incident_related_item: {
+    label: "Incident Related Item",
+    path: "/lightning/setup/ObjectManager/IncidentRelatedItem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  individual: {
+    label: "Individual",
+    path: "/lightning/setup/ObjectManager/Individual/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  invoice: {
+    label: "Invoice",
+    path: "/lightning/setup/ObjectManager/Invoice/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  invoice_line: {
+    label: "Invoice Line",
+    path: "/lightning/setup/ObjectManager/InvoiceLine/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  lead: {
+    label: "Lead",
+    path: "/lightning/setup/ObjectManager/Lead/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  legal_entity: {
+    label: "Legal Entity",
+    path: "/lightning/setup/ObjectManager/LegalEntity/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  list_email: {
+    label: "List Email",
+    path: "/lightning/setup/ObjectManager/ListEmail/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  location: {
+    label: "Location",
+    path: "/lightning/setup/ObjectManager/Location/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  location_group: {
+    label: "Location Group",
+    path: "/lightning/setup/ObjectManager/LocationGroup/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  location_group_assignment: {
+    label: "Location Group Assignment",
+    path: "/lightning/setup/ObjectManager/LocationGroupAssignment/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  macro: {
+    label: "Macro",
+    path: "/lightning/setup/ObjectManager/Macro/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  messaging_session: {
+    label: "Messaging Session",
+    path: "/lightning/setup/ObjectManager/MessagingSession/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  messaging_user: {
+    label: "Messaging User",
+    path: "/lightning/setup/ObjectManager/MessagingEndUser/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  object_milestone: {
+    label: "Object Milestone",
+    path: "/lightning/setup/ObjectManager/EntityMilestone/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  opportunity: {
+    label: "Opportunity",
+    path: "/lightning/setup/ObjectManager/Opportunity/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  opportunity_contact_role: {
+    label: "Opportunity Contact Role",
+    path: "/lightning/setup/ObjectManager/OpportunityContactRole/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  opportunity_product: {
+    label: "Opportunity Product",
+    path: "/lightning/setup/ObjectManager/OpportunityLineItem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  orchestration_run: {
+    label: "Orchestration Run",
+    path: "/lightning/setup/ObjectManager/FlowOrchestrationInstance/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  orchestration_stage_run: {
+    label: "Orchestration Stage Run",
+    path: "/lightning/setup/ObjectManager/FlowOrchestrationStageInstance/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  orchestration_step_run: {
+    label: "Orchestration Step Run",
+    path: "/lightning/setup/ObjectManager/FlowOrchestrationStepInstance/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  orchestration_work_item: {
+    label: "Orchestration Work Item",
+    path: "/lightning/setup/ObjectManager/FlowOrchestrationWorkItem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  order: {
+    label: "Order",
+    path: "/lightning/setup/ObjectManager/Order/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  order_product: {
+    label: "Order Product",
+    path: "/lightning/setup/ObjectManager/OrderItem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  party_consent: {
+    label: "Party Consent",
+    path: "/lightning/setup/ObjectManager/PartyConsent/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  payment: {
+    label: "Payment",
+    path: "/lightning/setup/ObjectManager/Payment/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  payment_authorization: {
+    label: "Payment Authorization",
+    path: "/lightning/setup/ObjectManager/PaymentAuthorization/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  payment_authorization_adjustment: {
+    label: "Payment Authorization Adjustment",
+    path: "/lightning/setup/ObjectManager/PaymentAuthAdjustment/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  payment_gateway: {
+    label: "Payment Gateway",
+    path: "/lightning/setup/ObjectManager/PaymentGateway/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  payment_group: {
+    label: "Payment Group",
+    path: "/lightning/setup/ObjectManager/PaymentGroup/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  payment_line_invoice: {
+    label: "Payment Line Invoice",
+    path: "/lightning/setup/ObjectManager/PaymentLineInvoice/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  price_book: {
+    label: "Price Book",
+    path: "/lightning/setup/ObjectManager/Pricebook2/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  price_book_entry: {
+    label: "Price Book Entry",
+    path: "/lightning/setup/ObjectManager/PricebookEntry/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  privacy_job_session: {
+    label: "Privacy Job Session",
+    path: "/lightning/setup/ObjectManager/PrivacyJobSession/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  privacy_policy: {
+    label: "Privacy Policy",
+    path: "/lightning/setup/ObjectManager/PrivacyPolicy/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  privacy_rtbf_request: {
+    label: "Privacy RTBF Request",
+    path: "/lightning/setup/ObjectManager/PrivacyRTBFRequest/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  problem: {
+    label: "Problem",
+    path: "/lightning/setup/ObjectManager/Problem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  problem_related_item: {
+    label: "Problem Related Item",
+    path: "/lightning/setup/ObjectManager/ProblemRelatedItem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  process_exception: {
+    label: "Process Exception",
+    path: "/lightning/setup/ObjectManager/ProcessException/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  product: {
+    label: "Product",
+    path: "/lightning/setup/ObjectManager/Product2/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  product_consumption_schedule: {
+    label: "Product Consumption Schedule",
+    path: "/lightning/setup/ObjectManager/ProductConsumptionSchedule/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  quick_text: {
+    label: "Quick Text",
+    path: "/lightning/setup/ObjectManager/QuickText/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  recommendation: {
+    label: "Recommendation",
+    path: "/lightning/setup/ObjectManager/Recommendation/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  refund: {
+    label: "Refund",
+    path: "/lightning/setup/ObjectManager/Refund/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  refund_line_payment: {
+    label: "Refund Line Payment",
+    path: "/lightning/setup/ObjectManager/RefundLinePayment/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  related_problem_and_incident: {
+    label: "Related Problem and Incident",
+    path: "/lightning/setup/ObjectManager/ProblemIncident/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  report_anomaly_event_store: {
+    label: "Report Anomaly Event Store",
+    path: "/lightning/setup/ObjectManager/ReportAnomalyEventStore/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  scorecard: {
+    label: "Scorecard",
+    path: "/lightning/setup/ObjectManager/Scorecard/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  scorecard_association: {
+    label: "Scorecard Association",
+    path: "/lightning/setup/ObjectManager/ScorecardAssociation/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  scorecard_metric: {
+    label: "Scorecard Metric",
+    path: "/lightning/setup/ObjectManager/ScorecardMetric/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  seller: {
+    label: "Seller",
+    path: "/lightning/setup/ObjectManager/Seller/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  service_contract: {
+    label: "Service Contract",
+    path: "/lightning/setup/ObjectManager/ServiceContract/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  session_hijacking_event_store: {
+    label: "Session Hijacking Event Store",
+    path: "/lightning/setup/ObjectManager/SessionHijackingEventStore/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  social_persona: {
+    label: "Social Persona",
+    path: "/lightning/setup/ObjectManager/SocialPersona/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  task: {
+    label: "Task",
+    path: "/lightning/setup/ObjectManager/Task/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  user: {
+    label: "User",
+    path: "/lightning/setup/ObjectManager/User/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  user_provisioning_request: {
+    label: "User Provisioning Request",
+    path: "/lightning/setup/ObjectManager/UserProvisioningRequest/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  work_order: {
+    label: "Work Order",
+    path: "/lightning/setup/ObjectManager/WorkOrder/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  work_order_line_item: {
+    label: "Work Order Line Item",
+    path: "/lightning/setup/ObjectManager/WorkOrderLineItem/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  work_plan: {
+    label: "Work Plan",
+    path: "/lightning/setup/ObjectManager/WorkPlan/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  work_plan_template: {
+    label: "Work Plan Template",
+    path: "/lightning/setup/ObjectManager/WorkPlanTemplate/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  work_plan_template_entry: {
+    label: "Work Plan Template Entry",
+    path: "/lightning/setup/ObjectManager/WorkPlanTemplateEntry/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  work_step: {
+    label: "Work Step",
+    path: "/lightning/setup/ObjectManager/WorkStep/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
+  },
+  work_step_template: {
+    label: "Work Step Template",
+    path: "/lightning/setup/ObjectManager/WorkStepTemplate/FieldsAndRelationships/view",
+    pageGroup: "Standard Object",
   },
 };

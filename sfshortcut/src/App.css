@@ -9,6 +9,7 @@
   --white-mode-text-colour: #3e7cf4;
   --dark-mode-background-colour: #3f3d3d;
   --dark-mode-box-shadow: #0003;
+  background-color: var(--dark-mode-background-colour);
 }
 
 h1,
@@ -40,6 +41,14 @@ button {
   box-shadow: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.container-small {
+  height: 150px;
+}
+
+.container-mid {
+  height: 260px;
 }
 
 ::-webkit-scrollbar-thumb {

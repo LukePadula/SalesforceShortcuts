@@ -1,26 +1,28 @@
 .navigate-record-container {
-  position: absolute;
-  right: 20px;
-  top: 55px;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
 }
 
 .record-id-form {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
 
 .record-id-input {
   background-color: var(--search-bar-colour);
-  height: 25px;
+  height: 35px;
   padding: 0;
   padding-left: 7px;
   border-radius: 5px 0 0 5px;
+  border: none;
+  color: #3f3d3d;
+  font-weight: bold;
 }
 
 .record-id-submit {
   background-color: #8d8d8d;
-  height: 25px;
+  height: 35px;
   background-color: var(--primary-colour);
   color: #ffff;
   border-radius: 0 5px 5px 0;

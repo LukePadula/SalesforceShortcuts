@@ -3,8 +3,3 @@
   background-color: var(--dark-mode-background-colour);
   position: relative;
 }
-
-.modal-overlay {
-  height: 100%;
-  width: 100%;
-}
