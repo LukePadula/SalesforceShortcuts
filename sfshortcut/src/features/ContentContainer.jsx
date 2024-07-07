@@ -11,15 +11,14 @@ import {
 import HomePage from "./pages/HomePage";
 import ListPage from "./pages/ListPage";
 import SettingsPage from "./pages/SettingsPage";
-import PageHeader from "./PageHeader";
-import NavigateToRecordModal from "../app/modalTools/NavigateToRecordModal";
+import NavigateToRecordPage from "./pages/NavigateToRecordPage";
 
 export default function ContentContainer() {
   const contentPageMap = {
     [homeViewLabel]: HomePage,
     [shortcutListViewLabel]: ListPage,
     [settingsViewLabel]: SettingsPage,
-    [navigateToRecordLabel]: NavigateToRecordModal,
+    [navigateToRecordLabel]: NavigateToRecordPage,
   };
 
   const page = useSelector(selectNavigationPage);
