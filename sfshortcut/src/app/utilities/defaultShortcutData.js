@@ -19,8 +19,8 @@ export const defaultObjectFavourites = [
 export const defaultShortcuts = {
   home: {
     label: "Home",
-    path: "/lightning/setup/Home/home",
-    pageGroup: "Digital Experiences",
+    path: "/lightning/page/home",
+    pageGroup: "Salesforce",
   },
   object_manager: {
     label: "Object Manager",
