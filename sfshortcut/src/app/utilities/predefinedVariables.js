@@ -2,7 +2,6 @@ const homeViewLabel = "Home";
 const shortcutListViewLabel = "Shortcuts";
 const settingsViewLabel = "Settings";
 const salesforceRedirectLabel = "Salesforce";
-const navigateToRecordLabel = "Navigate to Record";
 
 const setupFilter = "Setup";
 const objectsFilter = "Objects";
@@ -13,7 +12,6 @@ export {
   shortcutListViewLabel,
   settingsViewLabel,
   salesforceRedirectLabel,
-  navigateToRecordLabel,
   setupFilter,
   objectsFilter,
 };

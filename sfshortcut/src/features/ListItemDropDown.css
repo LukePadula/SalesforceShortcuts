@@ -1,0 +1,53 @@
+.drop-down-container .action-button {
+  position: relative;
+  width: 31px;
+}
+
+.drop-down-menu-container {
+  position: absolute;
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+  right: 0;
+  top: 25px;
+  z-index: 250;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px rgba(42, 42, 42, 0.25);
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  width: 128px;
+}
+
+.action-button {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.action-button-icon {
+  width: 40px;
+  height: 20px;
+}
+
+.drop-down-item {
+  cursor: pointer;
+  padding: 4px 2px;
+  border-radius: 3px;
+}
+
+.drop-down-item:hover {
+  background-color: var(--secondary-colour-400);
+}
+
+.chevron-icon {
+  color: var(--secondary-colour);
+  width: 100%;
+  height: 100%;
+}
+
+.sort-active {
+  opacity: 0.3;
+}

@@ -1,0 +1,32 @@
+.list-item-action-container {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.action-button {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: var(--secondary-colour-500);
+}
+
+.action-button-icon {
+  width: 22px;
+}
+
+.star-icon {
+  transition: color 0.3s, box-shadow 0.3s;
+}
+
+.star-icon-unselected {
+  color: var(--secondary-colour);
+}
+
+.star-icon-selected {
+  color: var(--favourite-icon-selected-colour);
+}

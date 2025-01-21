@@ -11,10 +11,22 @@ const getChromeStorage = () => {
     chrome.storage.local.get(
       ["shortcuts", "objectShortcuts", "settings"],
       (result) => {
+        if (result.settings) {
+          store.dispatch(loadSettings({ savedSettings: result.settings }));
+        }
+
         if (result.shortcuts) {
           store.dispatch(
             setFavourites({
               savedFavourites: result.shortcuts,
+              favouriteType: "shortcutFavourites",
+            })
+          );
+        } else {
+          // Set to defaults if no saved shortcuts exist
+          store.dispatch(
+            setFavourites({
+              savedFavourites: defaultFavourites,
               favouriteType: "shortcutFavourites",
             })
           );
@@ -27,33 +39,43 @@ const getChromeStorage = () => {
               favouriteType: "objectFavourites",
             })
           );
-        }
-
-        if (result.settings) {
-          store.dispatch(loadSettings({ savedSettings: result.settings }));
+        } else {
+          // Set to defaults if no saved object shortcuts exist
+          store.dispatch(
+            setFavourites({
+              savedFavourites: defaultObjectFavourites,
+              favouriteType: "objectFavourites",
+            })
+          );
         }
       }
     );
   } else {
-    store.dispatch(setFavourites({ savedFavourites: [] }));
+    store.dispatch(
+      setFavourites({
+        savedFavourites: defaultFavourites,
+        favouriteType: "shortcutFavourites",
+      })
+    );
+    store.dispatch(
+      setFavourites({
+        savedFavourites: defaultObjectFavourites,
+        favouriteType: "objectFavourites",
+      })
+    );
   }
 };
 
 const setChromeStorage = (shortcuts, objectShortcuts, settings) => {
-  console.log(objectShortcuts, "OBJECT SHORTCUTS");
   if (chrome.storage) {
     chrome.storage.local.get(
       ["shortcuts", "objectShortcuts", "settings"],
       (result) => {
-        if (shortcuts !== undefined) {
-          result.shortcuts = shortcuts;
-        }
-        if (objectShortcuts !== undefined) {
+        if (shortcuts !== undefined) result.shortcuts = shortcuts;
+        if (objectShortcuts !== undefined)
           result.objectShortcuts = objectShortcuts;
-        }
-        if (settings !== undefined) {
-          result.settings = settings;
-        }
+        if (settings !== undefined) result.settings = settings;
+
         chrome.storage.local.set(result);
       }
     );

@@ -1,14 +1,27 @@
 .favourite-button {
-  width: 85px;
-  height: 85px;
-  margin: 10px;
+  width: 100%;
+  height: 45px;
   border-radius: 5px;
   font-size: 12px;
-  background-color: var(--primary-colour);
-  display: flex;
-  justify-content: center;
+  background-color: var(--primary-colour-500);
+  display: grid;
   align-items: center;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
   color: var(--dark-mode-text-colour);
   box-shadow: 0 4px 6px var(--dark-mode-box-shadow);
   transition: background-color 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.favourite-title {
+  width: 100%;
+  color: #ffffff;
+}
+
+.favourite-button .chevron-icon {
+  color: #ffffff;
+}
+
+.favourite-button .drop-down-menu-container {
+  top: 30px;
 }

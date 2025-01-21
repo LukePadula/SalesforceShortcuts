@@ -12,17 +12,24 @@ import AlertModal from "./AlertModal";
 import { validateUrl } from "../app/utilities/chromeNavigationUtils";
 import { getChromeStorage, setChromeStorage } from "../app/utilities/chromeAPI";
 import { selectSettings } from "../slices/settingsSlice";
+import { selectCurrentUrl } from "../slices/navigationSlice";
 
 export default function ViewContainer() {
+  const userSettings = useSelector(selectSettings);
   const shortcutFavourites = useSelector(selectFavorites);
   const objectFavourites = useSelector(selectObjectFavourites);
-  const userSettings = useSelector(selectSettings);
   const alertModalConfig = useSelector(selectAlertModal);
+  const currentValidUrl = useSelector(selectCurrentUrl);
 
   useEffect(() => {
     const initialize = async () => {
-      await validateUrl();
       getChromeStorage();
+
+      // console.log(
+      //   window.matchMedia &&
+      //     window.matchMedia("(prefers-color-scheme: dark)").matches
+      // );
+      await validateUrl();
     };
 
     initialize();
@@ -37,9 +44,12 @@ export default function ViewContainer() {
   }, [userSettings]);
 
   return (
-    <div className="container">
+    <div
+      className="view-container"
+      data-theme={userSettings.darkMode === false ? "light" : "dark"}
+    >
       <NavigationBar />
-      <ContentContainer />
+      <ContentContainer urlValid={currentValidUrl ? true : false} />
       {alertModalConfig && <AlertModal config={alertModalConfig} />}
     </div>
   );

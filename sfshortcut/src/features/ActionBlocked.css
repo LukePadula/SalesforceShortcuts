@@ -6,30 +6,32 @@
   text-align: center;
   color: #ffff;
   height: 100%;
+  padding-top: 16px;
+  padding-bottom: 4px;
 }
 
 .no-favourites-title {
-  margin: 5px;
   font-size: 24px;
+  color: var(--text-colour);
 }
 
 .no-favourites-subtitle {
-  font-size: 13px;
+  font-size: 14px;
+  color: var(--text-colour);
 }
 
 .no-favourites-navigate-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-colour);
+  background-color: var(--primary-colour-500);
   border-radius: 5px;
-  width: 25%;
-  height: 15%;
+  height: 40px;
   padding: 15px;
-  color: #ffff;
-  margin-top: 15px;
+  margin: 14px;
 }
 
 .no-favourites-navigate-button > * {
   padding: 5px;
+  color: #ffff;
 }

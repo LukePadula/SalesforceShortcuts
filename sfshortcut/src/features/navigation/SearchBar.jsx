@@ -9,7 +9,7 @@ import {
 import { handleNavigationChange } from "../../slices/navigationSlice";
 import { shortcutListViewLabel } from "../../app/utilities/predefinedVariables";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function SearchBar() {
   const searchTerm = useSelector(selectSearchTerm);
@@ -24,6 +24,9 @@ export default function SearchBar() {
 
   return (
     <div className="search-container">
+      <div className="search-icon">
+        <FontAwesomeIcon icon={faMagnifyingGlass} />
+      </div>
       <input
         className="search-bar"
         ref={searchRef}
@@ -36,12 +39,14 @@ export default function SearchBar() {
           dispatch(onSearchTermChanged(e.target.value));
         }}
       />
-      <button
-        onClick={(e) => dispatch(onRestoreFullSearchResults())}
-        className="search-clear-container"
-      >
-        <FontAwesomeIcon className="search-clear-icon" icon={faXmark} />
-      </button>
+      {searchTerm && (
+        <button
+          onClick={() => dispatch(onRestoreFullSearchResults())}
+          className="search-clear-container"
+        >
+          <FontAwesomeIcon className="search-clear-icon" icon={faXmark} />
+        </button>
+      )}
     </div>
   );
 }

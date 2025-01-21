@@ -1,5 +1,8 @@
-.container {
-  width: 500px;
-  background-color: var(--dark-mode-background-colour);
+.view-container {
+  width: 540px;
+  background-color: var(--background-colour);
   position: relative;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }

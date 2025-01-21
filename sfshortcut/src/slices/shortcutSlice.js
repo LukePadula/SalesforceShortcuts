@@ -3,12 +3,17 @@ import {
   defaultShortcuts,
   defaultFavourites,
   defaultObjectFavourites,
+  defaultObjectShortcuts,
 } from "../app/utilities/defaultShortcutData";
 
 const initialState = {
   shortcutFavourites: defaultFavourites,
   objectFavourites: defaultObjectFavourites,
+  allShortcuts: { ...defaultShortcuts, ...defaultObjectShortcuts },
   shortcuts: defaultShortcuts,
+  objectShortcuts: defaultObjectShortcuts,
+  itemReOrder: false,
+  listBatch: 0,
 };
 
 export const shortcutSlice = createSlice({
@@ -17,15 +22,15 @@ export const shortcutSlice = createSlice({
   reducers: {
     setFavourites: (state, action) => {
       const { savedFavourites, favouriteType } = action.payload;
-      let newData = state.shortcuts;
+      let newData = state.allShortcuts;
       let favouritesList;
+
+      console.log(savedFavourites, favouriteType, "SET");
 
       if (Array.isArray(savedFavourites) && savedFavourites.length > 0) {
         favouritesList = savedFavourites;
         state[favouriteType] = savedFavourites;
-        console.log("NON EMPTY FAVS");
       } else {
-        console.log("EMPTY LIST?");
         favouritesList = defaultFavourites;
       }
 
@@ -43,9 +48,6 @@ export const shortcutSlice = createSlice({
           ? "objectFavourites"
           : "shortcutFavourites";
 
-      console.log(JSON.stringify(state["objectFavourites"]), "OBJECT ");
-      console.log(JSON.stringify(state["shortcutFavourites"]), "SHORTCUTS ");
-
       let newShortCutFavourites = state[favouritesLabel];
 
       if (newShortCutFavourites.includes(shortcutKey)) {
@@ -58,28 +60,63 @@ export const shortcutSlice = createSlice({
       state[favouritesLabel] = newShortCutFavourites;
     },
     onSearchTermChanged: (state, action) => {
-      const oldSearchTerm = state.searchTerm;
-      const newSearchTerm = action.payload.toLowerCase().replace(/\s+/g, "_");
-      state.searchTerm = action.payload;
-      let searchResults = {};
+      const newSearchTerm = action.payload
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "_");
 
-      // Restore full search results.
-      if (oldSearchTerm && !newSearchTerm) {
-        searchResults = defaultShortcuts;
+      state.searchTerm = action.payload;
+
+      let setupSearchResults = {};
+      let objectSearchResults = {};
+
+      if (!action.payload.trim()) {
+        setupSearchResults = defaultShortcuts;
+        objectSearchResults = defaultObjectShortcuts;
       } else {
+        // Search logic
         for (const key in defaultShortcuts) {
-          if (key.includes(newSearchTerm)) {
-            searchResults[key] = defaultShortcuts[key];
+          if (key.toLowerCase().includes(newSearchTerm)) {
+            setupSearchResults[key] = defaultShortcuts[key];
+          }
+        }
+        for (const key in defaultObjectShortcuts) {
+          const dataKey = key.trim().toLowerCase().replace(/\s+/g, "_");
+
+          if (dataKey.includes(newSearchTerm)) {
+            objectSearchResults[key] = defaultObjectShortcuts[key];
           }
         }
       }
-      state.shortcuts = searchResults;
+
+      state.shortcuts = setupSearchResults;
+      state.objectShortcuts = objectSearchResults;
+      state.allShortcuts = { ...setupSearchResults, ...objectSearchResults };
     },
     onRestoreFullSearchResults: (state, action) => {
       if (state.searchTerm) {
         state.shortcuts = defaultShortcuts;
+        state.objectShortcuts = defaultObjectShortcuts;
         state.searchTerm = "";
       }
+    },
+    onToggleListItemDropdown: (state, action) => {
+      const { shortcutKey, pageGroup } = action.payload;
+
+      const shortcutList =
+        pageGroup === "Standard Object" ? "objectShortcuts" : "shortcuts";
+      const listItem = state[shortcutList][shortcutKey];
+
+      listItem.isDropdownOpen = listItem.isDropdownOpen ? false : true;
+      state[shortcutList][shortcutKey] = listItem;
+    },
+    onToggleFavouriteReOrder: (state, action) => {
+      state.itemReOrder = !state.itemReOrder;
+    },
+    setListBatch: (state, action) => {
+      const { batchNumber } = action.payload;
+
+      state.listBatch = batchNumber;
     },
   },
 });
@@ -89,11 +126,17 @@ export const {
   setShortcutFavourite,
   onSearchTermChanged,
   onRestoreFullSearchResults,
+  onToggleListItemDropdown,
+  onToggleFavouriteReOrder,
+  setListBatch,
 } = shortcutSlice.actions;
 export const selectFavorites = (state) => state.shortcut.shortcutFavourites;
 export const selectObjectFavourites = (state) =>
   state.shortcut.objectFavourites;
+export const selectAllShortcuts = (state) => state.shortcut.allShortcuts;
 export const selectShortcuts = (state) => state.shortcut.shortcuts;
+export const selectObjectShortcuts = (state) => state.shortcut.objectShortcuts;
 export const selectSearchTerm = (state) => state.shortcut.searchTerm;
+export const selectItemReOrder = (state) => state.shortcut.itemReOrder;
 
 export default shortcutSlice.reducer;

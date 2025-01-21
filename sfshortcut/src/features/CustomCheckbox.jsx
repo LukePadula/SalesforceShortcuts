@@ -11,15 +11,15 @@ export default function CustomCheckbox({
   const dispatch = useDispatch();
 
   return (
-    <label className="checkbox-container">
+    <div className="checkbox-container">
       <input
         type="checkbox"
         id={id}
         onChange={(e) => onChangeFunction(e)}
         checked={value}
+        class="custom-checkbox "
       />
-      <span className="custom-checkbox"></span>
-      {label}
-    </label>
+      <label>{label}</label>
+    </div>
   );
 }

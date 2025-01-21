@@ -1,24 +1,23 @@
-.nav-button-container {
-  margin: 7px;
-}
 .nav-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #8d8d8d;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--secondary-colour-500);
+  padding-right: 0;
 }
 
 .nav-icon {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 22px;
 }
 
 .nav-icon-unselected:hover {
-  color: #cecece;
+  opacity: 80%;
 }
 
 .selected-nav-button {
-  color: var(--primary-colour);
+  color: var(--primary-colour-500);
 }
 
 .salesforce-icon {

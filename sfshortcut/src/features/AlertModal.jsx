@@ -1,31 +1,34 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { clearAlertModal } from "../slices/navigationSlice";
+import {
+  clearAlertModal,
+  selectAlertModal,
+  selectIsClosing,
+} from "../slices/navigationSlice";
 import "./AlertModal.css";
 
-export default function AlertModal(props) {
-  const { config } = props;
-  const dispatch = useDispatch();
+export default function AlertModal() {
+  const alertModal = useSelector(selectAlertModal);
+  const isClosing = useSelector(selectIsClosing);
 
-  const alertTitle = `${config.label} has been ${
-    config.newValue ? "added to" : "removed from"
+  if (!alertModal) return null;
+
+  const alertTitle = `${alertModal.label} has been ${
+    alertModal.newValue ? "added to" : "removed from"
   } favourites `;
+
   const alertIconClasses = `alert-modal-icon ${
-    config.newValue ? "icon-favourite-selected" : null
+    alertModal.newValue ? "icon-favourite-selected" : null
   }`;
 
   return (
-    <button
-      className="alert-modal-container"
-      onClick={() => dispatch(clearAlertModal())}
-    >
+    <button className={`alert-modal-button ${isClosing ? "closing" : ""}`}>
       <div className="alert-modal-content">
         <FontAwesomeIcon className={alertIconClasses} icon={faStar} />
         <div className="alert-modal-title">{alertTitle}</div>
       </div>
-      <div className="close-alert-modal-container"></div>
     </button>
   );
 }

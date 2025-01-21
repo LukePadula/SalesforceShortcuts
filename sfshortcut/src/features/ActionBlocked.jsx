@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faList } from "@fortawesome/free-solid-svg-icons";
+import { faList, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faSalesforce } from "@fortawesome/free-brands-svg-icons";
 import { handleNavigationChange } from "../slices/navigationSlice";
 import "./ActionBlocked.css";
@@ -10,6 +10,7 @@ import {
   shortcutListViewLabel,
   salesforceRedirectLabel,
 } from "../app/utilities/predefinedVariables";
+import { onRestoreFullSearchResults } from "../slices/shortcutSlice";
 
 export default function ActionBlocked({ type }) {
   const dispatch = useDispatch();
@@ -23,12 +24,19 @@ export default function ActionBlocked({ type }) {
         dispatch(handleNavigationChange(shortcutListViewLabel)),
     },
     invalidUrl: {
-      title: "Salesforce.com not found",
+      title: "Salesforce org not found",
       subtitle: "Please login into Salesforce before using shortcuts. ",
       iconType: faSalesforce,
       iconLabel: salesforceRedirectLabel,
       iconPressFunction: () =>
         navigateTab("https://login.salesforce.com/?locale=uk", true),
+    },
+    noSearchResults: {
+      title: "No results found..",
+      subtitle: "",
+      iconType: faMagnifyingGlass,
+      iconLabel: "Clear search",
+      iconPressFunction: () => dispatch(onRestoreFullSearchResults()),
     },
   };
 

@@ -1,22 +1,57 @@
 .filter-selection-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4px;
   width: 90%;
+}
+
+.page-filters {
+  display: flex;
+  justify-self: flex-end;
+}
+
+.page-filters button:first-child {
+  margin-right: 7px;
+}
+
+.toggleReOrder {
+  width: 30px;
   height: 30px;
-  justify-content: flex-end;
+  padding: 4px;
+  border-radius: 5px;
+  color: var(--text-colour);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+  background-color: var(--secondary-colour-400);
+  /* color: var(--text-colour); */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggleReOrder > * {
+  opacity: 0.5;
+}
+
+.selected > * {
+  opacity: 1;
 }
 
 .filter-container {
-  width: 55px;
+  width: 70px;
+  height: 32px;
   padding: 4px;
-  margin: 2px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--search-bar-colour);
+  background-color: var(--secondary-colour-400);
+  color: var(--text-colour);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .selected {
-  background-color: var(--primary-colour);
-  color: var(--dark-mode-text-colour);
+  background-color: var(--primary-colour-500);
+  color: #ffff;
 }

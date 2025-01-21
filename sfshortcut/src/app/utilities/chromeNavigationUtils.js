@@ -17,17 +17,19 @@ const navigateTab = (url, createNewTab) => {
   }
 };
 
-const navigateShortcut = (urlPath) => {
+const navigateShortcut = (urlPath, newTabOveride) => {
   const url = store.getState().navigation.url;
+
+  const openInNewTab =
+    newTabOveride == undefined
+      ? store.getState().settings.settings.openShortcutsInNewTab
+      : newTabOveride;
 
   if (validateCurrentUrl(url)) {
     let breakIndex = url.indexOf(".com/");
     let locationHost = url.substring(0, breakIndex + 4);
 
-    navigateTab(
-      `${locationHost}${urlPath}`,
-      store.getState().settings.settings.openShortcutsInNewTab
-    );
+    navigateTab(`${locationHost}${urlPath}`, openInNewTab);
   } else {
     store.dispatch(setNavigationPage(homeViewLabel));
   }
@@ -43,19 +45,17 @@ async function getCurrentTab() {
   }
 }
 const validateCurrentUrl = (url) => {
-  return (
-    url &&
-    (url.includes("lightning.force.com") || url.includes("salesforce.com"))
-  );
+  return url && (url.includes("lightning") || url.includes("salesforce.com"));
 };
 
 const validateUrl = async () => {
   const url = await getCurrentTab();
+
   if (validateCurrentUrl(url)) {
-    console.log("VALID");
     store.dispatch(setUrl(url));
     return true;
   }
+  return false;
 };
 
 export { navigateTab, navigateShortcut, validateUrl };

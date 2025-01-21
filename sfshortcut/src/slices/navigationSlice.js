@@ -4,10 +4,6 @@ import {
   homeViewLabel,
   shortcutListViewLabel,
 } from "../app/utilities/predefinedVariables";
-import {
-  setupFilter,
-  objectsFilter,
-} from "../app/utilities/predefinedVariables";
 
 const initialState = {
   navigationPage: homeViewLabel,
@@ -32,7 +28,8 @@ export const displayAlertModal = createAsyncThunk(
   "navigation/displayAlertModal",
   async (payload, { dispatch, getState }) => {
     const { timeoutId } = getState().navigation;
-    // Clear the previous timeout if it exists
+
+    // Clear previous timeout if it exists
     if (timeoutId) {
       clearTimeout(timeoutId);
     }
@@ -41,9 +38,12 @@ export const displayAlertModal = createAsyncThunk(
 
     const newTimeoutId = setTimeout(() => {
       dispatch(clearAlertModal());
-    }, 3500);
 
-    // Store the new timeout ID in the state
+      setTimeout(() => {
+        dispatch(resetAlertModal());
+      }, 180);
+    }, 2000);
+
     dispatch(setTimeoutId(newTimeoutId));
   }
 );
@@ -57,19 +57,24 @@ export const navigationSlice = createSlice({
         clearTimeout(state.timeoutId);
         state.alertModal = null;
       }
+      state.homePageFilter = 0;
       state.navigationPage = action.payload;
     },
     setAlertModal: (state, action) => {
       state.alertModal = action.payload;
+      state.isClosing = false;
     },
-    clearAlertModal: (state, action) => {
+    clearAlertModal: (state) => {
+      state.isClosing = true;
+    },
+    resetAlertModal: (state) => {
       state.alertModal = null;
+      state.isClosing = false;
     },
     setTimeoutId: (state, action) => {
       state.timeoutId = action.payload;
     },
     setUrl: (state, action) => {
-      console.log(action.payload);
       state.url = action.payload;
     },
     setHomepageFilter: (state, action) => {
@@ -85,10 +90,11 @@ export const {
   setTimeoutId,
   setUrl,
   setHomepageFilter,
+  resetAlertModal,
 } = navigationSlice.actions;
 export const selectNavigationPage = (state) => state.navigation.navigationPage;
 export const selectAlertModal = (state) => state.navigation.alertModal;
 export const selectCurrentUrl = (state) => state.navigation.url;
 export const selectHomePageFilter = (state) => state.navigation.homePageFilter;
-
+export const selectIsClosing = (state) => state.navigation.isClosing;
 export default navigationSlice.reducer;

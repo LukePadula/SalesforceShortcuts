@@ -9,7 +9,6 @@ import {
   homeViewLabel,
   shortcutListViewLabel,
   settingsViewLabel,
-  navigateToRecordLabel,
 } from "../../app/utilities/predefinedVariables";
 
 export default function NavigationButton({ buttonLabel, selected }) {
@@ -19,11 +18,9 @@ export default function NavigationButton({ buttonLabel, selected }) {
     [homeViewLabel]: faStar,
     [shortcutListViewLabel]: faList,
     [settingsViewLabel]: faGear,
-    [navigateToRecordLabel]: faSalesforce,
   };
 
-  const salesforceClass =
-    buttonLabel === navigateToRecordLabel ? "salesforce-icon" : null;
+  const salesforceClass = null;
   let buttonStyleClass;
   let iconStyleClass = "nav-icon";
 

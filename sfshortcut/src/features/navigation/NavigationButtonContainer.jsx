@@ -7,7 +7,6 @@ import {
   homeViewLabel,
   shortcutListViewLabel,
   settingsViewLabel,
-  navigateToRecordLabel,
 } from "../../app/utilities/predefinedVariables";
 
 export default function NavigationButtonContainer() {
@@ -22,10 +21,6 @@ export default function NavigationButtonContainer() {
       <NavigationButton
         buttonLabel={shortcutListViewLabel}
         selected={currentPage === shortcutListViewLabel}
-      />
-      <NavigationButton
-        buttonLabel={navigateToRecordLabel}
-        selected={currentPage === navigateToRecordLabel}
       />
       <NavigationButton
         buttonLabel={settingsViewLabel}

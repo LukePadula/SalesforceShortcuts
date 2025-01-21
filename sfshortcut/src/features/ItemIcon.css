@@ -1,0 +1,33 @@
+.icon-container {
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+  background-color: var(--primary-colour-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container-small {
+  width: 28px;
+  height: 28px;
+  background-color: #d9e8ff;
+}
+
+.item-icon-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-items: center;
+}
+
+.icon {
+  fill: var(--primary-colour-500);
+  width: 20px;
+  height: 20px;
+}
+
+.icon-small {
+  width: 16px;
+  height: 16px;
+}

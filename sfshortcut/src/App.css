@@ -1,22 +1,51 @@
 :root {
-  --primary-colour: #3e7cf4;
-  --secondary-colour: #b3b3b3;
-  --search-bar-colour: #8d8d8d;
-  --favourite-icon-selected-colour: #ffc300;
+  /* Primary Colors */
+  --primary-colour-500: #3e7cf4; /* Default */
+  --primary-colour-300: #c1daff; /* Light shade */
 
-  /* Dark/light mode variables */
-  --dark-mode-text-colour: #ffff;
-  --white-mode-text-colour: #3e7cf4;
-  --dark-mode-background-colour: #3f3d3d;
-  --dark-mode-box-shadow: #0003;
-  background-color: var(--dark-mode-background-colour);
+  /* Secondary Colors */
+  --secondary-colour-500: #979797; /* Default */
+  --secondary-colour-400: #d9d9d9; /* Lighter shade */
+  --secondary-colour-100: #ffffff; /* White */
+
+  /* Functional Colors */
+  --background-colour: #f3f3f3; /* Background */
+  --icon-favourite-selected: #ffc300; /* Favourite Icon */
+  --favourite-icon-selected-colour: #ffc300;
+  --text-colour: #000000;
+  --icon-colour: #3e7cf4;
+}
+
+[data-theme="dark"] {
+  --primary-colour-500: #3e7cf4; /* Default */
+  --primary-colour-300: #374d6d; /* Light shade */
+
+  --secondary-colour-500: #a1a1a1; /* Gray for dark mode */
+  --secondary-colour-400: #666666; /* Lighter gray */
+  --secondary-colour-100: #333338; /* Near black */
+
+  --background-colour: #2a2b2e; /* Dark background */
+  --text-colour: #ffffff;
+  --icon-colour: #364f72;
+}
+
+body {
+  margin: 0;
+  overflow-y: scroll;
 }
 
 h1,
+h2,
 p {
-  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: var(--secondary-colour-100);
+}
+
+h2 {
+  font-size: 14px;
 }
 
 input {
@@ -24,6 +53,13 @@ input {
   padding: 10px;
   font-size: 16px;
   color: var(--dark-mode-text-colour);
+}
+label {
+  font-family: "Noto Sans", sans-serif;
+}
+
+small {
+  color: var(--secondary-colour-500);
 }
 
 input:focus {
@@ -43,23 +79,27 @@ button {
   cursor: pointer;
 }
 
-.container-small {
-  height: 150px;
+.brand-button {
+  width: 50px;
+  height: 30px;
 }
 
-.container-mid {
-  height: 260px;
+.container-small {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  width: 90%;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--secondary-colour-400);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-colour);
+  opacity: 80%;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 6px;
 }

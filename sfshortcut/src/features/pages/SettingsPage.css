@@ -1,0 +1,72 @@
+.container-mid {
+  position: relative;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-content {
+  display: flex;
+  width: 200%; /* We have 2 slides, each taking 50% width */
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favourite-shortcut-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 340px;
+  overflow-y: scroll;
+}
+
+.shortcut-item {
+  margin: 10px;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-prev,
+.slider-next {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  background-color: #2980b9;
+}
+
+.page.entering {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.page.active {
+  transform: translateX(0);
+  opacity: 1;
+  position: relative;
+}
+
+.page.leaving {
+  transform: translateX(-100%);
+  opacity: 0;
+}

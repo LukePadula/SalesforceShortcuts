@@ -1,33 +1,18 @@
 import React from "react";
 import "./ShortcutListItem.css";
 import { navigateShortcut } from "../../app/utilities/chromeNavigationUtils";
-import { useDispatch } from "react-redux";
-import { setShortcutFavourite } from "../../slices/shortcutSlice";
-import { displayAlertModal } from "../../slices/navigationSlice";
+import ItemIcon from "../ItemIcon";
+import ListItemActions from "../ListItemActions";
 
-export default function ShortcutListItem({ shortcutKey, config, starIcon }) {
-  const { FontAwesomeIcon, iconType } = starIcon;
-  const dispatch = useDispatch();
-
-  const starIconClass = config.favourite
-    ? "star-icon-selected"
-    : "star-icon-unselected";
-
-  const handleFavourite = () => {
-    dispatch(
-      setShortcutFavourite({
-        shortcutKey,
-        shortcutType: config.pageGroup,
-      })
-    );
-    dispatch(
-      displayAlertModal({
-        alertName: "favouriteUpdate",
-        label: config.label,
-        newValue: !config.favourite,
-      })
-    );
-  };
+export default function ShortcutListItem({
+  shortcutKey,
+  config,
+  FontAwesomeIcon,
+  starIcon,
+  faChevronDown,
+  userSettings,
+}) {
+  console.log(shortcutKey);
 
   return (
     <div className="list-item">
@@ -35,23 +20,25 @@ export default function ShortcutListItem({ shortcutKey, config, starIcon }) {
         className="list-button-container"
         onClick={() => navigateShortcut(config.path)}
       >
-        <div className="list-button-content">
-          <div className="list-content-cont">
-            <p className="list-item-title">{config.label}</p>
-          </div>
-          <div className="list-content-cont">
-            <p className="list-item-type">{config.pageGroup}</p>
-          </div>
+        <div className="list-item-column">
+          <ItemIcon iconName={config.pageGroupIcon} size="large" />
+        </div>
+        <div className="list-item-column">
+          <h2 className="list-item-title">{config.label}</h2>
+          <small className="list-item-subtitle">{config.pageGroup}</small>
+        </div>
+        <div className="list-item-column">
+          <ListItemActions
+            shortcutKey={shortcutKey}
+            config={config}
+            FontAwesomeIcon={FontAwesomeIcon}
+            starIcon={starIcon}
+            faChevronDown={faChevronDown}
+            itemType="List"
+            userSettings={userSettings}
+          />
         </div>
       </button>
-      <div className="star-container">
-        <button onClick={handleFavourite}>
-          <FontAwesomeIcon
-            className={`star-icon ${starIconClass}`}
-            icon={iconType}
-          />
-        </button>
-      </div>
     </div>
   );
 }

@@ -1,0 +1,44 @@
+.favourite-shortcut-container {
+  width: 100vw;
+  max-height: 270px;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  padding-left: 6px;
+}
+
+.favourite-list {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+.shortcut-item {
+  width: 49.5%;
+  margin-top: 1%;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.75deg);
+  }
+  50% {
+    transform: rotate(-0.75deg);
+  }
+  75% {
+    transform: rotate(0.75deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}

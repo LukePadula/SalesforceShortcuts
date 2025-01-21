@@ -4,16 +4,26 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   selectHomePageFilter,
   setHomepageFilter,
+  selectNavigationPage,
+  setAlertModal,
 } from "../../slices/navigationSlice";
+import { faArrowsUpDownLeftRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  setupFilter,
-  objectsFilter,
-} from "../../app/utilities/predefinedVariables";
+  onToggleFavouriteReOrder,
+  selectItemReOrder,
+} from "../../slices/shortcutSlice";
 
-export default function PageFilterSelector({ goToSlide }) {
+export default function PageFilterSelector({
+  goToSlide,
+  propsArray,
+  allowSort,
+  urlValid,
+}) {
   const dispatch = useDispatch();
   const homePageFilterIndex = useSelector(selectHomePageFilter);
-
+  const reOrder = useSelector(selectItemReOrder);
+  const navigationPage = useSelector(selectNavigationPage);
   const handleFilterClick = (index) => {
     if (homePageFilterIndex != index) {
       goToSlide(index);
@@ -23,28 +33,36 @@ export default function PageFilterSelector({ goToSlide }) {
 
   return (
     <div className="filter-selection-container">
-      <button
-        id={setupFilter}
-        className={
-          homePageFilterIndex === 0
-            ? "filter-container selected"
-            : "filter-container"
-        }
-        onClick={(e) => handleFilterClick(0)}
-      >
-        Setup
-      </button>
-      <button
-        id={objectsFilter}
-        className={
-          homePageFilterIndex === 1
-            ? "filter-container selected"
-            : "filter-container"
-        }
-        onClick={(e) => handleFilterClick(1)}
-      >
-        Objects
-      </button>
+      <div className="page-filters">
+        {propsArray.map((props, index) => (
+          <button
+            id={props.filterLabel}
+            className={
+              homePageFilterIndex === index
+                ? "filter-container selected"
+                : "filter-container"
+            }
+            onClick={(e) => handleFilterClick(index)}
+          >
+            {props.filterLabel}
+          </button>
+        ))}
+      </div>
+      {allowSort ? (
+        <button
+          onClick={() => {
+            dispatch(onToggleFavouriteReOrder());
+            // dispatch(
+            //   setAlertModal(
+            //     "This feature is still in development and might not work as expected"
+            //   )
+            // );
+          }}
+          className={reOrder ? "selected toggleReOrder" : "toggleReOrder"}
+        >
+          <FontAwesomeIcon icon={faArrowsUpDownLeftRight} />
+        </button>
+      ) : null}
     </div>
   );
 }

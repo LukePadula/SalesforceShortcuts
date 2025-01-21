@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./NavigateToRecordPage.css";
 import { navigateShortcut } from "../../app/utilities/chromeNavigationUtils";
-import PageHeader from "../PageHeader";
 
 export default function NavigateToRecordPage() {
   const navigateRef = useRef(null);
@@ -14,16 +13,15 @@ export default function NavigateToRecordPage() {
 
   return (
     <div className="container-small">
-      <PageHeader pageTitle="Navigate to Record" />
       <div className="navigate-form">
         <form
           onSubmit={(e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
             const recordIdValue = formData.get("recordIdSearch");
-            console.log(recordIdValue);
             if (recordIdValue) {
               navigateShortcut(`/lightning/r/Lead/${recordIdValue}/view`, true);
+            } else {
             }
           }}
           className="record-id-form"

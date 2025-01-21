@@ -5,7 +5,7 @@
 }
 
 .record-id-input {
-  background-color: var(--search-bar-colour);
+  background-color: var(--secondary-colour-100);
   height: 35px;
   padding: 0;
   padding-left: 7px;
@@ -18,7 +18,7 @@
 .record-id-submit {
   background-color: #8d8d8d;
   height: 35px;
-  background-color: var(--primary-colour);
+  background-color: var(--primary-colour-500);
   color: #ffff;
   border-radius: 0 5px 5px 0;
 }

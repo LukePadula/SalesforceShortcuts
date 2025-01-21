@@ -1,9 +1,4 @@
 .settings-container {
-  padding: 20px;
-}
-.settings-item {
   display: flex;
-  align-items: center;
-  font-size: 13px;
-  color: #ffff;
+  flex-direction: column;
 }
